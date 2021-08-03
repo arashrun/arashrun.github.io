@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		vim-skill | 
+	 
+	Hexo
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Hexo</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										l-libs
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/30/l-libs/libcurl/">
+										libcurl
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/30/l-libs/libevent2/">
+										libevent2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										private
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/07/25/private/life/">
+										life
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/05/21/private/pwd/">
+										pwd
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/03/private/study_system/">
+										study_system
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										sketches
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/24/sketches/computer_principle/">
+										computer_principle
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/19/sketches/data_structure/">
+										data_structure
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/07/sketches/doit/">
+										doit
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/25/sketches/humanities/">
+										humanities
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										lang
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/18/sketches/lang/C++/">
+										C++
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/18/sketches/lang/Python/">
+										Python
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/22/sketches/lang/language/">
+										language
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/22/sketches/lang/web/">
+										web
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/23/sketches/network/">
+										network
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/23/sketches/os/">
+										os
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/24/sketches/study_resource/">
+										study_resource
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tech
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/06/22/sketches/tech/ProtoBuf/">
+										ProtoBuf
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/22/sketches/tech/RPC/">
+										RPC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/08/01/sketches/tech/ml/">
+										ml
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/28/sketches/tech/qt/">
+										qt
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										tools
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/07/23/tools/archlinux/">
+										archlinux
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/21/tools/centos/">
+										centos
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/30/tools/cmakelist/">
+										cmakelist
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/19/tools/docker/">
+										docker
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/12/tools/gdb/">
+										gdb
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/14/tools/git-skill/">
+										git-skill
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/12/tools/linux/">
+										linux
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/24/tools/makefile/">
+										makefile
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/24/tools/meson/">
+										meson
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/30/tools/tmux/">
+										tmux
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/07/23/tools/vim-skill/">
+										vim-skill
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/07/14/tools/vimrc/">
+										vimrc
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/06/25/tools/vps/">
+										vps
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	vim-skill
+</h1>
+<div class="article-meta">
+	
+	<span>arashrun</span>
+	<span>2021-07-23 17:16:16</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<blockquote>
+<p>记录原生vim中的一些概念，不涉及外部插件等用法和配置<br>
+基本都是从vim的官方帮助文档中总结出来的有用的特性和概念(<a target="_blank" rel="noopener" href="https://vimhelp.org/">https://vimhelp.org/</a>)</p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<ol>
+<li>下载最新vim源码包。</li>
+<li>执行make &amp;&amp; make install</li>
+</ol>
+<br>
+<h2 id="基本概念：">基本概念：</h2>
+<p><b>1. 文件，缓冲区，窗口，标签页</b></p>
+<p>文件：磁盘中的数据块</p>
+<p>缓冲区：加载到内存中的文件</p>
+<p>窗口：用于承载缓存区的容器，通过sp，vs等操作可以创建新窗口(对应于tmux中的panel的概念)</p>
+<p>标签页：承载多个窗口的容器，通过tabnew创建</p>
+<br>
+<h2 id="vim脚本语法">vim脚本语法</h2>
+<h3 id="变量类型：">变量类型：</h3>
+<ul>
+<li>全局变量	g:name</li>
+<li>脚本范围局部变量    s:name</li>
+<li>vim预定义变量    v:name</li>
+<li>函数内局部变量：l:name</li>
+<li>函数参数：a:name</li>
+<li>缓冲区局部变量：b:name</li>
+<li>窗口局部变量：w:name</li>
+<li>标签页局部变量：t:name</li>
+</ul>
+<blockquote>
+<p>脚本范围的局部变量，相当于c语言中static关键字，定义之后，只在当前声明的文件范围有效。</p>
+</blockquote>
+<br>
+<h3 id="变量定义：">变量定义：</h3>
+<pre><code class="language-shell">let g:a = 123
+let s:b = &quot;adf&quot;
+</code></pre>
+<h3 id="取消变量定义：">取消变量定义：</h3>
+<pre><code class="language-shell">unlet s:a
+</code></pre>
+<h3 id="表达式">表达式</h3>
+<p>1 基本表达式<br>
+数值<br>
+字符串常量<br>
+$name 环境变量<br>
+&amp;name 选项<br>
+@reg  寄存器<br>
+2 算法表达式<br>
++ - * / %<br>
+“hello” . “world” ==“helloworld” 字符串拼接</p>
+<h3 id="函数">函数</h3>
+<p>call function_name(para1,para2) 	调用函数<br>
+let line = getline(‘.’) 			调用函数作为表达式<br>
+:functions 							查看vim中内置的完整函数列表</p>
+<p>1 定义函数<br>
+function {name}({var1,{var2},…})<br>
+{body}<br>
+endfunction<br>
+- 函数名必须以大写字母开始<br>
+- a:var1 代表函数参数变量<br>
+- 函数内部没有特殊标识的变量(g: a: s:)都是局部变量<br>
+- 函数内部访问全局变量要加 g:<br>
+2 重定义函数<br>
+function! name(var1,var2)<br>
+3 范围使用<br>
+:10,30call funcname()<br>
+function funcname() range 	定义<br>
+4 可变参数<br>
+function Show(start,…)<br>
+a:0 	可变参数个数<br>
+a:1 	第一个可变参数<br>
+a:2 	第二个可变参数<br>
+a:000 	可变参数列表<br>
+5 删除函数<br>
+delfunction xxx</p>
+<br>
+<h2>常见问题</h2>
+<p><b>1. win上dos的文件到unix上就会多出一个^M符号</b><br>
+<br><br>
+<b>reason:</b> win上是用两个字符代表换行(\r\n)，而linux采用简洁原则换行符采用(\n)。因此导致win上的文件导入到unix等类平台时会多出一个(\r)字符，而该字符在unxi上就是显示为^M(ctrl-v)<br>
+<b>solution:</b> :%s/\r//g</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/07/25/private/life/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  life
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/07/23/tools/archlinux/">
+                archlinux
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
