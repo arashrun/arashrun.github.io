@@ -163,44 +163,6 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
-										private
-									</a>
-									
-							<ul>
-								<li class="file">
-									<a href="/2021/07/25/private/life/">
-										life
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/05/21/private/pwd/">
-										pwd
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/08/03/private/study_system/">
-										study_system
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-								</li>
-								
-							</ul>
-			
-							<ul>
-								<li class="directory">
-									<a href="#" class="directory">
-										<i class="fa fa-plus-square-o"></i>
 										sketches
 									</a>
 									
@@ -522,8 +484,8 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="docker">docker<a class="header-anchor" href="#docker">¶</a></h3>
-<h4 id="install-on-centos7">install(on centos7)<a class="header-anchor" href="#install-on-centos7">¶</a></h4>
+	<h3 id="docker">docker</h3>
+<h4 id="install-on-centos7">install(on centos7)</h4>
 <ol>
 <li>
 <p>curl -sSL <a target="_blank" rel="noopener" href="https://get.daocloud.io/docker">https://get.daocloud.io/docker</a> | sh</p>
@@ -535,7 +497,7 @@ var _hmt = _hmt || [];
 <p>docker run hello-world</p>
 </li>
 </ol>
-<h4 id="基本原理">基本原理<a class="header-anchor" href="#基本原理">¶</a></h4>
+<h4 id="基本原理">基本原理</h4>
 <pre><code class="language-mermaid">sequenceDiagram
 
 participant cl as DockerClient
@@ -548,7 +510,7 @@ hb--&gt;&gt;sv:ret image
 sv-&gt;&gt;sv:create container &amp;&amp; running output
 sv-&gt;&gt;cl:streamed that output
 </code></pre>
-<h4 id="配置国内源">配置国内源<a class="header-anchor" href="#配置国内源">¶</a></h4>
+<h4 id="配置国内源">配置国内源</h4>
 <ol>
 <li>
 <p>创建或修改 /etc/docker/daemon.json 文件，修改为如下形式</p>
@@ -568,7 +530,7 @@ sv-&gt;&gt;cl:streamed that output
 <p>systemctl restart docker</p>
 </li>
 </ol>
-<h4 id="常用命令">常用命令<a class="header-anchor" href="#常用命令">¶</a></h4>
+<h4 id="常用命令">常用命令</h4>
 <ol>
 <li>
 <p>为client创建一个伪终端</p>
