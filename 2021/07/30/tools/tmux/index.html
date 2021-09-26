@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/23/cs-theory/network/">
+									<a href="/2021/08/11/cs-theory/network/">
 										network
 									</a>
 								</li>
@@ -313,7 +313,7 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
-									<a href="/2021/07/23/tools/archlinux/">
+									<a href="/2021/09/11/tools/archlinux/">
 										archlinux
 									</a>
 								</li>
@@ -412,7 +412,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/07/14/tools/vimrc/">
+									<a href="/2021/09/26/tools/vimrc/">
 										vimrc
 									</a>
 								</li>
@@ -474,7 +474,10 @@ tmux new-session -s <session name></p>
 <p>tmux a -t <session name> # 从新进入临时退出的tmux会话</p>
 <p>c-b %       # verhicel<br>
 c-b &quot;<br>
-c-b x<br>
+c-b :       #在tmux中输入命令<br>
+c-b c       #创建新window<br>
+c-b &amp;       #关闭当前window<br>
+c-b x       #关闭当前panel<br>
 c-b space<br>
 c-b d       # 临时退出tmux<br>
 c-b up/down/left/right # foucs windows<br>
@@ -484,14 +487,16 @@ c-b [   # pageup/pagedown  <code>q</code> to exit page mode</p>
 c-b )   # 切换到下一个session<br>
 c-b L   # 切换到最后一个session</p>
 <h2 id="reference">reference</h2>
-<p><a target="_blank" rel="noopener" href="https://tao-of-tmux.readthedocs.io/zh_CN/latest/manuscript/05-session.html#tmux-sessions">官方使用文档</a><br>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lizhang4/p/7325086.html">常用快捷键</a><br>
+<a target="_blank" rel="noopener" href="https://tao-of-tmux.readthedocs.io/zh_CN/latest/manuscript/05-session.html#tmux-sessions">官方使用文档</a><br>
 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/bamanzi/p/tmux-mouse-tips.html">用鼠标切换窗口/调节分屏大小</a><br>
 unknown option: mouse-resize-pane错误<br>
 set-option -g mouse on<br>
 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/hongdada/p/13528984.html">tmux插件管理器的安装和使用</a><br>
 <a target="_blank" rel="noopener" href="http://louiszhai.github.io/2017/09/30/tmux/#%E5%AF%BC%E8%AF%BB">写的好的个人博客</a></p>
 <h2 id="config">config</h2>
-<pre><code class="language-shell"># source the tmux config file
+<pre><code class="language-shell">
+# source the tmux config file
 # tmux source-file ~/.tmux.conf
 
 
@@ -528,6 +533,14 @@ bind -r ^X next-window
 
 bind-key -n M-1 previous-window
 bind-key -n M-2 next-window
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind-key q set-option status
+
 </code></pre>
 
 </div>

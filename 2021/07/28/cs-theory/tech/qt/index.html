@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/23/cs-theory/network/">
+									<a href="/2021/08/11/cs-theory/network/">
 										network
 									</a>
 								</li>
@@ -313,7 +313,7 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
-									<a href="/2021/07/23/tools/archlinux/">
+									<a href="/2021/09/11/tools/archlinux/">
 										archlinux
 									</a>
 								</li>
@@ -412,7 +412,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/07/14/tools/vimrc/">
+									<a href="/2021/09/26/tools/vimrc/">
 										vimrc
 									</a>
 								</li>
@@ -495,6 +495,17 @@ rcc -name application  application.qrc -o qrc_application.cpp
 <li>书写主程序</li>
 <li>moc生成元对象代码moc_xxx.cpp</li>
 </ol>
+<h2 id="qt构建过程">qt构建过程</h2>
+<ol>
+<li>qmake -project “QT+=widgets”<br>
+qmake根据项目中的文件，自动生成pro项目配置文件</li>
+<li>qmake<br>
+第二次执行qmake生成makefile</li>
+<li>make</li>
+</ol>
+<h2 id="核心概念的解释">核心概念的解释</h2>
+<h3 id="qt元对象系统">qt元对象系统</h3>
+<p>元对象系统室qt专门对c++做的扩展，用来支持信号和槽机制、运行时类型定义、动态属性系统。</p>
 <h2 id="Reference">Reference:</h2>
 <blockquote>
 <ol>

@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/06/23/cs-theory/network/">
+									<a href="/2021/08/11/cs-theory/network/">
 										network
 									</a>
 								</li>
@@ -313,7 +313,7 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
-									<a href="/2021/07/23/tools/archlinux/">
+									<a href="/2021/09/11/tools/archlinux/">
 										archlinux
 									</a>
 								</li>
@@ -412,7 +412,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file active">
-									<a href="/2021/07/14/tools/vimrc/">
+									<a href="/2021/09/26/tools/vimrc/">
 										vimrc
 									</a>
 								</li>
@@ -445,7 +445,7 @@ var _hmt = _hmt || [];
 <div class="article-meta">
 	
 	<span>arashrun</span>
-	<span>2021-07-14 16:03:45</span>
+	<span>2021-09-26 08:14:31</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -494,7 +494,8 @@ set autoindent</p>
 <p>&quot; the default leader word is ‘’<br>
 &quot; here use mapleader to remap the leader word<br>
 let mapleader=“,”<br>
-imap <c-s> <esc>:w<cr><br>
+imap <c-k> <esc>:w<cr><br>
+nnoremap <esc> :noh<cr><br>
 map 'w <c-w>w<br>
 map 'n :bn<cr><br>
 map 'N :bp<cr><br>
@@ -507,7 +508,7 @@ map fj <c-d><br>
 map fk <c-u><br>
 map fh <c-f><br>
 map fl <c-b></p>
-<p>map <leader>t :Defx<cr><br>
+<p>map <leader>t :Defx -buffer-name=<code>'defx' . tabpagenr()</code><cr><br>
 map <leader>f <Plug>(coc-translator-p)<br>
 map M :%s/^M//g<cr></p>
 <p>map <leader>1 :tabprevious<cr><br>
@@ -529,7 +530,9 @@ map 's &lt;c-&gt;s<br>
 map 'f &lt;c-&gt;f</p>
 <p>&quot;let the c-l ==&gt;  insert mode move the cursor to left<br>
 imap <c-l> <esc>la<br>
+&quot; ctrl-enter<br>
 imap <NL> <esc>o</p>
+<p>iab xtime <c-r>=strftime(“%Y-%m-%d %H:%M:%S”)<cr></p>
 <p>call plug#begin(‘~/.vim/plugged’)<br>
 Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/yaozhijin/vim-airline.git">https://gitee.com/yaozhijin/vim-airline.git</a>’<br>
 Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/daibao9922/coc.nvim.git',%7B'branch':'release">https://gitee.com/daibao9922/coc.nvim.git’,{‘branch’:'release</a>’}<br>
@@ -549,12 +552,18 @@ endif<br>
 Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/yaozhijin/vim-floaterm.git">https://gitee.com/yaozhijin/vim-floaterm.git</a>’<br>
 &quot;Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/arashrun/vim-markdown.git">https://gitee.com/arashrun/vim-markdown.git</a>’<br>
 Plug ‘octol/vim-cpp-enhanced-highlight’<br>
-Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/zgpio/LeaderF.git">https://gitee.com/zgpio/LeaderF.git</a>’, { ‘do’: ‘:LeaderfInstallCExtension’ }</p>
+Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/zgpio/LeaderF.git">https://gitee.com/zgpio/LeaderF.git</a>’, { ‘do’: ‘:LeaderfInstallCExtension’ }<br>
+Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/zgpio/ultisnips.git">https://gitee.com/zgpio/ultisnips.git</a>’</p>
 <p>&quot; colorscheme<br>
 Plug ‘flrnd/candid.vim’<br>
 Plug ‘morhetz/gruvbox’<br>
 Plug ‘joshdick/onedark.vim.git’<br>
+Plug ‘<a target="_blank" rel="noopener" href="https://gitee.com/arashrun/vim-dogrun.git">https://gitee.com/arashrun/vim-dogrun.git</a>’<br>
 call plug#end()</p>
+<p>“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”&quot;<br>
+“”“”“”“”“”“”“”“”“”“”“”“ultisnips configured”“”“”“”“”“”“”“”“”“”“”“”“”“”&quot;<br>
+let g:UltiSnipsExpandTrigger=“&lt;c-;&gt;”<br>
+let g:UltiSnipsEditSplit=“vertical”</p>
 <p>“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”&quot;<br>
 “”“”“”“”“”“”“”“”“”“”“”“leaderf configured”“”“”“”“”“”“”“”“”“”“”“”“”“”&quot;<br>
 &quot; map ctrl-p to find the file<br>
@@ -569,8 +578,8 @@ let g:floaterm_keymap_toggle = ‘<leader>r’</p>
 <p>hi FloatermBorder guibg=orange</p>
 <p>“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”&quot;<br>
 “”“”“”“”“”“”“”“”“”“”“”““airline configured””“”“”“”“”“”“”“”“”“”“”&quot;<br>
-let g:airline_theme=‘molokai’<br>
-&quot;let g:airline_theme=‘bubblegum’<br>
+&quot;let g:airline_theme=‘molokai’<br>
+let g:airline_theme=‘bubblegum’<br>
 let g:airline#extensions#tabline#enabled = 1<br>
 let g:airline#extensions#tabline#formatter = ‘unique_tail’<br>
 let g:airline#extensions#tabline#buffer_nr_show = 1<br>
@@ -578,21 +587,21 @@ let g:airline#extensions#tabline#buffer_nr_show = 1<br>
 &quot;let g:airline#extensions#tabline#right_sep = ‘&gt;’<br>
 &quot;let g:airline#extensions#tabline#left_alt_sep = ‘##’<br>
 &quot; unicode symbols</p>
-<p>if !exists(‘g:airline_symbols’)<br>
-let g:airline_symbols = {}<br>
-endif<br>
-let g:airline_left_sep = ‘▶’<br>
-let g:airline_left_alt_sep = ‘❯’<br>
-let g:airline_right_sep = ‘◀’<br>
-let g:airline_right_alt_sep = ‘❮’<br>
-&quot;let g:airline_symbols.crypt = ‘’<br>
+<p>&quot;if !exists(‘g:airline_symbols’)<br>
+&quot;    let g:airline_symbols = {}<br>
+&quot;endif<br>
+&quot;let g:airline_left_sep = ‘▶’<br>
+&quot;let g:airline_left_alt_sep = ‘❯’<br>
+&quot;let g:airline_right_sep = ‘◀’<br>
+&quot;let g:airline_right_alt_sep = ‘❮’<br>
+&quot;let g:airline_symbols.linenr = ‘¶’<br>
+&quot;let g:airline_symbols.branch = ‘⎇’</p>
+<p>&quot;let g:airline_symbols.crypt = ‘’<br>
 &quot;let g:airline_symbols.linenr = ‘☰’<br>
 &quot;let g:airline_symbols.linenr = ‘␊’<br>
 &quot;let g:airline_symbols.linenr = ‘␤’<br>
-let g:airline_symbols.linenr = ‘¶’<br>
 &quot;let g:airline_symbols.maxlinenr = ‘’<br>
 &quot;let g:airline_symbols.maxlinenr = ‘㏑’<br>
-let g:airline_symbols.branch = ‘⎇’<br>
 &quot;let g:airline_symbols.paste = ‘ρ’<br>
 &quot;let g:airline_symbols.paste = ‘Þ’<br>
 &quot;let g:airline_symbols.paste = ‘∥’<br>
@@ -611,8 +620,13 @@ let g:airline_symbols.branch = ‘⎇’<br>
 “”“”“”“”“”“”“”“”“”“”“”““coc configured””“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”<br>
 &quot;CocInstall coc-marketplace<br>
 &quot;CocList marketplace<br>
-&quot;coc-translator, help-translator<br>
-inoremap <silent><expr> <TAB><br>
+&quot;coc-translator, help-translator</p>
+<p>let g:coc_global_extensions = [ ‘coc-json’,<br>
+\   ‘coc-clangd’,<br>
+\   ‘coc-cmake’,<br>
+\   ‘coc-pyright’<br>
+\   ]</p>
+<p>inoremap <silent><expr> <TAB><br>
 \ pumvisible() ? “&lt;C-n&gt;” :<br>
 \ <SID>check_back_space() ? “&lt;TAB&gt;” :<br>
 \ coc#refresh()<br>
@@ -932,13 +946,15 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<br>
 &quot;set ttimeoutlen=100
 </code></pre>
 <p>&quot;endif</p>
-<p>set background=dark<br>
+<p>“set background=dark<br>
 “set background=light<br>
-“””“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“colorscheme choose “””“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”&quot;</p>
-<p>autocmd vimenter * ++nested colorscheme gruvbox<br>
-&quot;colorscheme monokai-bold<br>
+“”””“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”““colorscheme choose “”””“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”“”</p>
+<p>&quot;gruvbox need background = dark<br>
+&quot;autocmd vimenter * ++nested colorscheme gruvbox</p>
+<p>&quot;colorscheme monokai-bold<br>
 &quot;colorscheme candid<br>
-&quot;colorscheme onedark</p>
+&quot;colorscheme onedark<br>
+colorscheme dogrun</p>
 
 </div>
 
@@ -946,16 +962,11 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-,a-<br>
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/07/14/tools/git-skill/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  git-skill
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/07/12/tools/gdb/">
-                gdb
+              <a href="/2021/09/11/tools/archlinux/">
+                archlinux
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
