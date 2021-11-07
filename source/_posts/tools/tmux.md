@@ -16,6 +16,9 @@ tmux new -s <session name>
 tmux new-session -s <session name>
 
 tmux ls
+tmux kill-
+tmux list-
+tmux attach-
 
 tmux a -t <session name> # 从新进入临时退出的tmux会话
 
