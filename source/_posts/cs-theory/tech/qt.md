@@ -53,3 +53,12 @@ qmake根据项目中的文件，自动生成pro项目配置文件
 ## Reference:
 > 1. [中文文档](https://qtguide.ustclug.org/)
 > 2. [官方文档](https://doc.qt.io/qt-5/topics-network-connectivity.html)
+
+
+## TODOLIST
+1. qwidgetstack用于多个widget组合切换
+2. model/view framework
+3. 代码中修改动态属性值
+    widget->setProperty("property", value);
+4. animation framework
+

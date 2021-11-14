@@ -5,7 +5,8 @@
 ## 安装
 
 1.  下载最新vim源码包。
-2.  执行make && make install
+2. ./configure --with-features=huge --enable-python3interp --enable-multibyte
+3.  执行make && make install
 
 
 
@@ -109,3 +110,6 @@ let line = getline('.') 			调用函数作为表达式
 <b>solution:</b> :%s/\r//g
 
 
+## TODOLIST
+1. v:在当前文件查找选择的可视化部分
+2. i:如何创建代码片段

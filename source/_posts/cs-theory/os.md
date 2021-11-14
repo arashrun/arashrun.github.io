@@ -286,6 +286,16 @@ void *shmat(int shmid, const void *addr, int flag);//cg=共享存储的地址
 int shmdt(void *addr);//cg=0
 ```
 
+**shm共享内存和内存映射mmap**
+> [shm & mmap](https://blog.csdn.net/ababab12345/article/details/102931841)
+
+```c
+shm_open
+mmap
+munmap
+shm_unlink
+ftruncate
+```
 
 
 
@@ -516,4 +526,7 @@ reactor：
 
 
 
+## Reference
+[宏定义中的#，##的含义](https://blog.csdn.net/weixin_40204595/article/details/81109644)
+[linux动态库链接规则](https://www.cnblogs.com/vanishfan/archive/2013/01/15/2861211.html)
 

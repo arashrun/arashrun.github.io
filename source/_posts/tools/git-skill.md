@@ -55,5 +55,6 @@ git branch --set-upstream <branch> <remote-branch>
 
 [后台服务器开发指南](https://github.com/zhiyong0804/server_develop_guide_book)
 [后端架构师技术栈](https://github.com/xingshaocheng/architect-awesome)
+[serenityos操作系统](https://github.com/SerenityOS/serenity.git)
 
 
