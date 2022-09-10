@@ -47,12 +47,17 @@ qmake根据项目中的文件，自动生成pro项目配置文件
 ## 核心概念的解释
 
 ### qt元对象系统
+
 元对象系统室qt专门对c++做的扩展，用来支持信号和槽机制、运行时类型定义、动态属性系统。
+
+1. 信号和槽
+
+信号与槽机制是用来解决这样的问题而产生的即：当我们改变一个widget时，我们希望另外一个widget被提醒。这种notify的功能，传统的使用callback回调来实现。但是回调的方法的问题在于不够直观并且很容易出问题在参数上。
 
 
 ## Reference:
-> 1. [中文文档](https://qtguide.ustclug.org/)
-> 2. [官方文档](https://doc.qt.io/qt-5/topics-network-connectivity.html)
+
+| [中文教程](https://qtguide.ustclug.org/) | [官方文档](https://doc.qt.io/qt-5/topics-network-connectivity.html) | [中文文档](http://qt6.digitser.net/index.html) |
 
 
 ## TODOLIST
@@ -61,4 +66,5 @@ qmake根据项目中的文件，自动生成pro项目配置文件
 3. 代码中修改动态属性值
     widget->setProperty("property", value);
 4. animation framework
+5. qt sqlite module
 

@@ -40,6 +40,55 @@ c-b (   # 切换到上一个session
 c-b )   # 切换到下一个session
 c-b L   # 切换到最后一个session
 
+## configure
+
+```bash
+# source the tmux config file
+# tmux source-file ~/.tmux.conf
+
+
+
+set -g base-index 1 # 设置窗口的起始下标为1
+set -g pane-base-index 1 # 设置面板的起始下标为1
+
+set -g status-interval 1 # 状态栏刷新时间
+set -g status-justify left # 状态栏列表左对齐
+
+set -wg window-status-format " #I #W " # 状态栏窗口名称格式
+set -wg window-status-current-format " #I:#W#F " # 状态栏当前窗口名称格式(#I：序号，#w：窗口名称，#F：间隔符)
+set -wg window-status-separator "" # 状态栏窗口名称之间的间隔
+
+set -g default-terminal "screen-256color" # tmux和vim配色冲突
+
+
+# tmux 插件管理---begin
+set -g @plugin 'tmux-plugins/tpm'
+#set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+# 会话保存插件
+# prefix+ ctrl+s == 保存会话
+# prefix+ ctrl+r == 加载保存的会话
+
+run '~/.tmux/plugins/tpm/tpm'
+# tmux 插件管理---end
+
+set-option -g mouse on
+set-option -g prefix C-x
+unbind ^X
+bind -r ^X next-window
+
+
+bind-key -n M-1 previous-window
+bind-key -n M-2 next-window
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind-key q set-option status
+
+```
 
 ## reference
 [常用快捷键](https://www.cnblogs.com/lizhang4/p/7325086.html)
