@@ -104,7 +104,7 @@ theme: self-hexo-theme
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:arashrun/arashrun.github.io.git
+  repo: https://github.com/arashrun/arashrun.github.io.git
   branch: master
 
 # Markdown-it config

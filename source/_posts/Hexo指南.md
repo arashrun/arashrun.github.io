@@ -5,7 +5,9 @@ tags:
 ---
 
 
-### 创建新文章
+### 写作流程
+
+1. 创建新文章
 
 ```shell
 hexo new [layout] <title>
@@ -18,3 +20,10 @@ hexo new post -p cs-theory/xxx "title name"
 - post
 - page
 - draft
+
+
+2. 部署
+
+```bash
+hexo d -g
+```
