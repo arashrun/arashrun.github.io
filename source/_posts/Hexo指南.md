@@ -1,7 +1,7 @@
 ---
 title: Hexo指南
 date: 2022-04-07 22:32:19
-tags:
+tags: 技术
 ---
 
 
@@ -12,14 +12,12 @@ tags:
 ```shell
 hexo new [layout] <title>
 
-hexo new post -p cs-theory/xxx "title name"
-```
-
-1. layout
-
 - post
 - page
 - draft
+
+hexo new post -p cs-theory/xxx "title name"
+```
 
 
 2. 部署
@@ -27,3 +25,22 @@ hexo new post -p cs-theory/xxx "title name"
 ```bash
 hexo d -g
 ```
+
+
+### 一些说明
+
+github上的两个分支，master和hexo分支。默认clone和展示的分支是hexo分支。hexo分支就是保存我们本地文件的分支。而master分支是hexo进行generate和deploy的分支，当我们写完文章准备同步到远程的时候。我们需要同时更新这两个分支。
+
+1. 更新hexo分支
+
+- git add .
+- git commit
+- git push
+
+2. 更新master分支
+
+- git deploy -g
+
+master分支可以看作是存放public内容的分支，public目录是通过命令`hexo g`生成的。该命令会将所有文章和主题等文件和资源进行处理然后拷贝到public中。
+
+`hexo deploy`Hexo 会将 public 目录中的文件和目录推送至 `_config.yml` 中指定的远端仓库和分支中，并且完全覆盖该分支下的已有内容。
