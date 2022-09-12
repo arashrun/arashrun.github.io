@@ -1,7 +1,10 @@
 ---
 title: vim
 date: 2021-03-23 07:21:23
-tags: tools
+categories:
+- 工具
+tags:
+- vim
 ---
 
 
@@ -180,6 +183,32 @@ autocmd FileType markdown :iabbrev <buffer> h3 ###
 autocmd FileType markdown :iabbrev <buffer> h4 ####
 autocmd FileType markdown :iabbrev <buffer> h5 #####
 
+"""""""""""""""""""""""""""""""""
+""""""""""netrw"""""""""""
+"""""""""""""""""""""""""""""""""
+
+function OpenNetrwInCurrent()
+exe "set acd"
+exe "25Lexplore "..expand("%:p:h")
+endfunction
+
+nnoremap ,t :call OpenNetrwInCurrent()<cr>
+
+"设置是否显示横幅
+let g:netrw_banner = 1
+ 
+"在之前的窗口编辑文件，类似按下大写 P
+let g:netrw_browse_split = 4
+"水平分割时，文件浏览器始终显示在左边
+let g:netrw_altv = 1
+ 
+"设置文件浏览器窗口宽度为 25%
+let g:netrw_winsize = 75
+
+"""""""""""""""""""""""""""""""""
+"===========vim-table-mode=======
+"""""""""""""""""""""""""""""""""
+let g:table_mode_corner = '|'
 
 ```
 
@@ -594,6 +623,9 @@ https://www.danielfranklin.id.au/vim/vim-8-package-management/
 
 ### 常用插件
 
+1. [vim-table-mode](http://howiefh.github.io/2014/04/29/vim-table-mode/)
+快速插入表格并自动格式化
+
 
 
 
@@ -652,3 +684,7 @@ https://www.danielfranklin.id.au/vim/vim-8-package-management/
 ## TODOLIST
 1. v:在当前文件查找选择的可视化部分
 2. i:如何创建代码片段
+
+- markdown
+1. 插入图片，链接，列表类似header的方式
+
