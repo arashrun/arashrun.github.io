@@ -115,6 +115,14 @@ let line = getline('.') 			调用函数作为表达式
 ## windows-gui版本基本配置
 
 ```
+"""""""""""""""""""""""""""""""""
+""""""""""通用配置相关"""""""""""
+"""""""""""""""""""""""""""""""""
+"chains commands ==== | or <bar>
+"alt ==== <M-key> or <A-key>
+"shift ==== 
+"source $VIMRUNTIME/menu.vim
+"source $VIMRUNTIME/delmenu.vim
 set rnu
 syntax on
 set guifont=source_code_pro:h10
@@ -140,7 +148,9 @@ nnoremap <c-k> <esc>:w<cr>
 nnoremap <esc> :noh<cr>
 map M :%s/^M//g<cr>
 vnoremap // y/<c-r>"<cr>
-
+"""""""""""""""""""""""""""""""""
+""""""""""tricks"""""""""""
+"""""""""""""""""""""""""""""""""
 " switch windows
 nnoremap <tab> :bn<cr>
 nnoremap <space> :bp<cr>
@@ -175,21 +185,48 @@ nnoremap ,s :botright terminal++rows=15<cr>
 """""""""""""""""""""""""""""""""
 """"""""""markdown"""""""""
 """""""""""""""""""""""""""""""""
-autocmd FileType markdown :iabbrev <buffer> bd ****<esc>hi
-autocmd FileType markdown :iabbrev <buffer> uu <u style="color:red"></u><esc>3hi
 autocmd FileType markdown :iabbrev <buffer> h1 #
 autocmd FileType markdown :iabbrev <buffer> h2 ##
 autocmd FileType markdown :iabbrev <buffer> h3 ###
 autocmd FileType markdown :iabbrev <buffer> h4 ####
 autocmd FileType markdown :iabbrev <buffer> h5 #####
+" 快速添加锚点
+autocmd Filetype markdown inoremap <buffer> <silent> ,, <++>
+" 寻找下一个锚点
+autocmd Filetype markdown inoremap <buffer> <silent> ,f <Esc>/<++><CR>:nohlsearch<CR>c4l
+" 寻找下一个锚点并删除锚点前的空格
+autocmd Filetype markdown inoremap <buffer> <silent> ,s <Esc>/ <++><CR>:nohlsearch<CR>c5l
+" 分割线
+autocmd Filetype markdown inoremap <buffer> <silent> ,- ---<Enter><Enter>
+" 加粗
+autocmd Filetype markdown inoremap <buffer> <silent> ,b **** <++><Esc>F*hi
+" 删除线
+autocmd Filetype markdown inoremap <buffer> <silent> ,x ~~~~ <++><Esc>F~hi
+" 斜体
+autocmd Filetype markdown inoremap <buffer> <silent> ,p ** <++><Esc>F*i
+" 行内代码
+autocmd Filetype markdown inoremap <buffer> <silent> ,q `` <++><Esc>F`i
+" 代码块
+autocmd Filetype markdown inoremap <buffer> <silent> ,c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
+" todo
+autocmd Filetype markdown inoremap <buffer> <silent> ,g - [ ] <Enter><++><ESC>kA
+" 下划线
+autocmd Filetype markdown inoremap <buffer> <silent> ,u <u></u><++><Esc>F/hi
+" 图片
+autocmd Filetype markdown inoremap <buffer> <silent> ,p ![](<++>) <++><Esc>F[a
+" 链接
+autocmd Filetype markdown inoremap <buffer> <silent> ,a [](<++>) <++><Esc>F[a
+" 插入当前时间
+autocmd Filetype markdown inoremap <buffer> <silent> ,d <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+
 
 """""""""""""""""""""""""""""""""
 """"""""""netrw"""""""""""
 """""""""""""""""""""""""""""""""
 
 function OpenNetrwInCurrent()
-exe "set acd"
-exe "25Lexplore "..expand("%:p:h")
+	exe "set acd"
+	exe "25Lexplore "..expand("%:p:h")
 endfunction
 
 nnoremap ,t :call OpenNetrwInCurrent()<cr>
@@ -209,7 +246,6 @@ let g:netrw_winsize = 75
 "===========vim-table-mode=======
 """""""""""""""""""""""""""""""""
 let g:table_mode_corner = '|'
-
 ```
 
 
@@ -621,10 +657,12 @@ set mouse=a
 
 https://www.danielfranklin.id.au/vim/vim-8-package-management/
 
-### 常用插件
+### 写markdown插件
 
 1. [vim-table-mode](http://howiefh.github.io/2014/04/29/vim-table-mode/)
 快速插入表格并自动格式化
+2. [bullets](https://github.com/dkarter/bullets.vim)
+3. [设置锚点](https://orxing.top/post/415fb651.html#%E8%AE%BE%E7%BD%AE%E9%94%9A%E7%82%B9%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BF%AB%E6%8D%B7%E9%94%AE)
 
 
 
