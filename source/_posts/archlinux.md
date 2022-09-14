@@ -1,3 +1,14 @@
+---
+title: archlinux
+date: 2022-04-07 22:32:19
+categories:
+- linux
+tags: 
+- linux
+---
+
+
+
 ## 安装流程
 
 ```bash
