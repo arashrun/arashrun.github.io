@@ -41,3 +41,4 @@ Email📫: arashrun@qq.com
 ## Blog TODOLIST
 
 1. 对文章的Format-matter逐步规范
+2. 对政治，法律，企业几个方面进行学习和了解
