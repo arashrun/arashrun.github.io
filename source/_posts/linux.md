@@ -1,13 +1,29 @@
------------------
+---
 title: Linux知识大全
-date: 2021/07/12 12:23:33
+date: 2021-07-12 12:23:33
+categories:
+- linux
+tags:
+- linux
+---
 
-----------------------
 
 > 记录范围：
 >   1.关于Linux方面的通用概念
 >   2.linux上好用的必备软件
 
+
+### bash终端代理设置
+
+1. windows下的ssr的选项设置下的本地代理勾选中
+2. [Linux bash终端设置代理（proxy）访问](http://aiezu.com/article/linux_bash_set_proxy.html#:~:text=linux%E8%A6%81%E5%9C%A8s,%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8D%B3%E5%8F%AF%E3%80%82)
+```bash
+#.bashrc
+export http_proxy=10.0.0.52:1080
+export https_proxy=10.0.0.52:1080
+export no_proxy="*.aiezu.com,10.*.*.*,192.168.*.*,*.local,localhost,127.0.0.1"
+
+```
 
 ### 终端翻译软件(shell translation tools)
 sudo apt-get install ruby

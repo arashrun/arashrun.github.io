@@ -110,6 +110,22 @@ let line = getline('.') 			调用函数作为表达式
 5 删除函数
     delfunction xxx
 
+## linux版本基本配置
+```bash
+set nusyntax on
+set encoding=utf-8
+set fileformats=unix, dos
+set ts=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+
+
+
+```
+
+<++>
 
 
 ## windows-gui版本基本配置

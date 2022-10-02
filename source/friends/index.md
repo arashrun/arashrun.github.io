@@ -15,8 +15,8 @@ tags:
 |                                                         | [法律法规数据库](https://flk.npc.gov.cn/)                          |                                                                          |
 
 
-### 娱乐
+### 资源网站
 
-| [小超资源网](https://www.xc6b.com/xjj.html) |  |
+| [小超资源网](https://www.xc6b.com/xjj.html) |[世界卫星地图网](https://bajiu.cn/ditu/?id=1)  |
 |---------------------------------------------|--|
 |                                             |  |
