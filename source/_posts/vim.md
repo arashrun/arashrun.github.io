@@ -9,38 +9,6 @@ tags:
 
 
 
-> 记录原生vim中的一些概念，不涉及外部插件等用法和配置
-> 基本都是从vim的官方帮助文档中总结出来的有用的特性和概念(https://vimhelp.org/)
-
-
-
-## 安装
-
-1.  下载最新vim源码包。
-2. ./configure --with-features=huge --enable-python3interp --enable-multibyte
-3.  执行make && make install
-
-
-
-<br>
-
-## 基本概念：
-
-<b>1. 文件，缓冲区，窗口，标签页</b>
-
-文件：磁盘中的数据块
-
-缓冲区：加载到内存中的文件
-
-窗口：用于承载缓存区的容器，通过sp，vs等操作可以创建新窗口(对应于tmux中的panel的概念)
-
-标签页：承载多个窗口的容器，通过tabnew创建
-
-
-
-
-<br>
-
 ## vim脚本语法
 
 ### 变量类型：
