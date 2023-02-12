@@ -52,3 +52,10 @@ def generate_ints(N):
 ```python
 open('bilibili-top100-{}.csv'.format(self.today), 'w', encoding='utf-8')
 ```
+
+3. 当出现需要代理才能连接上的网站时，需要设置代理。有两种方式设置代理，一种是直接在构造request请求时添加meta参数。第二种是自定义download middleware。
+[Scrapy 设置代理终极宝典 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/79067223)
+	若出现如下错误，就代表需要通过代理才能访问该网站
+```shell
+[<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', '', 'unexpected eof while reading')]>]
+```

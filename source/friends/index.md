@@ -17,6 +17,6 @@ tags:
 
 ### 资源网站
 
-| [小超资源网](https://www.xc6b.com/xjj.html) |[世界卫星地图网](https://bajiu.cn/ditu/?id=1)  |
+| [小超资源网](https://www.xc6b.com) |[世界卫星地图网](https://bajiu.cn/ditu/?id=1)  |
 |---------------------------------------------|--|
 |                                             |  |
