@@ -55,7 +55,8 @@
 
   由于分页方法（固定大小的页面的缺点：不符合程序中指令和数据的排布，导致）的缺陷，提出一种分段内存分配的算法，将一个程序分割为不同段：代码段，数据段，堆段，栈段，bss段，作为一个查询单位。而将内存分割为与程序相同的段。这样只要通过段表查询到段基址，就能保证能够每一个段在内存中是连续分配的。
 
-  <img src="pics/段表.png" alt="image-20200518181046844" style="zoom:67%;" />
+  
+![](../images/段表.png)
 
 - 段页式
 
@@ -91,37 +92,34 @@ BSD:
 
 **数据在硬盘上的存储和组织方式**：
 
-
-
-<img src="pics/连续块存储.png" alt="连续存储方式" style="zoom:67%;" />
-
+![](../images/连续块存储.png)
 
 
 **连续块存储：**这是一种最简单的实现方式，管理便捷。但最大的问题是空洞问题，即使物理磁盘还有空余容量，也不能再写入文件了。常见于CD-ROM等预先明确数据大小的存储器
 
 
-
-<img src="pics/链表式存储.png" alt="链式存储" style="zoom: 67%;" />
+![](../images/链表式存储.png)
 
 **链表式存储：**好处是不存在存储空洞且只需要记住第一个block的位置即可，缺点很明显：就是会造成大量的随机IO，而且读取完一个block才知道下一个block的位置，效率过低。为了改进这种效率问题，FAT诞生
 
 
+![](../images/fat文件系统.png)
 
-<img src="pics/fat文件系统.png" alt="fat文件组织方式" style="zoom:67%;" />
 
 **FAT：**链表式存储中，next指针是存储在每个block中的，而FAT把这些指针统一写在一个array中，这样获取一个文件的所有block位置就变得简单很多，效率也更高。但FAT也有一定的限制，比如FAT16只有65536个位置，FAT32虽然有更多的指针位，但是FAT表本身也占用了更大的内存。且FAT在读取某一文件中部时效率低，因为需要链表遍历。此外，FAT格式的文件系统不利于扩展文件的metadata。
 
 
+![](../images/linux的inode原理.png)
 
-<img src="pics/linux的inode原理.png" alt="inode" style="zoom:67%;" />
 
 **I-Node：**Linux 文件系统的思想是把所有与数据本身无关的data（如类型，大小，owner，创建修改时间等）都存进一个特殊的block中（inode），然后通过这个block可以找到与数据相关的所有block
 
-<img src="pics/inode实现原理.png" alt="inode细节" style="zoom:67%;" />
+
+![](../images/inode实现原理.png)
 
 可以看到，每个inode都有12个直接block指针，假设每个block是4k，那么有48k的地址可以通过一次寻址直接找到，这对小文件的寻址速度有非常大的帮助，而文件系统中，绝大多数文件都是小文件，这样也就直接提高了文件系统的性能。如果有大文件，可以通过二次甚至三次间接寻址的方式来获取block地址，目的是能节省inode占用的空间，把更多的空间留给数据。
 
-<img src="pics/inode寻址过程.png" alt="从inode到数据块" style="zoom:67%;" />
+![](../images/inode寻址过程.png)
 
 这里有一个比较清晰地例子表明，文件系统是如何将path转变为真正的block地址的。简而言之，inode树组成了目录树，通过树形查找获取磁盘信息。
 
@@ -306,7 +304,9 @@ ftruncate
 
 > 套接字是一种进程间通信的形式，如同管道，fifo，信号量，共享存储等。套接字可以在不同通信范围（domain）内的进程之间通信，而套接字就是一个传输中介。
 
-<img src="pics/socket结构.png" alt="socket结构" style="zoom:67%;" />
+
+![](../images/socket结构.png)
+
 
 创建于销毁
 
