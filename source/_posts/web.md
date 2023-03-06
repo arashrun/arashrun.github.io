@@ -2,9 +2,9 @@
 title: web前端
 date: 2022-02-12
 categories:
-- 技术
+- web
 tags:
-- web前端
+- 前端
 - node.js
 - php
 ---

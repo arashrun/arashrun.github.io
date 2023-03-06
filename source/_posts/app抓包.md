@@ -2,10 +2,9 @@
 title: app抓包
 date: 2022-09-17 17:46:40
 categories:
-- 技术
+- 爬虫
 tags:
 - fiddler
-- 爬虫
 - 抓包
 ---
 
