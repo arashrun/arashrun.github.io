@@ -14,7 +14,7 @@ tags:
 
 
 
-![](../images/lambuda组成.png)
+![](/images/lambuda组成.png)
 
 >   [lambda 表达式的概念和基本用法](http://c.biancheng.net/view/3741.html)
 

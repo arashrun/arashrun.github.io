@@ -2,8 +2,10 @@
 title: smart-pointer
 date: 2023-03-05 23:51:06
 categories:
+- c++
 tags:
 - c++
+- 内存管理
 ---
 
 

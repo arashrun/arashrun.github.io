@@ -1,3 +1,14 @@
+---
+title: gdb
+date: 2022-04-07 22:31:08
+categories:
+- c++
+- 工具
+tags:
+- gdb
+- 调试
+---
+
 
 # gdb 调试
 

@@ -2,7 +2,10 @@
 title: vim-manual
 date: 2022-10-19 15:17:32
 categories:
+- 工具
 tags:
+- 学习术语
+- vim
 ---
 
 

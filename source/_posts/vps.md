@@ -1,19 +1,19 @@
 ---
 title: vps
 date: 2021-03-12 10-21-20
+categories:
+- 工具
 tags:
 - vps
 - 加密
 ---
 
-<!-- toc -->
-
-<h2>vps 管理</h2>
+## vps 管理
 
 <br>
-<h3>安全管理</h3>
-<br>
-<b>设置使用密钥登录</b>
+### 安全管理
+
+**设置使用密钥登录**
 
 1. 在客户端使用ssh-keygen的非对称加密算法，生成公私钥(id_rsa--私钥,id_rsa.pub--公钥）
 2. 将公钥(id_rsa.pub)添加到vps的.ssh/authorized_keys中(私钥很重要，是密钥登录的核心保存好)

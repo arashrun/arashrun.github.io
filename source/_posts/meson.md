@@ -1,3 +1,12 @@
+---
+title: meson
+date: 2022-04-07 22:31:08
+categories:
+- 工具
+tags:
+- 语法
+---
+
 ## yml文件
 
 > yml文件和json文件类似，是一种配置文件。但由于其语法更加简洁明了，因此也常出没在github中（.travis.yml）

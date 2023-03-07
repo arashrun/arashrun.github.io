@@ -12,6 +12,10 @@ tags:
 一些在实际的开发过程中碰到的问题，解决和思考过程是否也写进去？
 这些问题归根结底来说是学习方法的凌乱，对于学习这件事没有建立起自己的一套方法论。技术的学习和科学理论知识的学习在方式上有些区别。摸索出一套自己的学习方法是很有必要的一项工作
 
+我希望通过笔记达到如下这些目的：
+1. 建立一个category的知识体系
+2. 记录问题的解决过程，方便下次不重复花时间折腾
+
 
 ## 关于我
 
@@ -34,5 +38,5 @@ tags:
 
 ## 联系方式
 
-Email📫: arashrun@qq.com
-Gitee: [gitee Home](https://gitee.com/arashrun)
+- Email📫: arashrun@qq.com
+- Gitee: [gitee Home](https://gitee.com/arashrun)

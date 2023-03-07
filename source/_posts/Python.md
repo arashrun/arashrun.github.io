@@ -4,7 +4,7 @@ date: 2021-06-18 12:23:19
 categories:
 - python
 tags:
-- 术语表
+- 学习术语
 ---
 
 - module(模块)

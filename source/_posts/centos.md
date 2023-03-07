@@ -1,7 +1,10 @@
 ---
 title: centos7
 date: 2021-07-21 18:01:12
+categories:
+- linux
 tags:
+- centos
 ---
 
 
@@ -10,7 +13,7 @@ tags:
 
 ### VMware中的3种网络模式
 
-<img src="/pics/net模式.png" alt= "net三种模式"/>
+![](/images/net模式.png)
 
 1. 桥接模式：相当于虚拟机直接连接路由器
 2. 仅主机模式：只能所在主机单向访问虚拟机，无法连接外网

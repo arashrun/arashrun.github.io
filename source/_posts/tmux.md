@@ -1,6 +1,9 @@
 ---
 title: tmux配置与使用
 date: 2021-07-30 10:47:52 
+categories:
+- 工具
+tags:
 ---
 
 ## concept

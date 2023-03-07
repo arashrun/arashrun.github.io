@@ -1,4 +1,12 @@
-
+---
+title: shell
+date: 2022-04-07 22:31:08
+categories:
+- 工具
+tags:
+- 语法
+- linux
+---
 
 ## 语法
 

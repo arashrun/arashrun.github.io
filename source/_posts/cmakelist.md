@@ -1,3 +1,17 @@
+
+---
+title: cmakelist
+date: 2021-07-21 18:01:12
+categories:
+- 工具
+tags:
+- cmake
+---
+
+
+
+
+
 # cmakelists.txt
 
 ## 语法

@@ -1,7 +1,11 @@
 ---
 title: 机器学习(ML)与tensorflow
 date: 2021-08-01 14:38:51
+categories:
+- AI
 tags:
+- 机器学习
+- tensorflow
 ---
 
 

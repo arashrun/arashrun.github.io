@@ -1,7 +1,10 @@
 ---
 title: qt重点内容
 date: 2021-07-28 09:46:50
+categories:
+- qt
 tags:
+- 学习术语
 ---
 
 

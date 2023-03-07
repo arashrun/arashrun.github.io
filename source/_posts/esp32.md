@@ -1,7 +1,11 @@
 ---
 title: Esp32
 date: 2022-04-07 22:31:08
+categories:
+- cs基础
 tags:
+- 硬件
+- esp32
 ---
 
 

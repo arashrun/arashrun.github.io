@@ -1,3 +1,12 @@
+---
+title: opengrok搭建代码阅读平台
+date: 2022-04-07 22:31:08
+categories:
+- 工具
+tags:
+---
+
+
 
 ## install
 1. install java11
@@ -27,7 +36,9 @@ wget https://github.com/OpenGrok/OpenGrok/releases/$xxx
 1. mkdir $opengrok/{src,data,dist,etc,log}
 2. tar -C $opengrok/dist/ --strip-components=1 -xzf opengrok.tar.gz
 3. cp $opengrok/dist/doc/logging.properties $opengrok/etc
-```logging.properties
+```
+# logging.properties
+
 handlers= java.util.logging.FileHandler, java.util.logging.ConsoleHandler
 
 java.util.logging.FileHandler.pattern = $opengrok/log/opengrok%g.%u.log
@@ -47,12 +58,16 @@ org.opengrok.level = FINE
 5. $tomcat/bin/startup.sh
 6. cd $tomcat/webapps/source/
 7. vim $tomcat/webapps/source/WEB-INF/web.xml
-```web.xml
-        <param-name>CONFIGURATION</param-name>
-		<param-value>$opengrok/etc/configuration.xml</param-value>
+```
+# web.xml
+
+<param-name>CONFIGURATION</param-name>
+<param-value>$opengrok/etc/configuration.xml</param-value>
 ```
 8. vim deploy.sh
-```deploy.sh
+```
+# deploy.sh
+
 java \
     -Djava.util.logging.config.file=/root/softs/opengrok/etc/logging.properties \
 	-jar /root/softs/opengrok/dist/lib/opengrok.jar \

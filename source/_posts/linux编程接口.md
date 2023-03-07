@@ -1,5 +1,5 @@
 ---
-title: linux_advance
+title: linux编程
 date: 2022-11-23 09:17:58
 categories:
 - linux

@@ -119,6 +119,11 @@ markdown_it_plus:
     typographer:
     quotes: “”‘’
     pre_class: highlight
+    plugins:
+      - plugin:
+          name: markdown-it-checkbox
+          enable: true
+
 
 tag_generator:
     per_page: 10

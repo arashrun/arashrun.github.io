@@ -1,3 +1,12 @@
+---
+title: powershell
+date: 2022-04-07 22:31:08
+categories:
+- 工具
+tags:
+- 语法
+---
+
 
 ## 是什么
 类似与linux的bash
