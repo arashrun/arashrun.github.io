@@ -59,18 +59,22 @@ hexo d
 
 2. [主题目录结构](https://hexo.io/zh-cn/docs/themes)
 
-3. 新添加layout
+3. 添加新模板
 
-	layout是页面布局，不同功能的页面需要不同的布局以方便内容的显示。layout目录下的各种ejs就代表不同的布局，如：index.ejs是首页布局。tags.ejs是tag页面布局等。 
-	
-	
+	主题模板(区别于hexo根目录下的scaffolds目录中的模板，scaffolds目录中的模板用于创建不同布局文件时的format-header自动填充)，指的是页面的显示模式，不同功能的页面需要不同的模板以适应不同内容的显示。theme下的layout目录中的各种ejs就代表不同的模板，如：index.ejs是首页模板，用于渲染首页；tags.ejs是tag页面模板，用于渲染tags页面等。这些不同的模板当然可以相互之间毫无关联，均开始于 `html` 标签，但由于复用的缘故，模板默认使用一个共同的布局——layout.ejs。该布局文件layout.ejs中需要提供 `<%- body %>` ，其他ejs模板就可以公用layout中的公共部分了
+
+
 ```bash
-1. 新建layout页面
+1. 新建一个新模板
 	hexo new page "about"
-2. 修改layout头部信息,添加layout头部信息
+2. 修改模板头部信息,添加layout头部信息
 	cd _post/about
 	vim index.md
 	layout: about
+
+3. 在theme/xxx/layout目录下创建模板ejs文件 `about.ejs`
+	cd layout
+	vim about.ejs
 ```
 
 4. ejs简单说明
