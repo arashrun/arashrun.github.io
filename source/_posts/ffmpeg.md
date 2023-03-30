@@ -39,4 +39,25 @@ ffmpeg无法推h264流
 1. 分辨率
 2. 视频码率
 3. 帧率
-4. 
+
+
+
+## ffmpeg库使用
+
+### libavcodec**
+
+**Decode流程**
+将压缩的av流，通过avcodec解压缩为原始数据
+
+```mermaid
+sequenceDiagram
+%%decode prograss
+
+%% AVCodecContext ->> AVCodecContext: 1. setup
+AVPACKET ->> avcodec: 2. avcodec_send_packet
+loop AVERROR(EAGAIN) or error
+avcodec ->> AVFRAME: 3. avcodec_receive_frame
+end
+```
+
+
