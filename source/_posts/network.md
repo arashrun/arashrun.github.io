@@ -30,3 +30,16 @@
 无连接：
 
 ## tcp三次握手，四次挥手
+
+
+
+
+### 获取IPV6地址
+
+1. 进入路由器，找到ipv6的支持页面，配置路由器的DNS地址为ipv6的公共DNS服务器 `240c::6666` 然后设置Lan模式为桥模式，这样路由器就只相当于一个桥的作用，因此会给Lan（局域网）范围内的主机分配ipv6地址
+2. 要保证 `ipconfig` 出来的地址出现 `temporary ipv6 address` 才算分配到了ipv6地址
+![](/images/ipv6.png)
+3. 通过网站 [IPv6 test - IPv6/4 connectivity and speed test (ipv6-test.com)](https://ipv6-test.com/) 进行ipv6支持性测试
+
+
+

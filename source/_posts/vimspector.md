@@ -53,6 +53,21 @@ tags:
                 "MIMode": "gdb"
            }   
         } 
+		"python_Launch": {
+			"adapter": "debugpy",
+			"configuration": {
+				"name": "python3: Launch",
+				"type": "python",
+				"request": "launch",
+				"cwd": "${workspaceRoot}",
+				"stopOnEntry": true,
+				"console": "externalTerminal",
+				"debugOptions": [],
+				"program": "${script:${file\\}}"
+			}
+		}
+
+
    }   
 }
 

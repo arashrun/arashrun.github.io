@@ -26,3 +26,7 @@ terminal的配色方案: `one-half-dark`
 ![](/images/torte.png)
 
 
+### shell+vim
+
+- posh-git
+- oh-my-posh
