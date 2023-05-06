@@ -3,8 +3,9 @@ title: electron
 date: 2023-04-19 10:54:25
 categories:
 - web
-- windows
 tags:
+- electron
+- 桌面应用
 ---
 
 
