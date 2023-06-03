@@ -46,3 +46,15 @@ firewall-cmd --list-all
 ```
 6. 重启sshd服务
 service sshd restart
+
+
+
+### vps测评和推荐网站
+
+
+#### 国内站点
+
+[主机之家测评- 专注分享便宜vps - 国外vps - 国外服务器 - 国外主机 - 测评及优惠码 (liuzhanwu.cn)](https://www.liuzhanwu.cn/)
+
+
+

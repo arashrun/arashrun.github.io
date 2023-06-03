@@ -7,6 +7,11 @@ tags:
 - 学习术语
 ---
 
+# qt一天入门
+
+[《Qt6 C++开发指南》2023_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1km4y1k7CW/?spm_id_from=333.337.search-card.all.click&vd_source=0a2bd2d5e3c437b3fd7699cd52ebe78d)
+
+
 
 ## qt项目的文件类型
 

@@ -6,160 +6,104 @@ categories:
 tags:
 - 前端
 - node.js
-- php
 ---
 
-# php
 
-#### 四种php页面间传递数据方法
-1. 使用浏览器的cookie
-```php
-<?php
-       setcookie('mycookie','自灵');
-?>
-<?php
-     $wuziling = $_COOKIE['mycookie'];
-     echo $wuziling;
-?>
-```
-
-2. 使用服务器session
-```php
-<?php
-    session_start();
-    $_SESSION["temp"]=array('123','456','789');
-?>
-<?php
-     session_start();
-     for($i=0;$i<3;$i++)
-     {
-             echo $_SESSION['temp'][$i].'<br />';
-     }
-?>
-```
-
-3. 使用表单来传递
-```html
-    <form action="page02.php" method="post">
-         <input type="text" name="wuziling" />
-         <input type="submit" name="submit" value="提交" />
-    </form>
-```
-```php
-    <?php
-        //使用post变量来获取
-        $wu = $_POST['wuziling'];
-        echo $wu;
-    ?>
-```
-
-4. 使用超链接
-```php
-    <?php
-    $var = 'I love you !';
-    ?>
-    <a href="<?php echo "page02.php?new=".$var ?>">get</a>
-
-    <?php
-         echo   $_GET['new'];
-    ?>
-```
-
-#### js使用php变量
-
-```js
-    var arr="<?php echo $column['column_type'];?>";
-```
-
-#### array常用操作
-
-```php
-$arr = array(1, 2, 3);
-count($arr)//get arr size
-var_dump($arr)//print arr context
-
-```
-
-# js
-
-```html
-<head>
-//第一种引用方式
-<script type="text/javascript">
-	var word = "Hello, itbsl";
-	alert(word);
-</script>
-//第二种方式
-<script type="text/javascript" src="./js/example.js"></script>
-</head>
+## 基础技术
 
 
-<body>
-//第三种方式
-<script type="text/javascript">
-	var word = "Hello, itbsl";
-	alert(word);
-</script>
-</body>
-```
+### html
+
+### css
+
+[sass]
+[postcss]
+[less]
+
+### js
+
+视频资料：
+[js速通]
+[es6 new feature 速通]
+[ts速通](https://www.bilibili.com/video/BV1CR4y1k7Az?t=499.3)
 
 
-**常用cdn**
-```html
-<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
-```
+文档资料：
+- [ECMA-262 - Ecma International (ecma-international.org)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+- [JavaScript 教程 (w3school.com.cn)](https://www.w3school.com.cn/js/index.asp) 十分全面
 
-
-# jquery
-
-```js
-1. jquery创建dom节点
-
-
-```
+### nodejs
 
 
 
-# css
+## 框架
 
-```html
-//方式一
-<head><link rel="stylesheet" type="text/css" href="mystyle.css"></head>
+> 框架是建立在基础技术之上的，应用于开发某特定领域，而构建的一套技术
 
-//方式二
-<head>
-<style type="text/css">
-body {background-color: red}
-p {margin-left: 20px}
-</style>
-</head>
+#### react
 
-//方式三
-<p style="color: red; margin-left: 20px">
-This is a paragraph
-</p>
-```
+#### vue
 
-# 术语表
+#### Angular
 
-## html terms
+#### fluent
 
-- 标题
-- 段落
-- 强调
-- 加粗
-- 列表
-- 超链接
-- 引用
-- 代码块
-- 下标
-- 上标
-- 联系信息
+#### uni-app
+
+#### electron
+
+## 工具
+
+#### webpack
+
+#### esbuild
+
+#### vite
 
 
 
-# TODOLIST
+
+
+## 应用方向
+
+1. 网站
+
+ #react 
+
+2. 桌面应用
+
+
+
+开源实战做贡献：
+[arashrun/fluent-reader: Modern desktop RSS reader built with Electron, React, and Fluent UI (github.com)](https://github.com/arashrun/fluent-reader)
+
+
+
+3. 移动应用
+
+
+
+4. 小程序
+
+
+
+
+
+
+
+## TODOLIST
 
 1. [js操作节点](https://juejin.cn/post/7044817289270525965)
 2. [jquery设置内容和属性](https://www.w3school.com.cn/jquery/jquery_dom_set.asp)
 3. [js模糊查询,不区分大小写](https://blog.csdn.net/zhengyinling/article/details/111587670)
+
+[前端开发的主流技术_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1jj411c7sb/?spm_id_from=333.337.search-card.all.click&vd_source=0a2bd2d5e3c437b3fd7699cd52ebe78d)
+[为初学者准备的：DOM 速成_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Nt411q73a/?spm_id_from=333.337.search-card.all.click&vd_source=0a2bd2d5e3c437b3fd7699cd52ebe78d)
+
+
+
+
+### ETC
+
+![](/images/jishupang.png)
