@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		文章搜索 | 
+	 
+	Shivers
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "arashrun.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+
+	</script>
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	<!-- 夜间模式 -->
+	
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/ejs.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+		
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Shivers</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+
+
+		<li class="menu-item">
+			<a href="/friends" class="menu-item-link">
+				友链
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="/search" class="menu-item-link">
+				<i class="fa fa-search fa-1x"></i>
+			</a>
+		</li>
+		
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+<!-- target = _blank 意思是开一个新tab中打开 -->
+			<a href="https://github.com/arashrun" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+
+	
+
+
+
+<script>
+
+
+
+</script>
+
+	
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+		
+
+<h1 align="center">文章搜索</h1>
+
+<div id="article-content">
+
+<div id="search" align="center">
+   <input type="text" class="search-engine" id="search-engine" placeholder="回车搜索文章" />
+</div>
+
+<div id="search-result"></div>
+<ul id="result-list">
+
+</ul>
+</div>
+
+
+<h1 align="center" >TODO</h1>
+<br>
+<br>
+
+<p><strong>重要议题：</strong></p>
+<ul>
+<li>精通一个工具是否可能，并且何以可能，例如cmake，c++语言？</li>
+</ul>
+<br>
+<p><strong><a href="/2023/03/20/%E7%AB%99%E7%82%B9%E4%BC%98%E5%8C%96/">站点优化:</a></strong></p>
+<ul>
+<li><s>文章目录功能</s></li>
+<li><s>about页面下方的轮播图</s>(已使用背景图替换)</li>
+<li><s>mermaid语法支持</s></li>
+</ul>
+<br>
+<p>vim:</p>
+<ul>
+<li>如何编写插件</li>
+<li>coc体系</li>
+</ul>
+<br>
+<p>linux:</p>
+<ul>
+<li>net模块</li>
+<li>启动代码分析
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yjf512/p/5996308.html">https://www.cnblogs.com/yjf512/p/5996308.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://home.ustc.edu.cn/~boj/courses/linux_kernel/1_boot.html">http://home.ustc.edu.cn/~boj/courses/linux_kernel/1_boot.html</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<script>
+var titlesList = [];
+let obj = {};
+
+
+
+   obj['name'] = "C++";
+   obj['url'] = "2021/06/18/C++/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "C++中IO流体系";
+   obj['url'] = "2023/03/20/C++中IO流体系/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "Cpp数据类型转换";
+   obj['url'] = "2023/03/08/Cpp数据类型转换/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "Hexo指南";
+   obj['url'] = "2022/04/07/Hexo指南/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "ProtoBuf";
+   obj['url'] = "2023/09/17/ProtoBuf/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "Python";
+   obj['url'] = "2021/06/18/Python/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "android";
+   obj['url'] = "2022/10/16/android/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "RPC";
+   obj['url'] = "2023/09/17/RPC/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "Windows开发";
+   obj['url'] = "2023/03/15/Windows开发/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "app抓包";
+   obj['url'] = "2022/09/17/app抓包/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "archlinux";
+   obj['url'] = "2022/04/07/archlinux/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "centos";
+   obj['url'] = "2021/07/21/centos/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "cmake";
+   obj['url'] = "2023/03/13/cmake/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "asio";
+   obj['url'] = "2023/04/17/asio/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "cmakelist";
+   obj['url'] = "2021/07/21/cmakelist/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "computer-图形学";
+   obj['url'] = "2023/04/01/computer-图形学/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "data_structure";
+   obj['url'] = "2021/06/19/data_structure/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "cocos2d";
+   obj['url'] = "2023/03/14/cocos2d/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "database";
+   obj['url'] = "2022/11/08/database/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "docker";
+   obj['url'] = "2023/01/03/docker/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "electron";
+   obj['url'] = "2023/04/19/electron/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "esp32";
+   obj['url'] = "2022/04/07/esp32/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "ffmpeg";
+   obj['url'] = "2022/04/07/ffmpeg/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "firewall";
+   obj['url'] = "2022/10/26/firewall/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "git-skill";
+   obj['url'] = "2022/04/07/git-skill/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "gdb";
+   obj['url'] = "2022/04/07/gdb/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "hexo插件";
+   obj['url'] = "2023/03/07/hexo插件/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "lambda";
+   obj['url'] = "2023/03/06/lambda/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "keyword-cpp";
+   obj['url'] = "2023/03/06/keyword-cpp/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "libcurl";
+   obj['url'] = "2023/09/17/libcurl/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "libevent2";
+   obj['url'] = "2023/09/17/libevent2/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "linux编程接口";
+   obj['url'] = "2022/11/23/linux编程接口/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "linux";
+   obj['url'] = "2021/07/12/linux/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "makefile";
+   obj['url'] = "2022/04/07/makefile/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "ml";
+   obj['url'] = "2021/08/01/ml/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "meson";
+   obj['url'] = "2022/04/07/meson/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "mysql";
+   obj['url'] = "2023/03/06/mysql/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "network";
+   obj['url'] = "2023/09/17/network/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "opengrok";
+   obj['url'] = "2022/04/07/opengrok/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "php";
+   obj['url'] = "2023/05/11/php/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "os";
+   obj['url'] = "2022/04/07/os/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "powershell";
+   obj['url'] = "2022/04/07/powershell/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "python-simple-proxy";
+   obj['url'] = "2023/04/06/python-simple-proxy/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "python-network";
+   obj['url'] = "2023/04/01/python-network/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "qt-network";
+   obj['url'] = "2022/10/25/qt-network/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "python_import_system";
+   obj['url'] = "2023/04/03/python_import_system/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "qt多线程";
+   obj['url'] = "2023/05/23/qt多线程/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "qt";
+   obj['url'] = "2021/07/28/qt/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "qt网络";
+   obj['url'] = "2023/05/23/qt网络/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "react";
+   obj['url'] = "2023/05/11/react/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "shell";
+   obj['url'] = "2022/04/07/shell/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "smart-pointer";
+   obj['url'] = "2023/03/05/smart-pointer/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "sdl2";
+   obj['url'] = "2023/03/15/sdl2/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "scrapy";
+   obj['url'] = "2023/03/06/scrapy/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "thread";
+   obj['url'] = "2022/04/07/thread/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "tmux";
+   obj['url'] = "2021/07/30/tmux/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "vim";
+   obj['url'] = "2021/03/23/vim/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "vimspector";
+   obj['url'] = "2023/03/25/vimspector/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "tree";
+   obj['url'] = "2023/04/25/tree/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "vim-manual";
+   obj['url'] = "2022/10/19/vim-manual/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "vim默认主题";
+   obj['url'] = "2023/03/25/vim默认主题/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "vps";
+   obj['url'] = "2023/09/17/vps/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "公众号文章爬取";
+   obj['url'] = "2023/03/06/公众号文章爬取/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "web";
+   obj['url'] = "2022/02/12/web/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "加密和安全";
+   obj['url'] = "2022/09/15/加密和安全/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "哈希表";
+   obj['url'] = "2023/05/29/哈希表/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "多态";
+   obj['url'] = "2023/03/06/多态/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "字体";
+   obj['url'] = "2023/03/06/字体/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "字节序";
+   obj['url'] = "2023/04/18/字节序/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "并发编程";
+   obj['url'] = "2023/03/06/并发编程/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "学习资料";
+   obj['url'] = "2022/04/07/学习资料/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "站点优化";
+   obj['url'] = "2023/03/20/站点优化/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "流媒体协议";
+   obj['url'] = "2023/04/13/流媒体协议/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "编码和字符集";
+   obj['url'] = "2023/03/17/编码和字符集/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "算法";
+   obj['url'] = "2022/10/19/算法/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "计算机结构";
+   obj['url'] = "2021/07/21/计算机结构/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "编码问题";
+   obj['url'] = "2023/03/06/编码问题/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "雪花算法";
+   obj['url'] = "2023/03/06/雪花算法/";
+   titlesList.push(obj);
+   obj = {};
+
+
+   obj['name'] = "smalltools";
+   obj['url'] = "2023/09/17/smalltools/";
+   titlesList.push(obj);
+   obj = {};
+
+</script>
+
+		</div>
+	</div>
+	
+	
+<div id="footer">
+
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			文章阅读量
+			<span id="busuanzi_value_site_pv"></span>
+			次
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			访客量
+			<span id="busuanzi_value_site_uv"></span>
+			人
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: false  });
+		await mermaid.run({
+			querySelector: '.mermaid'
+				})
+    </script>
+
+
+
+	
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+
+
+<script type="text/javascript"> 
+	const options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: false, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	}
+	new Darkmode(options).showWidget();
+</script>
+
+</html>

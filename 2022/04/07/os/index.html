@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		OS原理 | 
+	 
+	Shivers
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "arashrun.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+
+	</script>
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	<!-- 夜间模式 -->
+	
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/ejs.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+		
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Shivers</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+
+
+		<li class="menu-item">
+			<a href="/friends" class="menu-item-link">
+				友链
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="/search" class="menu-item-link">
+				<i class="fa fa-search fa-1x"></i>
+			</a>
+		</li>
+		
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+<!-- target = _blank 意思是开一个新tab中打开 -->
+			<a href="https://github.com/arashrun" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+
+	
+
+
+
+<div id="toc">
+<h2 class="post-toc-title">Contents</h2>
+<div class="post-toc-content always-active">
+	<nav id="TableOfContents">
+		<ul>
+		</ul>
+	</nav>
+</div>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+	
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+		
+<h1 id="article-title">
+	OS原理
+</h1>
+<div class="article-meta">
+	
+		<span id="busuanzi_container_page_pv">
+		  阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+		<br>
+	
+	<span>arashrun</span>
+	<span>2022-04-07 22:31:08</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/cs基础/">cs基础</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+    <br>
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h3 id="内存管理"><a class="markdownIt-Anchor" href="#内存管理"></a> 内存管理</h3>
+<blockquote>
+<p>编译（源程序模块）—》链接（目标模块）—》装入(装入模块)</p>
+<p>1.链接和装入的策略，分为3种。在磁盘上，在内存中，在cpu执行时。</p>
+<p>2.一个程序的运行，需要经过几道程序的运行。（编译器—链接器—装入内存（装入器）—内存分配（内存管理器））</p>
+<p>​	编译器：将程序员写的源程序编译为目标模块</p>
+<p>​	链接器：多个目标模块拼接，<strong>通过一定的策略</strong>形成可装入模块</p>
+<p>​	装入器：将可装入模块，<strong>通过一定的策略</strong>装入内存</p>
+<p>​	内存管理器：配合装入器，<strong>通过一定的策略</strong>完成对程序运行所需内存的分配</p>
+</blockquote>
+<h4 id="链接策略"><a class="markdownIt-Anchor" href="#链接策略"></a> 链接策略</h4>
+<ol>
+<li>静态链接：在装入内存之前，将各个目标模块链接起来。形成可装入模块（linux中就是链接.a静态库）</li>
+<li>装入时动态链接：边装入边链接</li>
+<li>运行时动态链接：执行时需要的时候才链接目标模块</li>
+</ol>
+<h4 id="装入策略装入器loader"><a class="markdownIt-Anchor" href="#装入策略装入器loader"></a> 装入策略（装入器loader）</h4>
+<ol>
+<li>绝对装入：程序的逻辑地址==进程的物理地址。缺点：编写的程序必须从指定位置开始，必须非常了解内存要求。常用于单道程序环境</li>
+<li>可重定位装入：当程序被装入程序（loader）装入内存后根据实际可用物理地址来变更程序中全文的地址。此时能够运行躲到程序缺点：程序装入之后，不可动态修改程序中的地址</li>
+<li>运行时动态装入：在指令被执行时，才动态修改地址。</li>
+</ol>
+<h4 id="内存分配策略内存管理器mm_manager"><a class="markdownIt-Anchor" href="#内存分配策略内存管理器mm_manager"></a> 内存分配策略（内存管理器mm_manager）</h4>
+<p>操作系统对内存的分配，大体上可以分为两个思路。1.分割内存，不分割装入模块（连续分区分配）。2.分割内存，并且分割程序（分页，分段，段页）</p>
+<p><strong>连续分区分配：</strong></p>
+<p>​	顾名思义，也就是程序作为一个整体装入内存中。而根据对内存的分割策略来看，有3种方式。</p>
+<ol>
+<li>单一连续分配（整个内存分为内核区，和用户区。用户区只有一道程序）</li>
+<li>静态分区分配（将用户区，划分固定大小的几个区域。开始可以存放多道程序，但可能有的程序很小，但是占据很大的区域，造成浪费）</li>
+<li>动态分区分配（根据程序的大小来确定内存分区的大小）</li>
+<li>动态重定位分区分配算法（在动态分区分配的基础上增加“紧凑”功能，减少内存的碎片，为了实现紧凑功能需要配合运行时动态装入的装入算法）</li>
+</ol>
+<p><strong>分页、分段、段页内存分配：</strong></p>
+<p>​	这些分配方式，不仅分割内存，还分割装入模块（进程）。可以看作数据结构中的链表。整个进程离散地分散到内存不同位置。不像连续分配，将装入模块整体装入。</p>
+<ul>
+<li>
+<p>分页</p>
+<p>将程序和内存空间分割成多个大小一样的片段（页面），操作系统的内存管理模块通过为程序建立页表，然后MTU地址转换单元通过查询进程的页表，来实现程序地址的动态重定位。</p>
+<p>当访问进程的某一条指令（比如：load 1，2500）2500是程序的逻辑地址，MTU首先计算得出该逻辑地址对应的程序分页中的页号，和页内偏移。然后通过在页表中查询到程序分页中的页号对应的物理块号，得到物理块号之后和前边的页内偏移相加，从而完成程序的逻辑地址到物理地址的转换。</p>
+</li>
+<li>
+<p>分段</p>
+<p>由于分页方法（固定大小的页面的缺点：不符合程序中指令和数据的排布，导致）的缺陷，提出一种分段内存分配的算法，将一个程序分割为不同段：代码段，数据段，堆段，栈段，bss段，作为一个查询单位。而将内存分割为与程序相同的段。这样只要通过段表查询到段基址，就能保证能够每一个段在内存中是连续分配的。</p>
+</li>
+</ul>
+<p><img src="/images/%E6%AE%B5%E8%A1%A8.png" alt="" /></p>
+<ul>
+<li>
+<p>段页式</p>
+<p>分页的好处是能够节省内存，分段的好处是程序友好，方便编程。为了结合两方面优势，将每一个程序段通过分页处理，然后通过段号找到页号，通过页号找到物理地址。</p>
+</li>
+</ul>
+<blockquote>
+<p>**内存模型到底是什么：**现在的编译器会将我们的程序进行分段处理，**c语言，c++中的内存模型，其实就是编译器所规定的一种逻辑上的程序组织方式，在内存中每一个段可能连续的一块（段式）来存储，也可能一个程序段分布在不同的物理内存（段页式）来存储，**然后在执行指令，进行地址转换时，操作系统根据实际内存分配方式，完成逻辑地址（每一个段的逻辑地址都是从0号开始的）到物理地址的转换，然后cpu访问物理地址来执行我们的程序。</p>
+</blockquote>
+<hr />
+<h3 id="unix系统标准unix实现"><a class="markdownIt-Anchor" href="#unix系统标准unix实现"></a> unix系统标准&amp;unix实现</h3>
+<p><strong>unix标准</strong></p>
+<ul>
+<li>iso c：该标准定义了c语言语法语义和c语言标准库，因为是所以unix都提供了c标准中的库函数，因此默认也就成了一种标准</li>
+<li>ieee posix：该标准的目的是提高应用程序在各种unix系统环境之间的可移植性</li>
+<li>SUS=single unix specification（单一unix规范）：是posix的超集，在posix的基础上还规定了一些操作系统接口，扩展了posix的功能</li>
+</ul>
+<p><strong>unix实现</strong></p>
+<p>SVR4(system v release 4)：System V 是 AT&amp;T 的第一个商业UNIX版本（UNIX System III）的加强。传统上，System V 被看作是两种UNIX&quot;风味&quot;之一（另一个是 BSD）。然而，随着一些并不基于这两者代码的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/UNIX/219943">UNIX</a>实现的出现，例如 Linux 和 QNX， 这一归纳不再准确，但不论如何，像POSIX这样的标准化努力一直在试图减少各种实现之间的不同。流行的SysV 衍生版本包括 Dell SVR4 和 Bull SVR4。当今广泛使用的 System V 版本是 SCO OpenServer，基于 System V Release 3，以及SUN Solaris 和 SCO UnixWare，都基于 System V Release 4。</p>
+<p>BSD:</p>
+<hr />
+<h3 id="磁盘到文件系统"><a class="markdownIt-Anchor" href="#磁盘到文件系统"></a> 磁盘到文件系统</h3>
+<blockquote>
+<p>文件系统：是一种存储和组织计算机数据的方法，它使得对其访问和查找变得容易，文件系统使用文件和树形目录的抽象逻辑概念代替了硬盘和光盘等物理设备使用数据块的概念，用户使用文件系统来保存数据不必关心数据实际保存在硬盘（或者光盘）的地址为多少的数据块上，只需要记住这个文件的所属目录和文件名。</p>
+</blockquote>
+<p><strong>数据在硬盘上的存储和组织方式</strong>：</p>
+<p><img src="/images/%E8%BF%9E%E7%BB%AD%E5%9D%97%E5%AD%98%E5%82%A8.png" alt="" /></p>
+<p>**连续块存储：**这是一种最简单的实现方式，管理便捷。但最大的问题是空洞问题，即使物理磁盘还有空余容量，也不能再写入文件了。常见于CD-ROM等预先明确数据大小的存储器</p>
+<p><img src="/images/%E9%93%BE%E8%A1%A8%E5%BC%8F%E5%AD%98%E5%82%A8.png" alt="" /></p>
+<p>**链表式存储：**好处是不存在存储空洞且只需要记住第一个block的位置即可，缺点很明显：就是会造成大量的随机IO，而且读取完一个block才知道下一个block的位置，效率过低。为了改进这种效率问题，FAT诞生</p>
+<p><img src="/images/fat%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png" alt="" /></p>
+<p>**FAT：**链表式存储中，next指针是存储在每个block中的，而FAT把这些指针统一写在一个array中，这样获取一个文件的所有block位置就变得简单很多，效率也更高。但FAT也有一定的限制，比如FAT16只有65536个位置，FAT32虽然有更多的指针位，但是FAT表本身也占用了更大的内存。且FAT在读取某一文件中部时效率低，因为需要链表遍历。此外，FAT格式的文件系统不利于扩展文件的metadata。</p>
+<p><img src="/images/linux%E7%9A%84inode%E5%8E%9F%E7%90%86.png" alt="" /></p>
+<p>**I-Node：**Linux 文件系统的思想是把所有与数据本身无关的data（如类型，大小，owner，创建修改时间等）都存进一个特殊的block中（inode），然后通过这个block可以找到与数据相关的所有block</p>
+<p><img src="/images/inode%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86.png" alt="" /></p>
+<p>可以看到，每个inode都有12个直接block指针，假设每个block是4k，那么有48k的地址可以通过一次寻址直接找到，这对小文件的寻址速度有非常大的帮助，而文件系统中，绝大多数文件都是小文件，这样也就直接提高了文件系统的性能。如果有大文件，可以通过二次甚至三次间接寻址的方式来获取block地址，目的是能节省inode占用的空间，把更多的空间留给数据。</p>
+<p><img src="/images/inode%E5%AF%BB%E5%9D%80%E8%BF%87%E7%A8%8B.png" alt="" /></p>
+<p>这里有一个比较清晰地例子表明，文件系统是如何将path转变为真正的block地址的。简而言之，inode树组成了目录树，通过树形查找获取磁盘信息。</p>
+<ul>
+<li>【原文出处】<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a5d783643fc2">https://www.jianshu.com/p/a5d783643fc2</a></li>
+<li>【linux内核对IO体系的实现】<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/96391501">https://zhuanlan.zhihu.com/p/96391501</a></li>
+<li></li>
+</ul>
+<hr />
+<h3 id="系统调用"><a class="markdownIt-Anchor" href="#系统调用"></a> 系统调用</h3>
+<blockquote>
+<p>系统调用是操作系统提供给用户态程序使用操作系统功能的接口，是在有操作系统的情况下访问硬件资源或内核的----唯一入口—。</p>
+</blockquote>
+<p>实现方式：<br />
+《linux下用户态程序使用系统调用》<br />
+1.高级语言如c/c++，通过使用封装好的c库（lib）函数，通常一个标准函数会使用一个或多个系统调用来实现<br />
+例如：printf --》 write系统调用<br />
+scanf	--》	read系统调用	<br />
+2.汇编语言，则是直接跟内核通信。内核中系统调用是通过中断机制来实现的，操作系统通过自定义内存中的中断向量表，将中断向量指向内核中的中断处理例程（程序）。而系统调用的中断在汇编中是用（int 80h）指令来实现的，<br />
+参考<br />
+<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_51e9c0ab010099ow.html">http://blog.sina.com.cn/s/blog_51e9c0ab010099ow.html</a>	系统调用</p>
+<h4 id="文件io"><a class="markdownIt-Anchor" href="#文件io"></a> 文件I/O</h4>
+<p>​	/*<br />
+​		linux中文件的内涵很多，<br />
+​		内核将加载到内存中的文件称为文件描述符，文件有很多种：普通文件，pipe（管道），fifo，终端。。。<br />
+​		进程通过使用文件描述符来使用内存中的文件对象。通常加载文件使用open系统调用来完成。<br />
+​		使用文件描述符的I/O函数是无缓冲，以字节为单位进行读写的。而标准io设置了缓冲区，读写单位可以是行（以换行符结尾）<br />
+​		全文（通过malloc分配文件大小的内存）。</p>
+<p>​</p>
+<p>​		文件描述符fd—&gt;文件表项—&gt;i节点表项</p>
+<p>​	<em>/<br />
+​	int open(const char</em> filename, int flags, …)<br />
+​											filename:要打开的文件名<br />
+​											flags:	设置文件的操作方式（只读，只写，读写）</p>
+<h4 id="进程"><a class="markdownIt-Anchor" href="#进程"></a> 进程</h4>
+<p><strong>操作进程环境表</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-comment">//每一个进程都会在栈段的上部存放一些系统的相关信息（环境表）</span>
+
+<span class="hljs-comment">//获取name对应的value</span>
+<span class="hljs-type">char</span> *<span class="hljs-title function_">getenv</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *name)</span><span class="hljs-comment">//cg=value</span>
+<span class="hljs-comment">//将name=value字符串放入环境表</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">putenv</span><span class="hljs-params">(<span class="hljs-type">char</span> *str)</span><span class="hljs-comment">//cg=0</span>
+<span class="hljs-comment">//将name设置为value.</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">setenv</span><span class="hljs-params">(<span class="hljs-type">char</span> *name, <span class="hljs-type">char</span> *value, <span class="hljs-type">int</span> rewrite)</span><span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">unsetenv</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *name)</span><span class="hljs-comment">//cg=0</span>
+</code></pre>
+<p><strong>进程创建与退出</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;unistd.h&gt;</span></span>
+	<span class="hljs-type">pid_t</span> <span class="hljs-title function_">fork</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>;<span class="hljs-comment">//cg:father=pid,son=0</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdlib.h&gt;</span></span>
+		<span class="hljs-type">void</span> <span class="hljs-title function_">exit</span><span class="hljs-params">(<span class="hljs-type">int</span> status)</span>;<span class="hljs-comment">//执行清理工作（执行终止处理程序，关闭标准IO），然后陷入内核</span>
+		<span class="hljs-type">void</span> _Exit(<span class="hljs-type">int</span> status);<span class="hljs-comment">//status：进程终止状态</span>
+		<span class="hljs-comment">//进程注册终止处理函数</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">atexit</span><span class="hljs-params">(<span class="hljs-type">void</span> (*func)(<span class="hljs-type">void</span>))</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;unistd.h&gt;</span></span>
+		<span class="hljs-type">void</span> _exit(<span class="hljs-type">int</span> status);
+
+</code></pre>
+<p><strong>执行新程序</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-comment">//区别：1.前四个使用路径名，后两个使用文件名 2.参数arg传递方式l（代表list=独立参数），v（代表vector=指针数组）</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">execl</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *pathname, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *arg0, ...)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">execv</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *pathname, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *arg[])</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">execle</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *pathname, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *arg0, ...)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">execve</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *pathname, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *arg[], <span class="hljs-type">char</span> *<span class="hljs-type">const</span> envp[])</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">execlp</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *filename, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *arg0, ...)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">execvp</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *filename, <span class="hljs-type">const</span> <span class="hljs-type">char</span> *arg[])</span>;
+</code></pre>
+<p><strong>获得进程终止状态</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/wait.h&gt;</span></span>
+<span class="hljs-type">pid_t</span> <span class="hljs-title function_">wait</span><span class="hljs-params">(<span class="hljs-type">int</span> *statloc)</span>;
+<span class="hljs-type">pid_t</span> <span class="hljs-title function_">waitpid</span><span class="hljs-params">(<span class="hljs-type">pid_t</span> pid, <span class="hljs-type">int</span> *statloc, <span class="hljs-type">int</span> opt)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">waitid</span><span class="hljs-params">(<span class="hljs-type">idtype_t</span> idtype, <span class="hljs-type">id_t</span> id, siginfo *infop, <span class="hljs-type">int</span> opt)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">pid_t</span> <span class="hljs-title function_">wait3</span><span class="hljs-params">(<span class="hljs-type">int</span> *statloc, <span class="hljs-keyword">struct</span> rusage *rusage)</span>;
+<span class="hljs-type">pid_t</span> <span class="hljs-title function_">wait4</span><span class="hljs-params">(<span class="hljs-type">pid_t</span> pid, <span class="hljs-type">int</span> *statloc, <span class="hljs-type">int</span> opt, <span class="hljs-keyword">struct</span> rusage *ruage)</span>;
+</code></pre>
+<h4 id="进程间通信ipc"><a class="markdownIt-Anchor" href="#进程间通信ipc"></a> 进程间通信（IPC）</h4>
+<blockquote>
+<p>pipe（管道）</p>
+<p>fifo（命名管道）</p>
+<p>消息队列</p>
+<p>信号量</p>
+<p>共享存储</p>
+<p>套接字</p>
+</blockquote>
+<p>XSI ipc(标识符用于进程中，键key可用于不同进程中标识同一个内核ipc结构)</p>
+<p><strong>消息队列</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/msg.h&gt;</span></span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">msgget</span><span class="hljs-params">(<span class="hljs-type">key_t</span> key, <span class="hljs-type">int</span> flag)</span>;<span class="hljs-comment">//cg=队列标识符</span>
+<span class="hljs-comment">//cmd对队列要执行的操作（IPC_STAT,IPC_SET,IPC_RMID)分别取buf，设置buf，移除buf</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">msgctl</span><span class="hljs-params">(<span class="hljs-type">int</span> msgid, <span class="hljs-type">int</span> cmd, <span class="hljs-keyword">struct</span> msgid_ds *buf)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-comment">//ptr代表消息，nbytes消息大小，flag可以设置为非阻塞发送消息到队列</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">msgsend</span><span class="hljs-params">(<span class="hljs-type">int</span> msgid, <span class="hljs-type">const</span> <span class="hljs-type">void</span> *ptr, <span class="hljs-type">size_t</span> nbytes, <span class="hljs-type">int</span> flag)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-comment">//type代表取消息的方式，flag可以设置为MSG_NOERROR</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">msgrecv</span><span class="hljs-params">(<span class="hljs-type">int</span> msgid, <span class="hljs-type">const</span> <span class="hljs-type">void</span> *ptr, <span class="hljs-type">size_t</span> nbytes, <span class="hljs-type">long</span> type, <span class="hljs-type">int</span> flag)</span>;
+</code></pre>
+<p><strong>信号量</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/sem.h&gt;</span></span>
+<span class="hljs-comment">//linux上是信号量集合，因此需要一个参数nsems指定集合大小</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">semget</span><span class="hljs-params">(<span class="hljs-type">key_t</span> key, <span class="hljs-type">int</span> nsems, <span class="hljs-type">int</span> flag)</span>;<span class="hljs-comment">//cg=信号量标识符</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">semctl</span><span class="hljs-params">(<span class="hljs-type">int</span> semid, <span class="hljs-type">int</span> nsems, <span class="hljs-type">int</span> cmd, ...)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">semop</span><span class="hljs-params">(<span class="hljs-type">int</span> semid, <span class="hljs-keyword">struct</span> sembuf semoparray[], <span class="hljs-type">size_t</span> nops)</span>;<span class="hljs-comment">//cg=0</span>
+</code></pre>
+<p><strong>共享存储</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/shm.h&gt;</span></span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">shmget</span><span class="hljs-params">(<span class="hljs-type">key_t</span> key, <span class="hljs-type">size_t</span> size, <span class="hljs-type">int</span> flag)</span>;<span class="hljs-comment">//cg=共享存储id</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">shmctl</span><span class="hljs-params">(<span class="hljs-type">int</span> shmid, <span class="hljs-type">int</span> cmd, <span class="hljs-keyword">struct</span> shmid_ds *buf)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">void</span> *<span class="hljs-title function_">shmat</span><span class="hljs-params">(<span class="hljs-type">int</span> shmid, <span class="hljs-type">const</span> <span class="hljs-type">void</span> *addr, <span class="hljs-type">int</span> flag)</span>;<span class="hljs-comment">//cg=共享存储的地址</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">shmdt</span><span class="hljs-params">(<span class="hljs-type">void</span> *addr)</span>;<span class="hljs-comment">//cg=0</span>
+</code></pre>
+<p><strong>shm共享内存和内存映射mmap</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ababab12345/article/details/102931841">shm &amp; mmap</a></p>
+</blockquote>
+<pre class="highlight"><code class="c">shm_open
+mmap
+munmap
+shm_unlink
+ftruncate
+</code></pre>
+<p><strong>套接字</strong></p>
+<blockquote>
+<p>套接字是一种进程间通信的形式，如同管道，fifo，信号量，共享存储等。套接字可以在不同通信范围（domain）内的进程之间通信，而套接字就是一个传输中介。</p>
+</blockquote>
+<p><img src="/images/socket%E7%BB%93%E6%9E%84.png" alt="" /></p>
+<p>创建于销毁</p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/socket.h&gt;</span></span>
+<span class="hljs-comment">//domain确定通信范围(AF_INET,AF_INET6,AF_UNIX,AF_UNSPEC)，间接影响了地址格式</span>
+<span class="hljs-comment">//type确定套接字类型(SOCK_STREAM,SOCK_DGRAM,SOCK_RAW,SOCK_SEQPACKET)</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">socket</span><span class="hljs-params">(<span class="hljs-type">int</span> domain, <span class="hljs-type">int</span> type, <span class="hljs-type">int</span> protocol)</span>;<span class="hljs-comment">//cg=描述符</span>
+
+<span class="hljs-comment">//how关闭套接字：SHUT_RD(关闭读取),SHUT_WR(关闭写入),SHUT_RDWR(关闭读写)</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">shutdown</span><span class="hljs-params">(<span class="hljs-type">int</span> socket, <span class="hljs-type">int</span> how)</span>;<span class="hljs-comment">//cg=0</span>
+</code></pre>
+<p>设置套接字选项</p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/socket.h&gt;</span></span>
+<span class="hljs-comment">//option代表要设置套接字的功能选项，level代表选项所修改的协议。</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">setsockopt</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd, <span class="hljs-type">int</span> level, <span class="hljs-type">int</span> option, <span class="hljs-type">const</span> <span class="hljs-type">void</span> *val, <span class="hljs-type">socklen_t</span> len)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">getsockopt</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd, <span class="hljs-type">int</span> level, <span class="hljs-type">int</span> option, <span class="hljs-type">const</span> <span class="hljs-type">void</span> *val, <span class="hljs-type">socklen_t</span> len)</span>;<span class="hljs-comment">//cg=0</span>
+
+
+</code></pre>
+<p>地址格式</p>
+<pre class="highlight"><code class="c"><span class="hljs-comment">//地址格式：(地址格式，在不同的通信域中是不一样的。但为了使用同一套接口，不同地址可以转换成统一的地址:sockaddr)</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;netinet/in.h&gt;</span></span>
+	AF_INET域:	
+		sockaddr_in
+		&#123;
+							sin_family;	<span class="hljs-comment">//地址族</span>
+							sin_port;	<span class="hljs-comment">//端口</span>
+			<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">in_addr</span>	<span class="hljs-title">sin_addr</span>;</span>	<span class="hljs-comment">//ipv4地址</span>
+		&#125;
+
+		in_addr
+		&#123;
+			s_addr;						<span class="hljs-comment">//ipv4地址</span>
+		&#125;
+</code></pre>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;sys/socket.h&gt;</span></span>
+客户端：
+	
+		<span class="hljs-comment">//创建socket</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">connect</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd,	<span class="hljs-type">const</span> <span class="hljs-keyword">struct</span> sockaddr*addr,	<span class="hljs-type">socklen_t</span> len)</span><span class="hljs-comment">//cg=0</span>
+
+服务器：
+		<span class="hljs-comment">//socket绑定网卡</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">bind</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd, <span class="hljs-type">const</span> <span class="hljs-keyword">struct</span> sockaddr* addr, <span class="hljs-type">socklen_t</span> len)</span><span class="hljs-comment">//cg=0</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">listen</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd,	<span class="hljs-type">int</span> backlog)</span><span class="hljs-comment">//cg=0</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">accept</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd,	<span class="hljs-keyword">struct</span> sockaddr*addr,	<span class="hljs-type">socklen_t</span>* len)</span><span class="hljs-comment">//cg=clientfd</span>
+
+共用：
+		<span class="hljs-comment">//关闭socket</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">socket</span><span class="hljs-params">(<span class="hljs-type">int</span> domain,<span class="hljs-type">int</span> type,<span class="hljs-type">int</span> protocol)</span><span class="hljs-comment">//cg=socketfd</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">shutdown</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd,<span class="hljs-type">int</span> how)</span><span class="hljs-comment">//cg=0</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">close</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd)</span><span class="hljs-comment">//cg=0</span>
+		<span class="hljs-comment">//数据传输</span>
+		<span class="hljs-type">ssize_t</span> <span class="hljs-title function_">send</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd,<span class="hljs-type">const</span> <span class="hljs-type">void</span>*buf,	<span class="hljs-type">size_t</span> nbytes,	<span class="hljs-type">int</span> flags)</span>;
+		<span class="hljs-type">ssize_t</span> <span class="hljs-title function_">recv</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd, <span class="hljs-type">void</span>* buf, <span class="hljs-type">size_t</span> nbytes, <span class="hljs-type">int</span> flags)</span>;
+		read(),write()
+		<span class="hljs-comment">//设置套接字选项</span>
+		<span class="hljs-type">int</span> <span class="hljs-title function_">setsockopt</span><span class="hljs-params">(<span class="hljs-type">int</span> sockfd, <span class="hljs-type">int</span> level, <span class="hljs-type">int</span> option, <span class="hljs-type">const</span> <span class="hljs-type">void</span>* val, <span class="hljs-type">socklen_t</span> len)</span><span class="hljs-comment">//cg=0</span>
+</code></pre>
+<h4 id="线程"><a class="markdownIt-Anchor" href="#线程"></a> 线程</h4>
+<p><strong>创建与销毁</strong></p>
+<pre class="highlight"><code class="c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;pthread.h&gt;</span></span>
+    <span class="hljs-type">int</span> <span class="hljs-title function_">pthread_equal</span><span class="hljs-params">(<span class="hljs-type">pthread_t</span> t1, <span class="hljs-type">pthread_t</span> t2)</span>;<span class="hljs-comment">//不等0，相等=0</span>
+    <span class="hljs-type">pthread_t</span> <span class="hljs-title function_">pthread_self</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span>; <span class="hljs-comment">//线程id</span>
+    <span class="hljs-type">int</span> <span class="hljs-title function_">pthread_create</span><span class="hljs-params">(<span class="hljs-type">pthread_t</span> *tid, <span class="hljs-type">pthread_attr_t</span> *attr/线程属性/, <span class="hljs-type">void</span>*(*func)(<span class="hljs-type">void</span>*)/调用函数/, <span class="hljs-type">void</span>*arg/函数参数/)</span><span class="hljs-comment">//cg=0</span>
+    <span class="hljs-comment">//线程退出的三种方式1.正常退出 2.被其他线程取消pthread_cancel，pthread_exit(PTHREAD_CANCELED) 3.调用pthread_exit</span>
+    <span class="hljs-type">void</span> <span class="hljs-title function_">pthread_exit</span><span class="hljs-params">(<span class="hljs-type">void</span>\*ptr)</span>;<span class="hljs-comment">//线程退出</span>
+    <span class="hljs-type">int</span> <span class="hljs-title function_">pthread_cancel</span><span class="hljs-params">(<span class="hljs-type">pthread_t</span> t)</span>;<span class="hljs-comment">//cg=0//只是提出取消请求，具体是否取消可以在线程中设置</span>
+    <span class="hljs-type">int</span> <span class="hljs-title function_">pthread_join</span><span class="hljs-params">(<span class="hljs-type">pthread_t</span> t, <span class="hljs-type">void</span>\*\*ptr)</span><span class="hljs-comment">//cg=0</span>
+</code></pre>
+<h4 id="线程同步"><a class="markdownIt-Anchor" href="#线程同步"></a> 线程同步</h4>
+<ul>
+<li>互斥量(pthread_mutex_t)</li>
+</ul>
+<pre class="highlight"><code class="c"><span class="hljs-comment">//初始化方法有两种1.pthread_mutex_t = PTHREAD_MUTEX_INITIALIZER; 2.使用下面的init方法。</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_mutex_init</span><span class="hljs-params">(<span class="hljs-type">pthread_mutex_t</span> *mutex, <span class="hljs-type">const</span> <span class="hljs-type">pthread_mutexattr_t</span>*attr)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_mutex_destroy</span><span class="hljs-params">(<span class="hljs-type">pthread_mutex_t</span> \*mutex)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-comment">//互斥量加锁和解锁方法</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_mutex_lock</span><span class="hljs-params">(<span class="hljs-type">pthread_mutex_t</span> *mutex)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_mutex_unlock</span><span class="hljs-params">(<span class="hljs-type">pthread_mutex_t</span> *mutex)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_mutex_trylock</span><span class="hljs-params">(<span class="hljs-type">pthread_mutex_t</span>*mutex)</span>;<span class="hljs-comment">//cg=0</span>
+</code></pre>
+<ul>
+<li>读写锁(pthread_rwlock_t)</li>
+</ul>
+<pre class="highlight"><code class="c"><span class="hljs-comment">//初始化方法</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_rwlock_init</span><span class="hljs-params">(<span class="hljs-type">pthread_rwlock_t</span> *rwlock, <span class="hljs-type">const</span> <span class="hljs-type">pthread_rwlockattr_t</span>*attr)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_rwlock_destroy</span><span class="hljs-params">(<span class="hljs-type">pthread_rwlock_t</span> *rwlock)</span>;
+<span class="hljs-comment">//读写锁，两种加锁方式和一种解锁方式//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_rwlock_rdlock</span><span class="hljs-params">(<span class="hljs-type">pthread_rwlock_t</span>*rwlock)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_rwlock_wrlock</span><span class="hljs-params">(<span class="hljs-type">pthread_rwlock_t</span>*rwlock)</span>;
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_rwlock_unlock</span><span class="hljs-params">(<span class="hljs-type">pthread_rwlock_t</span>*rwlock)</span>;
+</code></pre>
+<ul>
+<li>条件变量(pthread_cond_t)</li>
+</ul>
+<pre class="highlight"><code class="c"><span class="hljs-comment">//初始化方法有两种1.pthread_cond_t = PTHREAD_COND_INITIALIZER 2.使用下面的方法</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_cond_init</span><span class="hljs-params">(<span class="hljs-type">pthread_cond_t</span> *cond, <span class="hljs-type">pthread_condattr_t</span>* attr)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_cond_destroy</span><span class="hljs-params">(<span class="hljs-type">pthread_cond_t</span> *cond)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-comment">//等待条件发生</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_cond_wait</span><span class="hljs-params">(<span class="hljs-type">pthread_cond_t</span>*cond, <span class="hljs-type">pthread_mutex_t</span> *mutex)</span>;<span class="hljs-comment">//cg=0</span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">pthread_cond_timewait</span><span class="hljs-params">(<span class="hljs-type">pthread_cond_t</span>*cond,pthread_mutex*mutex,<span class="hljs-type">const</span> timespec*timeout)</span>;<span class="hljs-comment">//cg=0</span>
+</code></pre>
+<h3 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h3>
+<h4 id="如何设计一个操作系统"><a class="markdownIt-Anchor" href="#如何设计一个操作系统"></a> 如何设计一个操作系统</h4>
+<p>从用户的角度来看，<strong>操作系统的核心是由抽象概念和其上的基本操作所构成的</strong>，而基本操作则可通过系统调用加以利用</p>
+<ol>
+<li>定义抽象概念（–进程抽象【cpu】、虚拟地址空间抽象【内存】、文件和目录抽象【硬盘】、IO抽象【键盘鼠标。。。】、）</li>
+<li>提供基本操作（向上，对开发人员）</li>
+<li>确保隔离</li>
+<li>管理硬件（对下，屏蔽硬件差异）</li>
+</ol>
+<p>进程有关的信息存放在：地址空间中、内核的进程表</p>
+<p>地址空间：指令，数据，堆（储物间），栈（垃圾桶），外部数据源（文件，socket）</p>
+<h4 id="c服务器设计一基于io复用的reactor模式"><a class="markdownIt-Anchor" href="#c服务器设计一基于io复用的reactor模式"></a> <a target="_blank" rel="noopener" href="https://www.cnblogs.com/moyangvip/p/5360837.html">C++服务器设计（一）：基于I/O复用的Reactor模式</a></h4>
+<p>•阻塞式IO       阻塞于read（）<br />
+•非阻塞IO       立即返回错误码（进程对多个套接字轮寻）<br />
+•上两种+多线程 线程切换开销大<br />
+•IO复用        调用epoll<br />
+•异步IO        （内核将就绪的描述符，准备好并通知进程来取用。显然这样就解放了进程，将复杂任务交给内核来完成）<br />
+•reactor模式   基于事件触发机制。将需要判断的描述符注册入reactor中，然后由reactor调用事件关联处理函数。</p>
+<p>reactor：<br />
+​描述符fd --事件<br />
+​事件分用器 --epoll/poll/select<br />
+​事件处理器 --将处理器中的回调函数声明为虚函数，便于具体的处理器继承和实现<br />
+​reactor管理器 --包含事件分用器</p>
+<h4 id="虚拟地址空间vs虚拟内存"><a class="markdownIt-Anchor" href="#虚拟地址空间vs虚拟内存"></a> 虚拟地址空间vs虚拟内存</h4>
+<ol>
+<li>虚拟内存=硬盘上的一块空间，当作内存看待。通过缺页中断来调入内存，通过页面替换算法调出内存</li>
+<li>虚拟地址空间 = 32位系统上，每一个进程有4GB的虚拟地址空间（虚拟的可用的空间）。当cpu寄存器CR0的31位分页标志位置为1时，cpu启用MMU机构（地址转换机构），读入虚拟地址，然后根据该进程在<strong>内核</strong>中对应的页目录和页表，将该进程的虚拟地址转换为实际的物理地址。<br />
+{<br />
+★ 每一个程序自以为自己真有4GB的空间。<br />
+★ 每一个进程都有在内核区会有一个页表和页目录<br />
+}</li>
+<li>可重定向文件（relocatable）：编译器编译而成的.o文件，可以重新定向组合成可执行文件也称之为目标文件</li>
+<li>可执行文件（executable）：操作系统能够直接运行的文件</li>
+<li>共享库（shared object）：在程序运行过程中被动态链接的文件，可以减小可执行文件的大小</li>
+<li>其中可执行文件和共享库文件都是由目标文件（.o文件）构成的，因此他们的文件格式和目标文件的格式是一样的，在linux上目标文件的格式称之为（elf）文件格式</li>
+</ol>
+<h4 id="水平触发vs边缘触发"><a class="markdownIt-Anchor" href="#水平触发vs边缘触发"></a> 水平触发vs边缘触发</h4>
+<blockquote>
+<p>参考:</p>
+<p>[epoll水平触发和边缘触发]<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7eaa0224d797">https://www.jianshu.com/p/7eaa0224d797</a></p>
+</blockquote>
+<ol>
+<li>
+<p>读缓冲区刚开始是空的</p>
+</li>
+<li>
+<p>读缓冲区写入2KB数据</p>
+</li>
+<li>
+<p>水平触发（LT）和边缘触发模式（ET）此时都会发出可读信号</p>
+</li>
+<li>
+<p>收到信号通知后，读取了1kb的数据，读缓冲区还剩余1KB数据</p>
+</li>
+<li>
+<p>水平触发会再次进行通知，而边缘触发不会再进行通知，所以边缘触发需要一次性的把缓冲区的数据读完为止，也就是一直读，直到读到EGAIN为止，EGAIN说明缓冲区已经空了，因为这一点，边缘触发需要设置文件句柄为非阻塞</p>
+<pre class="highlight"><code class="c"><span class="hljs-comment">//水平触发</span>
+ret = read(fd, buf, <span class="hljs-keyword">sizeof</span>(buf));
+
+<span class="hljs-comment">//边缘触发</span>
+<span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>) &#123;
+    ret = read(fd, buf, <span class="hljs-keyword">sizeof</span>(buf);
+    <span class="hljs-keyword">if</span> (ret == EAGAIN) <span class="hljs-keyword">break</span>;
+&#125;
+</code></pre>
+</li>
+</ol>
+<p>区别:水平触发是只要读缓冲区有数据，就会一直触发可读信号，而边缘触发仅仅在空变为非空的时候通知一次.</p>
+<h2 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h2>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40204595/article/details/81109644">宏定义中的#，##的含义</a><br />
+<a target="_blank" rel="noopener" href="https://www.cnblogs.com/vanishfan/archive/2013/01/15/2861211.html">linux动态库链接规则</a></p>
+
+</div>
+
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2022/04/07/opengrok/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  opengrok搭建代码阅读平台
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2022/04/07/powershell/">
+                powershell
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div id="gitalk-container"></div>
+
+
+<script>
+
+
+const gitalk = new Gitalk({
+  clientID: 'd91e94a64a0bd6162192',
+  clientSecret: 'dea5446950bd4dbd03f7c459e78838a581b4658c',
+  repo: 'hexo_comments',
+  owner: 'arashrun',
+  admin: ['arashrun'],
+  id: location.pathname,
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+
+
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
+<script type="text/javascript" src="/lib/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/lib/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/lib/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/lib/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/lib/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important;  }</style>
+
+
+		</div>
+	</div>
+	
+	
+<div id="footer">
+
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			文章阅读量
+			<span id="busuanzi_value_site_pv"></span>
+			次
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			访客量
+			<span id="busuanzi_value_site_uv"></span>
+			人
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: false  });
+		await mermaid.run({
+			querySelector: '.mermaid'
+				})
+    </script>
+
+
+
+	
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+
+
+<script type="text/javascript"> 
+	const options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: false, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	}
+	new Darkmode(options).showWidget();
+</script>
+
+</html>

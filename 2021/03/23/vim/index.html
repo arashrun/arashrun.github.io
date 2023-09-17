@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		vim | 
+	 
+	Shivers
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "arashrun.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+
+	</script>
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	<!-- 夜间模式 -->
+	
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/ejs.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+		
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Shivers</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+
+
+		<li class="menu-item">
+			<a href="/friends" class="menu-item-link">
+				友链
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="/search" class="menu-item-link">
+				<i class="fa fa-search fa-1x"></i>
+			</a>
+		</li>
+		
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+<!-- target = _blank 意思是开一个新tab中打开 -->
+			<a href="https://github.com/arashrun" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+
+	
+
+
+
+<div id="toc">
+<h2 class="post-toc-title">Contents</h2>
+<div class="post-toc-content always-active">
+	<nav id="TableOfContents">
+		<ul>
+		</ul>
+	</nav>
+</div>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+	
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+		
+<h1 id="article-title">
+	vim
+</h1>
+<div class="article-meta">
+	
+		<span id="busuanzi_container_page_pv">
+		  阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+		<br>
+	
+	<span>arashrun</span>
+	<span>2021-03-23 07:21:23</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/工具/">工具</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+    <br>
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/vim/">vim</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<p><strong>NOTE：</strong></p>
+<p>vim作为文本编辑器，虽然其本质也一直在变在发展。但是，最根本的作为编辑器来说。不应该去追求花哨看似有用的功能。而应该在这些实用方面深入：</p>
+<ul>
+<li>快速移动，和定位。比鼠标移动的快才算合格</li>
+<li>快速搜索文件，创建文件，删除文件，创建文件夹，删除文件夹</li>
+<li>快速字符串查找</li>
+</ul>
+<h3 id="windows平台构建编译"><a class="markdownIt-Anchor" href="#windows平台构建编译"></a> windows平台构建编译</h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/vim/vim/blob/master/src/INSTALLpc.txt">msvc编译步骤官方文档</a></p>
+<pre class="highlight"><code class="">1. 进入src目录
+
+2. nmake -f Make_mvc.mak PYTHON3=C:\Users\ming\AppData\Local\Programs\Python\Python310 DYNAMIC_PYTHON3=yes PYTHON3_VER=310
+
+3. 在顶级目录下查看是否有vim90目录，没有创建
+
+4. Copy the &quot;runtime&quot; files into &quot;vim90&quot;:
+copy runtime\* vim90
+xcopy /s runtime\* vim90
+
+5. Copy the new binaries into the &quot;vim90&quot; directory
+copy src\*.exe vim90
+copy src\tee\tee.exe vim90
+copy src\xxd\xxd.exe vim90
+
+6. Copy gettext and iconv DLLs into the &quot;vim90&quot; directory【从E:/vim/vim90中搜索dll，拷贝到新的vim90中】
+
+7. 执行老vim90中的uninstall.bat,删除老的vim90
+8. 将新vim90拷贝到E:/vim中，并执行vim90中的install.bat
+
+</code></pre>
+<h2 id="vim脚本语法"><a class="markdownIt-Anchor" href="#vim脚本语法"></a> vim脚本语法</h2>
+<h3 id="变量类型"><a class="markdownIt-Anchor" href="#变量类型"></a> 变量类型：</h3>
+<p>The following builtin types are supported:<br />
+bool<br />
+number<br />
+float<br />
+string<br />
+blob<br />
+list&lt;{type}&gt;<br />
+dict&lt;{type}&gt;<br />
+job<br />
+channel<br />
+func<br />
+func: {type}<br />
+func({type}, …)<br />
+func({type}, …): {type}<br />
+void</p>
+<h3 id="变量作用域"><a class="markdownIt-Anchor" href="#变量作用域"></a> 变量作用域</h3>
+<ul>
+<li>全局变量	g:name</li>
+<li>脚本范围局部变量    s:name</li>
+<li>vim预定义变量    v:name</li>
+<li>函数内局部变量：l:name</li>
+<li>函数参数：a:name</li>
+<li>缓冲区局部变量：b:name</li>
+<li>窗口局部变量：w:name</li>
+<li>标签页局部变量：t:name</li>
+</ul>
+<blockquote>
+<p>脚本范围的局部变量，相当于c语言中static关键字，定义之后，只在当前声明的文件范围有效。</p>
+</blockquote>
+<br>
+<h3 id="变量定义"><a class="markdownIt-Anchor" href="#变量定义"></a> 变量定义：</h3>
+<pre class="highlight"><code class="shell">let g:a = 123
+let s:b = &quot;adf&quot;
+</code></pre>
+<h3 id="取消变量定义"><a class="markdownIt-Anchor" href="#取消变量定义"></a> 取消变量定义：</h3>
+<pre class="highlight"><code class="shell">unlet s:a
+</code></pre>
+<h3 id="表达式"><a class="markdownIt-Anchor" href="#表达式"></a> 表达式</h3>
+<p>1 基本表达式<br />
+数值<br />
+字符串常量<br />
+$name 环境变量<br />
+&amp;name 选项<br />
+@reg  寄存器<br />
+2 算法表达式<br />
++ - * / %<br />
+“hello” . “world” ==“helloworld” 字符串拼接</p>
+<h3 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h3>
+<p>call function_name(para1,para2) 	调用函数<br />
+let line = getline(‘.’) 			调用函数作为表达式<br />
+:functions 							查看vim中内置的完整函数列表</p>
+<p>1 定义函数<br />
+function {name}({var1,{var2},…})<br />
+{body}<br />
+endfunction<br />
+- 函数名必须以大写字母开始<br />
+- a:var1 代表函数参数变量<br />
+- 函数内部没有特殊标识的变量(g: a: s:)都是局部变量<br />
+- 函数内部访问全局变量要加 g:<br />
+2 重定义函数<br />
+function! name(var1,var2)<br />
+3 范围使用<br />
+:10,30call funcname()<br />
+function funcname() range 	定义<br />
+4 可变参数<br />
+function Show(start,…)<br />
+a:0 	可变参数个数<br />
+a:1 	第一个可变参数<br />
+a:2 	第二个可变参数<br />
+a:000 	可变参数列表<br />
+5 删除函数<br />
+delfunction xxx</p>
+
+</div>
+
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/06/18/Python/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  python术语
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+        </div>
+    </div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div id="gitalk-container"></div>
+
+
+<script>
+
+
+const gitalk = new Gitalk({
+  clientID: 'd91e94a64a0bd6162192',
+  clientSecret: 'dea5446950bd4dbd03f7c459e78838a581b4658c',
+  repo: 'hexo_comments',
+  owner: 'arashrun',
+  admin: ['arashrun'],
+  id: location.pathname,
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+
+
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
+<script type="text/javascript" src="/lib/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/lib/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/lib/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/lib/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/lib/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important;  }</style>
+
+
+		</div>
+	</div>
+	
+	
+<div id="footer">
+
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			文章阅读量
+			<span id="busuanzi_value_site_pv"></span>
+			次
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			访客量
+			<span id="busuanzi_value_site_uv"></span>
+			人
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: false  });
+		await mermaid.run({
+			querySelector: '.mermaid'
+				})
+    </script>
+
+
+
+	
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+
+
+<script type="text/javascript"> 
+	const options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: false, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	}
+	new Darkmode(options).showWidget();
+</script>
+
+</html>

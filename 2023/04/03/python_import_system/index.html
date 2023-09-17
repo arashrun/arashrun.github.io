@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		python导入系统 | 
+	 
+	Shivers
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "arashrun.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+
+	</script>
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	<!-- 夜间模式 -->
+	
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/ejs.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+		
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Shivers</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+
+
+		<li class="menu-item">
+			<a href="/friends" class="menu-item-link">
+				友链
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="/search" class="menu-item-link">
+				<i class="fa fa-search fa-1x"></i>
+			</a>
+		</li>
+		
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+<!-- target = _blank 意思是开一个新tab中打开 -->
+			<a href="https://github.com/arashrun" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+
+	
+
+
+
+<div id="toc">
+<h2 class="post-toc-title">Contents</h2>
+<div class="post-toc-content always-active">
+	<nav id="TableOfContents">
+		<ul>
+		</ul>
+	</nav>
+</div>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+	
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+		
+<h1 id="article-title">
+	python导入系统
+</h1>
+<div class="article-meta">
+	
+		<span id="busuanzi_container_page_pv">
+		  阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+		<br>
+	
+	<span>arashrun</span>
+	<span>2023-04-03 15:36:25</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/python/">python</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+    <br>
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<ol>
+<li>python中有多种导入机制，import语句是最常用的，但不是唯一的，<code>importlib.import_module()</code> 函数和内建的 <code>__import__()</code> 函数也能用于模块导入。</li>
+<li>import语句会执行两部操作来实现导入机制：首先查找命名的模块，然后将找到的结果绑定到本地空间的一个名称上</li>
+<li>查找操作实际调用的是 <code>__import__()</code> 函数，如果找到了则会执行模块创建操作，但是会有一些副作用，比如会导入parent package，更新各种缓存，只用 <code>import</code> 语句会执行名称绑定操作</li>
+<li>当import语句执行的时候，标准的 <code>__import__()</code> 函数会被调用到，其他的一些导入方式如 <code>importlib.import_module()</code> 可以选择不通过 <code>__import__()</code> 而使用自己定义的方式来实现导入功能</li>
+<li>当一个模块第一次被导入，python会搜索这个模块，如果找到了就会创建一个模块对象并初始化它，如果没有找到，<code>ModuleNotFoundError</code> 就会被抛出。python有各种搜索命名模块的策略，这些策略可以通过使用各种hook技术来进行修改和扩展</li>
+<li><code>importlib</code> 模块提供了丰富的接口用于修改python的导入系统</li>
+</ol>
+<h3 id="packages"><a class="markdownIt-Anchor" href="#packages"></a> packages</h3>
+<ol>
+<li>python中只有一种模块对象————packages</li>
+<li>可以拿文件系统中的目录和文件来打比方，packages相当于目录，modules相当于文件，但是又与这个比喻(analogy)有差异。因为packages和modules不是通过文件系统来组成的，packages可以递归包含，这个和 <code>regular modules</code> 是一样的</li>
+<li><mark>所有的packages都是modules，但不是所有的modules都是packages。一个module如果包含一个 <code>__path__</code> 属性，那么它就被看作一个package</mark></li>
+<li>所有的modules都有一个名字，子包名称与其父包名称之间用一个点分隔，类似于 Python 的标准属性访问语法。例如：父包 <code>email</code> ，包含有一个子包 <code>email.mime</code> ，子包中又包含一个module叫做 <code>email.mime.text</code></li>
+</ol>
+<h3 id="regular-packages"><a class="markdownIt-Anchor" href="#regular-packages"></a> Regular Packages</h3>
+<ol>
+<li>python中两种package类型
+<ol>
+<li>regular packages（以下简称RP）</li>
+<li>namespace packages（简称NP）</li>
+</ol>
+</li>
+<li>regular packages属于传统的包类型存在于python3.2之前。典型的特征是一个目录中包含一个 <code>__init__.py</code> 文件。当一个RP被导入，这个init文件就会被隐式被执行，其中的对象就会被绑定到这个包的namespace中</li>
+</ol>
+<h3 id="namespace-packages"><a class="markdownIt-Anchor" href="#namespace-packages"></a> Namespace Packages</h3>
+<ol>
+<li>NP是由多个部分(portion)组合而成的一个集合体（composite），每个部分看作父包的一个子包。每个部分可能存在于文件系统中的不同位置。可能存在于zip等压缩文件中，在网络上，在任何python导入时可以搜索到的地方</li>
+<li>NP不使用一般的list作为 <code>__path__</code> 属性，而是使用一个自定义的可迭代类型，该迭代类型可用于执行自动进行下一步搜索</li>
+<li>NP不存在 <code>__init__.py</code> 文件，因为NP中的各部分都是由散落各地的package组成。</li>
+</ol>
+<h3 id="searching"><a class="markdownIt-Anchor" href="#searching"></a> Searching</h3>
+<ol>
+<li>开始搜索模块之前，python需要获取模块的完全限定的名称，该名称会用于搜索的不同阶段。例如 <code>foo.bar.baz</code> 这个名称，python搜索分为3个阶段，首先尝试导入 <code>foo</code> ， 然后尝试导入 <code>foo.bar</code> ，最后尝试导入 <code>foo.bar.baz</code> ，这中间的(intermediate)任何一个阶段导入失败，都会抛出模块未找到的异常</li>
+<li>搜索策略如下：
+<ol>
+<li>首先搜索模块缓存 <mark><code>sys.modules</code></mark> 这个字典对象，key为模块名，value为module object。</li>
+<li>如果在模块缓存中搜索不到指定的模块，python下一步搜索 <mark><code>sys.meta_path</code></mark> 这个list中存储的所有 <mark><code>meta path finder</code></mark> 对象（简称：MPF），这些MPF按照顺序进行查找相关模块，MPF对象必须实现 <code>find_spec()</code> 方法，用于实现搜索策略</li>
+<li>import机制是可扩展的，因此可以添加新的finder，从而扩展模块的搜索范围。finder在找到模块之后不会实际地加载模块，而是返回一个 <mark><code>module spec</code></mark> 对象，该对象中包含了模块导入相关的信息，然后import机制之后根据这个spec对象加载模块</li>
+</ol>
+</li>
+<li>import hooks：为了实现导入机制的可扩展，基本的方式就是使用 <code>import hooks</code> 技术，该技术分为两种： <code>meta hooks</code> 和 <code>import path hooks</code> 。</li>
+<li><code>meta.hooks</code> 在所有导入步骤之前起作用(当然 <code>sys.modules</code> 缓存查找不算在内)，因此这就允许该类型hook可以复写 <code>sys.path</code> 过程，frozen modules, 甚至是内建模块。通过在 <code>sys.meta_path</code> 中新增一个finder对象（对应于 <code>meta path finder</code> ），我们就实现了一个meta hooks的注册</li>
+<li><code>import path hooks</code> 被认作是 <code>sys.path</code> 处理过程中的一部分，该hooks可以通过往 <mark><code>sys.path_hooks</code></mark> 中添加新的可调用对象来实现。这种hooks方式对应于 <code>path entries finder</code> 。</li>
+</ol>
+<h3 id="参考文档"><a class="markdownIt-Anchor" href="#参考文档"></a> 参考文档</h3>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/3/reference/import.html#package-relative-imports">5. The import system — Python 3.11.2 documentation</a></p>
+
+</div>
+
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2023/04/06/python-simple-proxy/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  python实现proxy
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2023/04/01/computer-%E5%9B%BE%E5%BD%A2%E5%AD%A6/">
+                computer_图形学
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div id="gitalk-container"></div>
+
+
+<script>
+
+
+const gitalk = new Gitalk({
+  clientID: 'd91e94a64a0bd6162192',
+  clientSecret: 'dea5446950bd4dbd03f7c459e78838a581b4658c',
+  repo: 'hexo_comments',
+  owner: 'arashrun',
+  admin: ['arashrun'],
+  id: location.pathname,
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+
+
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
+<script type="text/javascript" src="/lib/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/lib/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/lib/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/lib/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/lib/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important;  }</style>
+
+
+		</div>
+	</div>
+	
+	
+<div id="footer">
+
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			文章阅读量
+			<span id="busuanzi_value_site_pv"></span>
+			次
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			访客量
+			<span id="busuanzi_value_site_uv"></span>
+			人
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: false  });
+		await mermaid.run({
+			querySelector: '.mermaid'
+				})
+    </script>
+
+
+
+	
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+
+
+<script type="text/javascript"> 
+	const options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: false, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	}
+	new Darkmode(options).showWidget();
+</script>
+
+</html>

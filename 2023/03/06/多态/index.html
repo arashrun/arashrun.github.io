@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		多态 | 
+	 
+	Shivers
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "arashrun.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+
+	</script>
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	<!-- 夜间模式 -->
+	
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/ejs.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+		
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Shivers</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+
+
+		<li class="menu-item">
+			<a href="/friends" class="menu-item-link">
+				友链
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="/search" class="menu-item-link">
+				<i class="fa fa-search fa-1x"></i>
+			</a>
+		</li>
+		
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+<!-- target = _blank 意思是开一个新tab中打开 -->
+			<a href="https://github.com/arashrun" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+
+	
+
+
+
+<div id="toc">
+<h2 class="post-toc-title">Contents</h2>
+<div class="post-toc-content always-active">
+	<nav id="TableOfContents">
+		<ul>
+		</ul>
+	</nav>
+</div>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+	
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+		
+<h1 id="article-title">
+	多态
+</h1>
+<div class="article-meta">
+	
+		<span id="busuanzi_container_page_pv">
+		  阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+		<br>
+	
+	<span>arashrun</span>
+	<span>2023-03-06 00:11:04</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/c/">c++</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+    <br>
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/oop/">oop</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h2 id="多态是"><a class="markdownIt-Anchor" href="#多态是"></a> 多态是：</h2>
+<ul>
+<li>同一个方法在基类和派生类中的行为不同，方法的行为取决于调用方法的对象。</li>
+<li>实现方式：<br />
+1.在派生类中重新定义基类需要实现多态的方法<br />
+2.使用虚方法(虚拟成员函数，在方法声明前加上virtual关键字)。编译器对虚方法采用 动态联编（将函数调用推迟到运行时决定）</li>
+<li>动态联编的原因是：继承关系中的第二条。基类指针或引用可以指向派生类对象所导致的。</li>
+</ul>
+<pre class="highlight"><code class="c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">funPrint</span><span class="hljs-params">()</span></span>&#123;cout&lt;&lt;<span class="hljs-string">&quot;funPrint of class A&quot;</span>&lt;&lt;endl;&#125;;
+&#125;;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>:<span class="hljs-keyword">public</span> A
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">funPrint</span><span class="hljs-params">()</span></span>&#123;cout&lt;&lt;<span class="hljs-string">&quot;funPrint of class B&quot;</span>&lt;&lt;endl;&#125;;
+&#125;;
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+A *p; <span class="hljs-comment">//定义基类的指针</span>
+A a;
+B b;
+p=&amp;a;
+p-&gt;<span class="hljs-built_in">funPrint</span>();
+p=&amp;b;
+p-&gt;<span class="hljs-built_in">funPrint</span>();
+&#125;
+</code></pre>
+<p>大家以为这段代码的输出结果是什么？有的人可能会马上回答funPrint of class A 与 funPrint of class B 因为第一次输出是引用类A的实 例啊，第二次输出是引用类B的实例啊。那么我告诉你这样想就错啦，答案是funPrintof class A 与 funPrint of class A。因为p是一个A类的指针，所以不管你将p指针指向类A或是类B，最终调用的函数都是类A的funPrint 函数。这就是<strong>静态联篇</strong>，编译器在编译的时候就已经确定好了。可是如果我想实现跟据实例的不同来动态决定调用哪个函数呢？这就须要用到 虚函数（也就是<strong>动态联篇</strong>）</p>
+<h3 id="虚函数多态概念的c实现"><a class="markdownIt-Anchor" href="#虚函数多态概念的c实现"></a> 虚函数（多态概念的c++实现）</h3>
+<pre class="highlight"><code class="c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">funPrint</span><span class="hljs-params">()</span></span>&#123;cout&lt;&lt;<span class="hljs-string">&quot;funPrint of classA&quot;</span>&lt;&lt;endl;&#125;;<span class="hljs-comment">//虚函数</span>
+&#125;;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>:<span class="hljs-keyword">public</span> A
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">funPrint</span><span class="hljs-params">()</span></span>&#123;cout&lt;&lt;<span class="hljs-string">&quot;funPrint of classB&quot;</span>&lt;&lt;endl;&#125;;
+&#125;;
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+A *p; <span class="hljs-comment">//定义基类的指针</span>
+A a;
+B b;
+p=&amp;a;
+p-&gt;<span class="hljs-built_in">funPrint</span>();
+p=&amp;b;
+p-&gt;<span class="hljs-built_in">funPrint</span>();
+&#125;
+</code></pre>
+<p>此时由于继承的A中调用函数是虚函数，编译器采用动态联编，结果就会出现多态性。同一个操作</p>
+<p>（p-&gt;funprint），不同的结果。</p>
+<h3 id="虚基类"><a class="markdownIt-Anchor" href="#虚基类"></a> 虚基类</h3>
+<p><img src="/images/%E4%B8%BA%E4%BD%95%E5%BC%95%E5%85%A5%E8%99%9A%E5%9F%BA%E7%B1%BB.png" alt="" /></p>
+<p>为了解决菱形继承体系下，类d，通过类b，类c两条途径获得类a数据的两份拷贝。和可能的命名冲突。通过让类b与类c使用<strong>虚拟继承</strong>类a来声明类a是共享的。来消除歧义</p>
+<pre class="highlight"><code class="c++"><span class="hljs-comment">//间接基类A</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">A</span>&#123;
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-type">int</span> m_a;
+&#125;;
+
+<span class="hljs-comment">//直接基类B</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">B</span>: <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">public</span> A&#123;  <span class="hljs-comment">//虚继承，则类A叫做虚基类</span>
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-type">int</span> m_b;
+&#125;;
+
+<span class="hljs-comment">//直接基类C</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">C</span>: <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">public</span> A&#123;  <span class="hljs-comment">//虚继承</span>
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-type">int</span> m_c;
+&#125;;
+
+<span class="hljs-comment">//派生类D</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">D</span>: <span class="hljs-keyword">public</span> B, <span class="hljs-keyword">public</span> C&#123;
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">seta</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span></span>&#123; m_a = a; &#125;  <span class="hljs-comment">//正确，如果类b，c没有声明为虚继承，则此处命名冲突</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setb</span><span class="hljs-params">(<span class="hljs-type">int</span> b)</span></span>&#123; m_b = b; &#125;  <span class="hljs-comment">//正确</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setc</span><span class="hljs-params">(<span class="hljs-type">int</span> c)</span></span>&#123; m_c = c; &#125;  <span class="hljs-comment">//正确</span>
+    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setd</span><span class="hljs-params">(<span class="hljs-type">int</span> d)</span></span>&#123; m_d = d; &#125;  <span class="hljs-comment">//正确</span>
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-type">int</span> m_d;
+&#125;;
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;
+    D d;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;
+</code></pre>
+<h3 id="抽象类纯虚函数"><a class="markdownIt-Anchor" href="#抽象类纯虚函数"></a> 抽象类(纯虚函数)</h3>
+<p>类中含有纯虚函数的类，纯虚函数只是一个接口，没有实现（因此，抽象类无法被实例化）。</p>
+<pre class="highlight"><code class="c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Vehicle</span>
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">PrintTyre</span><span class="hljs-params">()</span></span>=<span class="hljs-number">0</span>; <span class="hljs-comment">//纯虚函数是这样定义的.该类为抽象类</span>
+&#125;;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Camion</span>:<span class="hljs-keyword">public</span> Vehicle <span class="hljs-comment">//继承抽象类，要实现接口，如果不实现，则该类也是抽象类</span>
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">PrintTyre</span><span class="hljs-params">()</span></span>&#123;cout&lt;&lt;<span class="hljs-string">&quot;Camion tyrefour&quot;</span>&lt;&lt;endl;&#125;;<span class="hljs-comment">//virtual关键字不是必需的</span>
+&#125;;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Bike</span>:<span class="hljs-keyword">public</span> Vehicle
+&#123;
+<span class="hljs-keyword">public</span>:
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-type">void</span> <span class="hljs-title">PrintTyre</span><span class="hljs-params">()</span></span>&#123;cout&lt;&lt;<span class="hljs-string">&quot;Bike tyre two&quot;</span>&lt;&lt;endl;&#125;;
+&#125;;
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>&#123;
+Camion c;
+Bike b;
+b.<span class="hljs-built_in">PrintTyre</span>();
+c.<span class="hljs-built_in">PrintTyre</span>();
+&#125;
+</code></pre>
+
+</div>
+
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2023/03/06/mysql/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  mysql
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2023/03/05/smart-pointer/">
+                smart-pointer
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div id="gitalk-container"></div>
+
+
+<script>
+
+
+const gitalk = new Gitalk({
+  clientID: 'd91e94a64a0bd6162192',
+  clientSecret: 'dea5446950bd4dbd03f7c459e78838a581b4658c',
+  repo: 'hexo_comments',
+  owner: 'arashrun',
+  admin: ['arashrun'],
+  id: location.pathname,
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+
+
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
+<script type="text/javascript" src="/lib/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/lib/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/lib/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/lib/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/lib/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important;  }</style>
+
+
+		</div>
+	</div>
+	
+	
+<div id="footer">
+
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			文章阅读量
+			<span id="busuanzi_value_site_pv"></span>
+			次
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			访客量
+			<span id="busuanzi_value_site_uv"></span>
+			人
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: false  });
+		await mermaid.run({
+			querySelector: '.mermaid'
+				})
+    </script>
+
+
+
+	
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+
+
+<script type="text/javascript"> 
+	const options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: false, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	}
+	new Darkmode(options).showWidget();
+</script>
+
+</html>

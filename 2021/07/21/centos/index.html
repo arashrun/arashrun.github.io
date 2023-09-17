@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		centos7 | 
+	 
+	Shivers
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "arashrun.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+
+	</script>
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	<!-- 夜间模式 -->
+	
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/ejs.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.4.14/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+		
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+	
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">Shivers</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于</a>
+		</li>
+
+
+		<li class="menu-item">
+			<a href="/friends" class="menu-item-link">
+				友链
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="/search" class="menu-item-link">
+				<i class="fa fa-search fa-1x"></i>
+			</a>
+		</li>
+		
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+<!-- target = _blank 意思是开一个新tab中打开 -->
+			<a href="https://github.com/arashrun" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+
+	
+
+
+
+<div id="toc">
+<h2 class="post-toc-title">Contents</h2>
+<div class="post-toc-content always-active">
+	<nav id="TableOfContents">
+		<ul>
+		</ul>
+	</nav>
+</div>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+	
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+		
+<h1 id="article-title">
+	centos7
+</h1>
+<div class="article-meta">
+	
+		<span id="busuanzi_container_page_pv">
+		  阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+		<br>
+	
+	<span>arashrun</span>
+	<span>2021-07-21 18:01:12</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/linux/">linux</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+    <br>
+    
+		<span>Tags：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-tag" aria-hidden="true">
+                        <a href="/tags/centos/">centos</a>
+                        </i>
+                    </span>
+                
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h3 id="vmware中的3种网络模式"><a class="markdownIt-Anchor" href="#vmware中的3种网络模式"></a> VMware中的3种网络模式</h3>
+<p><img src="/images/net%E6%A8%A1%E5%BC%8F.png" alt="" /></p>
+<ol>
+<li>桥接模式：相当于虚拟机直接连接路由器</li>
+<li>仅主机模式：只能所在主机单向访问虚拟机，无法连接外网</li>
+<li>nat模式：主机和虚拟机之间可以双向通讯，且通过nat网络映射的原理能实现连接外部网络。但局域网中的其他主机一般无法访问此虚拟机的服务。</li>
+</ol>
+<h3 id="linux防火墙和yumepel"><a class="markdownIt-Anchor" href="#linux防火墙和yumepel"></a> Linux防火墙和yum+epel</h3>
+<ol>
+<li>
+<p>查看Linux内核版本<br />
+cat /proc/version    或者 uname -a</p>
+</li>
+<li>
+<p>查看linux发行版（什么系统centos？Fedora？，版本号）<br />
+lsb_release -a  , cat /etc/issue  适用于所有发行版Redhat，suse，debian<br />
+cat /etc/redhat-release   适用于Redhat系列的linux<br />
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+</li>
+<li>
+<p>centos的第7个版本，（也就是通过cat /etc/redhat-release 查看的有centos7字样的。）中的防火墙不再是iptables，而是firewalld。</p>
+</li>
+</ol>
+<p>firewalld是一个后台进程，分为系统配置文件和用户配置文件，系统配置文件（/usr/lib/firewalld/services），用户配置文件（/etc/firewalld/）</p>
+<p>修改防火墙的设置有两种方法。<br />
+1.直接修改用户配置文件，<br />
+2.使用命令（firewall-cmd）来间接管理修改配置文件</p>
+<p>firewall-cmd --permanent --add-port=445/tcp 开放9527端口<br />
+firewall-cmd --permanent --remove-port=12345/tcp  禁用端口<br />
+firewall-cmd --state        查看防火墙的状态<br />
+firewall-cmd --list-all       查看防火墙的开放列表</p>
+<p>firewalld 常用命令<br />
+1.重启，关闭，开启firewalld服务<br />
+service firewalld start/stop/restart</p>
+<ol start="4">
+<li>开放80端口(centos6)<br />
+vi /etc/sysconfig/iptables<br />
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT<br />
+service iptables restart<br />
+或:<br />
+iptables -A INPUT -p tcp -m state --state  NEW  -m tcp --dport 80 -j ACCEPT<br />
+service iptables save<br />
+service iptables restart</li>
+</ol>
+<p>（<a target="_blank" rel="noopener" href="https://blog.csdn.net/yyycheng/article/details/79753032%EF%BC%89">https://blog.csdn.net/yyycheng/article/details/79753032）</a><br />
+（<a target="_blank" rel="noopener" href="https://blog.csdn.net/xiazichenxi/article/details/80169927%EF%BC%89%E9%98%B2%E7%81%AB%E5%A2%99%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D">https://blog.csdn.net/xiazichenxi/article/details/80169927）防火墙详细介绍</a><br />
+（<a target="_blank" rel="noopener" href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls%EF%BC%89redhat%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3">https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls）redhat官方文档</a><br />
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p>
+<h3 id="centos系统安装流程"><a class="markdownIt-Anchor" href="#centos系统安装流程"></a> centos系统安装流程</h3>
+<ol>
+<li>
+<p>安装centos7，通过镜像</p>
+</li>
+<li>
+<p>配置网络<br />
+vi /etc/sysconfig/network-scripts/ifcfg-xxx<br />
+{<br />
+修改如下:<br />
+static<br />
+on<br />
+添加如下:<br />
+IPADDR=192.168.1.100<br />
+NETMASK=255.255.255.0<br />
+GATEWAY=192.168.1.1<br />
+DNS1=114.114.114.114<br />
+DNS2=8.8.8.8<br />
+DNS3=192.168.1.1(/etc/resolve.conf文件会根据网卡配置文件中的dns值设置nameserver，因此会出现每次重启导致resolve.conf文件清空)<br />
+}<br />
+systemctl restart network.service(service network restart)<br />
+ip addr</p>
+</li>
+<li>
+<p>配置yum国内镜像源</p>
+<p>3.1 首先备份/etc/yum.repos.d/CentOS-Base.repo<br />
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</p>
+<p>3.2 在163镜像站里找到centos对应版本repo文件下载<br />
+curl <a target="_blank" rel="noopener" href="http://mirrors.163.com/.help/CentOS7-Base-163.repo">http://mirrors.163.com/.help/CentOS7-Base-163.repo</a> &gt; /etc/yum.repos.d/CentOS7-Base-163.repo</p>
+<p>3.3 生成缓存<br />
+yum clean all<br />
+yum makecache</p>
+</li>
+<li>
+<p>安装常用软件<br />
+yum install gcc vim git wget</p>
+</li>
+<li>
+<p>bashrc配置</p>
+<pre class="highlight"><code class="shell"><span class="hljs-meta prompt_">
+# </span><span class="language-bash">.bashrc</span>
+<span class="hljs-meta prompt_">
+# </span><span class="language-bash">User specific aliases and <span class="hljs-built_in">functions</span></span>
+
+alias rm=&#x27;rm -i&#x27;
+alias cp=&#x27;cp -i&#x27;
+alias mv=&#x27;mv -i&#x27;
+<span class="hljs-meta prompt_">
+# </span><span class="language-bash">Source global definitions</span>
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+
+alias cl=&#x27;cl()&#123; cd $1;ls;&#125;;cl&#x27;
+alias scpget=&#x27;scpget()&#123; scp root@192.168.1.101:$1 $2;&#125;;scpget&#x27;
+alias scpsend=&#x27;scpsend()&#123; scp root@192.168.1.101:$1 $2;&#125;;scpsend&#x27;
+alias home=&#x27;home()&#123; cl ~;&#125;;home&#x27;
+alias portadd=&#x27;portadd() &#123; firewall-cmd --permanent --add-port=$1/tcp;&#125;;portadd&#x27;
+alias portsub=&#x27;portsub()&#123; firewall-cmd --permanent --remove-port=$1/tcp;&#125;;portsub&#x27;
+alias net=&#x27;net()&#123; netstat -lnp |grep $1;&#125;;net&#x27;
+
+</code></pre>
+</li>
+<li>
+<p>安装zsh和下载zsh的配置文件oh-my-zsh</p>
+</li>
+</ol>
+<p>+++ 安装zsh +++<br />
+yum install -y zsh</p>
+<p>+++ 安装oh-my-zsh +++<br />
+git clone <a target="_blank" rel="noopener" href="https://gitee.com/mirrors/oh-my-zsh.git">https://gitee.com/mirrors/oh-my-zsh.git</a> ~/.oh-my-zsh<br />
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</p>
+<ol start="7">
+<li>配置网络时间同步服务ntpd<br />
+<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/156757418">https://zhuanlan.zhihu.com/p/156757418</a></li>
+</ol>
+<br>
+<br>
+<h3 id="centos软件管理"><a class="markdownIt-Anchor" href="#centos软件管理"></a> centos软件管理</h3>
+<blockquote>
+<p>References:<br />
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/liang_operations/article/details/83241551#2rpm_7">https://blog.csdn.net/liang_operations/article/details/83241551#2rpm_7</a></p>
+</blockquote>
+<ol>
+<li>
+<p>软件类型<br />
+rpm–》二进制软件。<br />
+tar–》软件源码。</p>
+</li>
+<li>
+<p>rpm管理（1.手动下载安装。 2.使用yum包管理软件来管理）</p>
+<ul>
+<li>
+<p>手动管理</p>
+<ol>
+<li>
+<p>rpm包格式<br />
+eg：perl-Carp-1.26-244.el7.noarch.rpm<br />
+软件名：    perl-Carp<br />
+版本：     1.26-244  （版本细分：主版本号1，次版本号26，release次数244）<br />
+操作系统版本： e17<br />
+cpu架构：    noarch</p>
+</li>
+<li>
+<p>下载<br />
+通过互联网下载（curl或wget）xxx.rpm</p>
+</li>
+<li>
+<p>安装<br />
+rpm -ivh xxx.rpm</p>
+</li>
+<li>
+<p>查询<br />
+rpm -qa xxx （查询是否安装某软件）<br />
+rpm -qf /usr/bin/dd （查询软件所属rpm包）</p>
+</li>
+<li>
+<p>删除<br />
+rpm -e xxx.rpm</p>
+</li>
+</ol>
+</li>
+<li>
+<p>yum软件来管理</p>
+<ol>
+<li>yum原理<br />
+首先yum软件运行makecache选项后通过目录/etc/yum.repos.d/下的配置文件，<br />
+通过网络更新软件信息缓存表（只是软件的描述信息，而不是软件本身）<br />
+用户就可以查询相关软件的信息在本地，通过缓存表<br />
+yum clean all 清空缓存表（/var/cache/yum）<br />
+yum makecache 生成缓存</li>
+</ol>
+<pre class="highlight"><code class="bash">1、升级系统
+[root@localhost ~]<span class="hljs-comment">#yum update</span>
+ 
+2、安装指定的软件包
+[root@localhost ~]<span class="hljs-comment"># yum -y install mysql-server</span>
+ 
+3、升级指定的软件包
+[root@localhost ~]<span class="hljs-comment"># yum -y update mysql</span>
+ 
+4、卸载指定的软件包
+[root@localhost ~]<span class="hljs-comment"># yum -y remore mysql</span>
+ 
+5、查看系统中已经安装的和可用的软件组，对于可用的软件组，你可以选择安装
+[root@localhost ~]<span class="hljs-comment"># yum grouplist</span>
+ 
+6、安装上一个命令中显示的可用的软件组中的一个软件组
+[root@localhost ~]<span class="hljs-comment"># yum -y groupinstall Emacs</span>
+ 
+7、更新指定软件组中的软件包
+[root@localhost ~]<span class="hljs-comment"># yum -y groupupdate Emacs</span>
+ 
+8、卸载指定软件组中的软件包
+[root@localhost ~]<span class="hljs-comment"># yum -y groupremove Emacs</span>
+ 
+9、清除缓存中的rpm 头文件和包文件
+[root@localhost ~]<span class="hljs-comment"># yum clean all</span>
+ 
+10、搜索相关的软件包
+[root@localhost ~]<span class="hljs-comment"># yum -y search Emacs</span>
+ 
+11、显示指定软件包的信息
+[root@localhost ~]<span class="hljs-comment"># yum info Emacs</span>
+ 
+12、查询指定软件包的依赖包
+[root@localhost ~]<span class="hljs-comment"># yum deplist emacs</span>
+ 
+13、列出所有以 yum 开头的软件包
+[root@localhost ~]<span class="hljs-comment"># yum list yum\*</span>
+ 
+14、列出已经安装的但是不包含在资源库中的rpm 包
+[root@localhost ~]<span class="hljs-comment"># # yum list extras</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>tar源码包管理<br />
+./configure --prefix = /usr/local/bin/    （配置软件的属性：安装路径，功能选项。类似win下单安装软件过程。最终生成makefile文件）<br />
+make      根据makefile规则执行编译<br />
+make install  根据makefile规则执行安装<br />
+make clean    根据makefile规则执行清理</p>
+</li>
+<li>
+<p>自己安装软件,设置环境变量</p>
+<ol>
+<li>建立可执行文件的软连接.<br />
+ln -s src dst</li>
+<li>vim .bashrc<br />
+export PATH=$PATH:<yourpath></li>
+<li>source .bashrc</li>
+</ol>
+</li>
+</ol>
+<br>
+<br>
+<h3 id="centos7搭建web服务器"><a class="markdownIt-Anchor" href="#centos7搭建web服务器"></a> centos7搭建web服务器</h3>
+<h4 id="nginx-php方式"><a class="markdownIt-Anchor" href="#nginx-php方式"></a> nginx + php方式</h4>
+<ol>
+<li>
+<p>安装nginx<br />
+方式一：<br />
+yum install epel-release<br />
+yum makecache<br />
+yum install nginx -y<br />
+方式二：<br />
+cat /etc/redhat-release 发行版本号,下面的6<br />
+uname -a <a target="_blank" rel="noopener" href="//xn--x-h47a387dv4a952a.x.x">//内核版本x.x.x</a><br />
+vi  /etc/yum.repos.d/nginx.repo</p>
+<pre><code>     [nginx]
+     name=nginx repo
+     baseurl=http://nginx.org/packages/centos/6/$basearch/
+     gpgcheck=0
+     enabled=1
+ 
+     yum clean all
+     yum makecache
+     yum install nginx
+</code></pre>
+</li>
+<li>
+<p>安装php<br />
+rpm -Uvh <a target="_blank" rel="noopener" href="https://centos7.iuscommunity.org/ius-release.rpm">https://centos7.iuscommunity.org/ius-release.rpm</a>   ==添加源<br />
+yum search php7x   ==查找包<br />
+yum install php7x*   ==安装7x的所有包(扩展)</p>
+</li>
+<li>
+<p>配置nginx<br />
+1.修改<br />
+location / {<br />
+root   E:\php-7.2.6\www;   //php目录<br />
+index  index.html index.htm;<br />
+}<br />
+2.解开如下location节点<br />
+location ~ .php$ {<br />
+root           E:\php-7.2.6\www;   //php目录<br />
+fastcgi_pass   127.0.0.1:9000;<br />
+fastcgi_index  index.php;<br />
+fastcgi_param  SCRIPT_FILENAME  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><msub><mi>t</mi><mi>r</mi></msub><mi>o</mi><mi>o</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">document_root</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">o</span><span class="mord mathnormal">c</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">o</span><span class="mord mathnormal">o</span><span class="mord mathnormal">t</span></span></span></span>fastcgi_script_name; //修改/script为$document_root<br />
+include        fastcgi_params;<br />
+}</p>
+</li>
+<li>
+<p>配置php<br />
+3.配置<br />
+3.1 解开配置<br />
+extension_dir = E:\php-7.2.6\ext;//php插件目录<br />
+cgi.fix_pathinfo=1; //php与使用cgi的配置项<br />
+4.管理<br />
+4.1.启动<br />
+php-cgi.exe -b 127.0.0.1:9000 -c php.ini<br />
+4.2.关闭</p>
+</li>
+</ol>
+<br>
+<br>
+<h4 id="tomcat-java方式"><a class="markdownIt-Anchor" href="#tomcat-java方式"></a> tomcat + java方式</h4>
+<ol>
+<li>
+<p>首先下载java<br />
+yum clean all<br />
+yum makecache<br />
+yum install java</p>
+</li>
+<li>
+<p>下载tomcat安装包<br />
+国内超快镜像  <a target="_blank" rel="noopener" href="https://mirrors.cnnic.cn/apache/tomcat/">https://mirrors.cnnic.cn/apache/tomcat/</a></p>
+</li>
+<li>
+<p>解压tar.gz<br />
+tar -zvxf apache-tomcat.tar.gz<br />
+cd apache-tomcat/bin<br />
+./starup.sh</p>
+</li>
+<li>
+<p>查看tomcat实时日志记录<br />
+cd apache-tomcat/logs<br />
+tail -f catalina.out<br />
+ctrl+c退出</p>
+</li>
+</ol>
+<br>
+<br>
+<h4 id="数据库下载"><a class="markdownIt-Anchor" href="#数据库下载"></a> 数据库下载</h4>
+<blockquote>
+<p>centos7中不再使用mysql，MySQL被收购之后就不是开源了。使用的是mariadb数据库</p>
+</blockquote>
+<ol>
+<li>安装mariadb<br />
+yum install mariadb-server mariadb</li>
+<li>启动mariadb<br />
+systemctl start mariadb</li>
+<li>关闭mariadb<br />
+systemctl stop mariadb</li>
+</ol>
+<h4 id="服务管理"><a class="markdownIt-Anchor" href="#服务管理"></a> 服务管理</h4>
+<p>1.查看启动项<br />
+systemctl list-unit-files<br />
+2.过滤查看启动项<br />
+systemctl list-unit-files | grep enable</p>
+
+</div>
+
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/07/28/qt/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  qt重点内容
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/07/21/cmakelist/">
+                cmakelists
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div id="gitalk-container"></div>
+
+
+<script>
+
+
+const gitalk = new Gitalk({
+  clientID: 'd91e94a64a0bd6162192',
+  clientSecret: 'dea5446950bd4dbd03f7c459e78838a581b4658c',
+  repo: 'hexo_comments',
+  owner: 'arashrun',
+  admin: ['arashrun'],
+  id: location.pathname,
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+
+
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
+<script type="text/javascript" src="/lib/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/lib/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/lib/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/lib/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/lib/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important;  }</style>
+
+
+		</div>
+	</div>
+	
+	
+<div id="footer">
+
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">arashrun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			文章阅读量
+			<span id="busuanzi_value_site_pv"></span>
+			次
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			访客量
+			<span id="busuanzi_value_site_uv"></span>
+			人
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+		mermaid.initialize({ startOnLoad: false  });
+		await mermaid.run({
+			querySelector: '.mermaid'
+				})
+    </script>
+
+
+
+	
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+
+
+<script type="text/javascript"> 
+	const options = {
+	  bottom: '64px', // default: '32px'
+	  right: 'unset', // default: '32px'
+	  left: '32px', // default: 'unset'
+	  time: '0.5s', // default: '0.3s'
+	  mixColor: '#fff', // default: '#fff'
+	  backgroundColor: '#fff',  // default: '#fff'
+	  buttonColorDark: '#100f2c',  // default: '#100f2c'
+	  buttonColorLight: '#fff', // default: '#fff'
+	  saveInCookies: false, // default: true,
+	  label: '🌓', // default: ''
+	  autoMatchOsTheme: true // default: true
+	}
+	new Darkmode(options).showWidget();
+</script>
+
+</html>
