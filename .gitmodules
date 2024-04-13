@@ -1,0 +1,3 @@
+[submodule "themes/self-hexo-theme"]
+	path = themes/self-hexo-theme
+	url = https://github.com/arashrun/self-hexo-theme.git
