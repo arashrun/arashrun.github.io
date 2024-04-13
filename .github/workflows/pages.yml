@@ -2,7 +2,7 @@
 on:
   push:
     branches:
-      - hexo
+      - main
     workflow_dispatch:
 
 jobs:
