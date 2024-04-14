@@ -2,14 +2,13 @@
 title: Hexo指南
 date: 2022-04-07 22:32:19
 categories:
-- web
-tags: 
-- 技术
-- hexo
-- ejs
-- node.js
-- jquery
-- 前端
+  - web
+tags:
+  - 技术
+  - hexo
+  - ejs
+  - jquery
+  - 前端
 ---
 
 
@@ -99,3 +98,24 @@ github上的两个分支，master和hexo分支。默认clone和展示的分支�
 
 - hexo deploy -g
 
+
+> [!NOTE]
+> 
+> 1. hexo部署流程已通过Github Actions的功能进行了优化，文章写完之后推送到远程即可实现自动化部署到Github Pages界面
+> 2. 更好的笔记部署方式是通过obsidian插件`webpage html export` 插件将笔记转换成html之后，部署到vercel这个 `静态界面托管平台` [^1][^2] 进行管理，这个平台只需要一个GitHub网址，即可在你更新仓库之后自动部署到vercel平台，不需要编写Github Actions文件。并且该插件能够保留你obsidian中当前的布局和主题，真正做到所见即所得的网址效果
+
+
+
+### 站点
+
+- [Github Pages](https://github.com/arashrun.github.io)
+- [Vercel](https://arashrun.vercel.app)
+
+
+
+[^1]: 推荐的托管平台
+	- [几个免费的静态网站托管平台对比 | xxyopen](https://www.xxyopen.com/2022/07/19/tools/pages_host.html)
+	- [静态托管平台收集 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/180152636)
+
+
+[^2]: vercel的站点需要一个 `index.html` 文件才能正常访问，使用webpage插件导出的笔记目录中是没有该index.html的，导致访问vercel站点会出现404错误，可以手写一个入口界面，指向指定的内部界面即可
