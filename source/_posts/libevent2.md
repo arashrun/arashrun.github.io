@@ -1,60 +1,58 @@
+---
+title: libevent2
+date: 2023-07-14 09:57:22
+categories:
+  - 开源库
+tags:
+  - network
+  - 网络
+---
 
-<h2>标准使用流程</h2>
 
-<h3>1. Creating an event base</h3>
+## 标准使用流程
 
-<br>
+### 1. Creating an event base
 
-<b>
-struct event_base *event_base_new(void);<br>
-</b>
+```c
+struct event_base *event_base_new(void);
 创建event-base结构体
-<br><br>
 
-<b>
-struct event_config *event_config_new(void);<br>
-struct event_base *event_base_new_with_config(const struct event_config *cfg);<br>
-void event_config_free(struct event_config *cfg);<br>
-</b>
+struct event_config *event_config_new(void);
+struct event_base *event_base_new_with_config(const struct event_config *cfg);
+void event_config_free(struct event_config *cfg);
 使用特定的配置(event_config)来创建一个event_base。event_config_new只是创建一个结构体，具体的配置需要使用如下的函数来配置。
-<br></br>
 
-<b>
-int event_config_avoid_method(struct event_config *cfg, const char *method);<br>
+int event_config_avoid_method(struct event_config *cfg, const char *method);
 int event_config_require_features(struct event_config *cfg,
                                   enum event_method_feature feature);<br>
 int event_config_set_flag(struct event_config *cfg,
-    enum event_base_config_flag flag);<br>
-</b>
+    enum event_base_config_flag flag);
 使用上述的函数接口来配置event_config结构体。
-<br><br>
 
+```
 
-<b>
-const char **event_get_supported_methods(void);<br>
-const char *event_base_get_method(const struct event_base *base);<br>
-enum event_method_feature event_base_get_features(const struct event_base *base);<br>
-</b>
-- 获取本机支持的底层事件机制（select，poll，epoll）。最后一个字符串是null<br>
-- 获取当前event_base使用的哪个机制<br>
-- 获取当前event_base机制支持的features
-<br><br>
+```c++
+//获取本机支持的底层事件机制（select，poll，epoll）。最后一个字符串是null
+const char **event_get_supported_methods(void);
+// 获取当前event_base使用的哪个机制
+const char *event_base_get_method(const struct event_base *base);
+ //获取当前event_base机制支持的features
+enum event_method_feature event_base_get_features(const struct event_base *base);
 
-<b>
-void event_base_free(struct event_base *base);<br>
-</b>
-释放event_base。但不会释放管理的event，和涉及到的file description及指针
-
-<hr></br><br>
+// 释放event_base。但不会释放管理的event，和涉及到的file description及指针
+void event_base_free(struct event_base *base);
+```
+ 
 
 
 
 
 
-<h3>2. Create a event and add it to `event_base`</h3>
+
+
+### 2. Create a event and add it to `event_base`
 <br>
-2.1 event的状态机模型<br>
-<br>
+2.1 event的状态机模型
 initialized<br>
 |<br>
 pending<br>
@@ -107,39 +105,31 @@ int event_remove_timer(struct event *ev);
 
 
 
-
-<h3>3. run the event_base</h3>
-<br>
-<b>
+### run the event_base
+```c
 #define EVLOOP_ONCE             0x01<br>
 #define EVLOOP_NONBLOCK         0x02<br>
 #define EVLOOP_NO_EXIT_ON_EMPTY 0x04<br>
-int event_base_loop(struct event_base *base, int flags);<br>
-</b>
+int event_base_loop(struct event_base *base, int flags);
 使用某一种方式运行event_base。EVLOOP_ONCE等待并运行完成所有事件。EVLOOP_NONBLOCK巡逻式的检查是否有event激活。
-</br><br>
-
-<b>
 int event_base_dispatch(struct event_base *base);
-</b>
 使用默认的方式（一直运行，直到没有注册的事件，或者调用event_base_loopbreak,event_base_loopexit来强制结束事件循环）运行
-<br>
-<br>
+```
 
-<b>
+
+
+```c
 int event_base_loopexit(struct event_base *base,
-                        const struct timeval *tv);<br>
-int event_base_loopbreak(struct event_base *base);<br>
-</b>
+                        const struct timeval *tv);
+int event_base_loopbreak(struct event_base *base);
 终止loop。
-<br><br>
 
+```
 
-<b>
-void event_base_dump_events(struct event_base *base, FILE *f);<br>
-</b>
+```c
+void event_base_dump_events(struct event_base *base, FILE *f);
 用于调试，将event_base当前持有的事件写入文件中。
-<br><br>
+```
 
 
 
@@ -147,29 +137,10 @@ void event_base_dump_events(struct event_base *base, FILE *f);<br>
 
 
 
+## Some useful utility
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2>Some useful utility</h2>
-
+```c
 struct event_base:
 struct event:
 struct bufferevent:
@@ -193,21 +164,18 @@ struct evbuffer:
     int evbuffer_add_buffer(struct evbuffer *dst, struct evbuffer *src);
     int evbuffer_remove_buffer(struct evbuffer *src, struct evbuffer *dst, size_t datlen);
 
+```
+
+###  对libevent中Bufferevents的water-mark的理解
 
 
-<br>
-<br>
-<br>
-
-
-## 对libevent中Bufferevents的water-mark的理解
 > 每一个bufferevent结构都有一个input buffer和output buffer(均为evbuffer结构).当有数据往bufferevent中写时，bufferevent就会将要写入的数据添加到output buffer中。反过来，当bufferevent中有数据可读时，你可以从bufferevent中的input buffer提取出数据
 
-<br>
 每一个bufferevent结构都有两个与数据相关的回调：读回调(read callback)和写回调(write callback)。默认情况下，读回调会当底层传输机制(epool,poll,iocp)有数据可读时触发回调，而写回调只有output buffer中还有空间可写时调用。用户可以通过设置读和写的watermarks(水位)来改变数据收发的时机
 
-<img alt="watermarks" src="/pics/water_mark.png"/>
+![water_mark](../images/water_mark.png)
 
-<br>
+
+
 > Reference: 
 > http://www.wangafu.net/~nickm/libevent-book/
