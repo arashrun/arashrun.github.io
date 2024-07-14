@@ -175,6 +175,7 @@ struct evbuffer:
 
 ![water_mark](../images/water_mark.png)
 
+![water_mark](images/water_mark.png)
 
 
 > Reference: 
