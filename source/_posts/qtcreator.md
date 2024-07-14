@@ -24,6 +24,12 @@ tags:
 sudo patchelf --add-rpath /opt/qt-creator/libc/lib/x86_64-linux-gnu/:/opt/qt-creator/libstd/usr/lib/x86_64-linux-gnu/ qtcreator
 
 
-# 修改程序的ld
+# 修改程序的ld 【出现段错误的时候】
 sudo patchelf --set-interpreter /opt/qt-creator/libc/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2  qtcreator
+
+
+# 二级依赖导致先加载的系统本地的libpthread版本，虽然上面指定了rpath，但是need查找优先级高于rpath
+sudo patchelf --add-needed libpthread.so.1 qtcreator
 ```
+
+同理，其他小工具无法使用的时候也按照上面的指令来修改elf头即可
