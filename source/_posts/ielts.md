@@ -7,6 +7,17 @@ tags:
   - ielts
 ---
 
+## 阅读 (page-6)
+
+- 3 sections , 40 questions
+- notices, advertisements, leaflets, newspapers, instruction manuals, books, magazins
+- first sections: linguistic survival
+- second section: work relevant , more complex
+- third section: more complex plus
+- with the emphasis on descriptive and instructive rather than argumentative texts
+
+
+
 ## 11-06
 
 - candidates
@@ -33,3 +44,44 @@ tags:
 - circumstances
 - fees
 - it is expected you'll contribute to the cost of your care
+
+
+
+
+## 11-12
+
+- aged-care home
+- health facility
+- wing
+- programme
+- what if
+- cabin bags
+- air travel
+- withstand
+- harsh
+- treatment
+- nylon
+- polyester
+- rip or burst
+- thrown whilst in transit
+- trolley handle
+- flimsy
+- grip
+- good soaking
+- ridges
+- sore
+- fabric
+- tug
+- This is definitely one    to avoid
+- let loads of water in
+- inside the lid
+- adjustable straps
+- smooth floors
+- steer 
+- fabric tore
+- leopard print
+- lipstick kisses
+- retract
+- internal diveider
+- is resistant to
+- 
