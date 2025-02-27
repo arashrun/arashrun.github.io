@@ -33,3 +33,74 @@ sudo patchelf --add-needed libpthread.so.1 qtcreator
 ```
 
 同理，其他小工具无法使用的时候也按照上面的指令来修改elf头即可
+
+
+## qmake构建系统
+
+
+**交叉编译**
+
+1. 安装交叉编译器
+2. 创建目标平台的根文件系统img，并进行挂载
+3. 创建qmake的配置文件
+
+```qmake
+
+#!/bin/bash
+
+script_dir_path=`dirname $0`
+script_dir_path=`(cd "$script_dir_path"; /bin/pwd)`
+
+#/usr/lib/qt5/bin/qmake -qtconf "$script_dir_path/arm.conf" $*
+#/usr/bin/qmake -qtconf "$script_dir_path/arm.conf" $*
+
+#/usr/lib/x86_64-linux-gnu/qt5/bin/qmake $* -qtconf "$script_dir_path/arm.conf"
+/usr/bin/qmake $* -qtconf "$script_dir_path/arm.conf"
+
+```
+
+
+```arm.conf
+
+[Paths]
+Prefix=/usr
+ArchData=lib/aarch64-linux-gnu/qt5
+Binaries=../../../usr/lib/qt5/bin
+Data=share/qt5
+Documentation=share/qt5/doc
+Examples=lib/aarch64-linux-gnu/qt5/examples
+Headers=include/aarch64-linux-gnu/qt5
+Imports=lib/aarch64-linux-gnu/qt5/imports
+Libraries=lib/aarch64-linux-gnu
+LibraryExecutables=lib/aarch64-linux-gnu/qt5/libexec
+Plugins=lib/aarch64-linux-gnu/qt5/plugins
+Qml2Imports=lib/aarch64-linux-gnu/qt5/qml
+Settings=/etc/xdg
+Translations=share/qt5/translations
+Sysroot=/mnt/kylinOS
+SysrootifyPrefix=true
+TargetSpec=linux-aarch64-gnu-g++
+HostSpec=linux-g++
+HostPrefix=/usr
+;HostPrefix=/mnt/kylinOS
+;HostBinaries=lib/qt5/bin
+;HostData=lib/x86_64-linux-gnu/qt5
+HostData=../mnt/kylinOS/usr/lib/aarch64-linux-gnu/qt5
+;HostLibraries=lib/x86_64-linux-gnu
+;HostLibraryExecutables=libexec
+```
+
+
+
+对于libgl动态库的问题，需要修改img镜像中的qt的mkspec文件。覆盖 `QMAKE_LIBS_OPENGL` 
+
+
+```qmake.conf
+
+load(qt_config)  # 加载 Qt 默认配置
+
+# 覆盖 OpenGL 配置（必须在此位置）
+QMAKE_LIBS_OPENGL = $$[QMAKE_SYSROOT]/usr/lib/aarch64-linux-gnu/libGL.so
+```
+
+
