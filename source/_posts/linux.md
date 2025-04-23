@@ -27,6 +27,10 @@ export no_proxy="*.aiezu.com,10.*.*.*,192.168.*.*,*.local,localhost,127.0.0.1"
 
 ```
 
+`proxyman` : 一键配置代理脚本
+
+
+
 ### 终端翻译软件(shell translation tools)
 sudo apt-get install ruby
 sudo gem install fy
