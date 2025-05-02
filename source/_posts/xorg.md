@@ -34,8 +34,6 @@ tags:
 
 lightdm提供了glib接口，但是有其他语言绑定封装的库可以使用。 qt有 `liblightdm-qt5-3-dev` 。js有 webkit2的封装
 
-
-
 ### window manager
 
 窗管列表
