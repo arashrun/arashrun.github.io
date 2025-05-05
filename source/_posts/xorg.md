@@ -34,6 +34,22 @@ tags:
 
 lightdm提供了glib接口，但是有其他语言绑定封装的库可以使用。 qt有 `liblightdm-qt5-3-dev` 。js有 webkit2的封装
 
+### vnc
+
+```bash
+# apt install x11vnc
+
+export DISPLAY=:0
+x11vnc -rfbport 5901 -shared -ncache 4 -forever -bg -repeat
+```
+
+x11vnc是基于 `rdp` 协议来实现远程控制的。不同于tigervnc-standalone-server的方式。tigervnc采用的是重开一个X session会话的方式，这种方式多个用户互相不影响对方的操作
+
+
+
+### xcb
+
+
 ### window manager
 
 窗管列表
@@ -45,4 +61,9 @@ lightdm提供了glib接口，但是有其他语言绑定封装的库可以使用
 **wayland**
 
 - [lxqt-session/config/waylandwindowmanagers.conf at master · lxqt/lxqt-session](https://github.com/lxqt/lxqt-session/blob/master/config/waylandwindowmanagers.conf)
+
+基本原理代码
+
+- [mackstann/tinywm: The tiniest window manager.](https://github.com/mackstann/tinywm)
+- [jichu4n/basic_wm: An example basic X11 window manager.](https://github.com/jichu4n/basic_wm/tree/master)
 
