@@ -9,6 +9,14 @@ tags:
 
 [08-线程的使用方式2-添加修改任务类_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1iN411f7dY?p=8&vd_source=0a2bd2d5e3c437b3fd7699cd52ebe78d)
 
+Qt中两个模块中涉及到了并发编程相关的内容，QtCore提供了基础的较为低层的线程控制类，QtConcurrent模块则实现了高级的并发模型，例如 `Map-Reduce` `Filter-Reduce
+
+| QtCore      | QtConcurrent                    |     |
+| ----------- | ------------------------------- | --- |
+| QThread     | map,mapped,mappedReduced        |     |
+| QThreadPool | filter,filterd, filteredReduced |     |
+|             | run                             |     |
+
 
 ### 线程类——QThread
 
@@ -57,4 +65,7 @@ QThread的构造函数是在老线程中执行的，而run方法是在新线程�
 1. 调用QThreadPool静态方法 `QThreadPool::globalInstance()` 返回全局线程池对象
 2. 调用全局线程池对象的start，将任务类实例添加进去
 
+
+
+### QtConcurrent
 
