@@ -9,13 +9,72 @@ tags:
   - gstreamer
 ---
 
+#### 基本概念
+
+**Pipeline**
+
+
+**Element**
+
+
+
+**Bin** 
+
+bin是一个容器的概念，多个element组合在一起构成的逻辑单元称为bin。
+
+
+**Pad**
+
+在 GStreamer 中，**pad（ pads，也称为 "端口"）** 是元素（element）之间连接的接口，用于数据的输入和输出。可以把它理解为管道中元素的 "接口"，数据通过 pad 在不同元素之间流动。
+- **src pad（源端口）**：元素输出数据的端口（数据离开元素的地方）
+- **sink pad（接收端口）**：元素接收数据的端口（数据进入元素的地方）
+- **ghost pad（幽灵端口）** 是一种特殊的 pad，它本身不处理数据，而是作为容器元素（bin）内部某个元素 pad 的 "代理" 或 "别名"。
+简单说，ghost pad 的作用是：
+1. 让容器元素（bin）对外暴露内部元素的 pad，使容器可以像普通元素一样与外部连接
+2. 隐藏容器内部的复杂结构，简化管道设计
+
+**Probe**
+
+在 GStreamer 中，**probe（探针）** 是一种用于监控、检查或修改流经 pad 的数据的机制。它允许你在数据通过 pad 时插入自定义逻辑，常用于调试、分析或动态控制媒体流。
+
+
+
+**capabilities** 
+
+
+**interface** 
+
+
+**Buffer** 
+
+**Bus** 
+
+
+**Event**
+
 
 ```bash
 # 列出你的摄像头设备支持的所有格式、分辨率和帧率
 v4l2-ctl --list-formats-ext -d /dev/video12
+
+# 输出gstreamer管道图（apt install graphviz)
+export GST_DEBUG_DUMP_DOT_DIR=/tmp/gstvideo
+gst-launch-1.0 playbin uri=file:///home/ccls/ds.mp4 audio-sink='pulsesink client-name=uuid'
+
+dot -Tpng /tmp/gstvideo/xxx.dot -o xxx.png
 ```
 
+#### 管道控制
 
+**动态修改运行中管道的元素属性**
+
+```bash
+# 查看系统中所有运行的 GStreamer 管道：
+gst-inspect-1.0 --types=PIPELINE
+
+# 通过 ID 发送控制命令：假设目标管道 ID 为 0x55f5a7b2c3d4
+gst-launch-1.0 controller --id=0x55f5a7b2c3d4 send=vol,volume:0.5
+```
 
 
 ### 图片的清晰度是由什么决定的？物理屏幕大小和图片分辨率和图片大小这些吗
