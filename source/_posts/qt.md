@@ -39,3 +39,11 @@ tags:
 
 | [中文教程](https://qtguide.ustclug.org/) | [官方文档](https://doc.qt.io/qt-5/topics-network-connectivity.html) | [中文文档](http://qt6.digitser.net/index.html) |
 
+
+
+## 常见需求
+
+- [Qt 给顶层窗口和子控件添加阴影和圆角 - fengMisaka - 博客园](https://www.cnblogs.com/linuxAndMcu/p/13447776.html)
+- [使用亚克力的透明磨砂效果的窗口思路和解决方案 | 跨平台方案](https://github.com/SunnyCapturer/AcrylicWindow)
+- [Qt 无边框窗口，自定义边框、标题栏样式；自定义最小化、最大化、关闭图标及样式；可移动、拉伸、缩放；自定义窗口阴影、圆角且不影响窗口最大化；](https://github.com/yibobunengyuntian/FrameWgt)
+- 

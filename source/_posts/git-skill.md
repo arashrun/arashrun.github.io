@@ -57,15 +57,21 @@ git push <remote repo name> <remote new branch>:<local new branch>
 git branch --set-upstream <branch> <remote-branch>
 ```
 
+
+### rebase
+
+对本地提交A进行补充修复或提交
+
+```bash
+git commit --fixup <hash_A>
+git rebase -i <Commit_Before_A_Hash>
+
+pick <Hash_A> Commit A message
+fixup <Hash_Fixup_A> Fixup! Commit A message  <-- 移动到 A 后面，操作改为 fixup
+pick <Hash_B> Commit B message
+pick <Hash_C> Commit C message
+```
+
 ### git 子模块
-1. git submodule add <git path>		//添加子模块
 
-
-## 好的git项目
-
-
-[后台服务器开发指南](https://github.com/zhiyong0804/server_develop_guide_book)
-[后端架构师技术栈](https://github.com/xingshaocheng/architect-awesome)
-[serenityos操作系统](https://github.com/SerenityOS/serenity.git)
-
-
+1. git submodule add <git path>

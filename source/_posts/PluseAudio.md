@@ -85,3 +85,32 @@ pactl load-module module-loopback source=LineOut.monitor sink=alsa_output.pci-00
 1. 取消重定向
 2. 删除虚拟sink
 ```
+
+
+**修改设备描述**
+
+参考：[pulse-cli-syntax(5) — Arch manual pages](https://man.archlinux.org/man/pulse-cli-syntax.5#NAME)
+
+
+```bash
+修改/etc/pulse/default.pa，添加如下命令，最后重启音频服务
+
+update-sink-proplist alsa_output.platform-hdmi0-sound.stereo-fallback device.description="我的hdmi声卡"
+
+systemctl --user restart pulseaudio.service
+```
+
+
+
+
+
+### Term
+
+- card
+一个card代表物理或模拟的音频IC，一个声卡通常包含多个 `port` 和多个可用的 `profile` 
+
+- profile
+由于声卡有多个端口，因此可以按需启用相关功能组合。profile就是声卡上的一组功能组合
+
+- port
+端口。直接可见的可连接线缆的插孔。一个声卡通常可以连接和处理多个输入输出设备。

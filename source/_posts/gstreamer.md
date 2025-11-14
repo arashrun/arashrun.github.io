@@ -62,6 +62,30 @@ export GST_DEBUG_DUMP_DOT_DIR=/tmp/gstvideo
 gst-launch-1.0 playbin uri=file:///home/ccls/ds.mp4 audio-sink='pulsesink client-name=uuid'
 
 dot -Tpng /tmp/gstvideo/xxx.dot -o xxx.png
+
+
+# MPP开启全局AFBC
+export GST_MPP_VIDEODEC_DEFAULT_ARM_AFBC=1
+
+#通过fpsdisplaysink获取帧率
+GST_DEBUG=fpsdisplaysink:7 gst-play-1.0 --flags=3 --videosink="fpsdisplaysink \
+video-sink=xvimagesink signal-fps-measurements=true text-overlay=false  \
+sync=false" test.mp4
+
+#信息输出如下
+Press 'k' to see a list of keyboard shortcuts.
+Now playing /home/cat/test.mp4
+0:00:00.104146271  1868   0x55a0d01790 DEBUG         fpsdisplaysink fpsdisplaysink.c:440:fps_display_sink_start:<fpsdisplaysink0> Use text-overlay? 0
+Redistribute latency...
+0:00:01.670561179  1868   0x7f84044f70 DEBUG         fpsdisplaysink fpsdisplaysink.c:372:display_current_fps:<fpsdisplaysink0> Updated max-fps to 69.251621
+0:00:01.671678203  1868   0x7f84044f70 DEBUG         fpsdisplaysink fpsdisplaysink.c:376:display_current_fps:<fpsdisplaysink0> Updated min-fps to 69.251621
+0:00:01.673051588  1868   0x7f84044f70 LOG           fpsdisplaysink fpsdisplaysink.c:381:display_current_fps:<fpsdisplaysink0> Signaling measurements: fps:69.251621 droprate:0.000000 avg-fps:69.251621
+0:00:02.175685861  1868   0x7f84044f70 DEBUG         fpsdisplaysink fpsdisplaysink.c:372:display_current_fps:<fpsdisplaysink0> Updated max-fps to 69.281343
+0:00:02.176746888  1868   0x7f84044f70 LOG           fpsdisplaysink fpsdisplaysink.c:381:display_current_fps:<fpsdisplaysink0> Signaling measurements: fps:69.281343 droprate:0.000000 avg-fps:69.266479
+0:00:02.688069779  1868   0x7f84044f70 DEBUG         fpsdisplaysink fpsdisplaysink.c:372:display_current_fps:<fpsdisplaysink0> Updated max-fps to 72.214109
+0:00:02.689163762  1868   0x7f84044f70 LOG           fpsdisplaysink fpsdisplaysink.c:381:display_current_fps:<fpsdisplaysink0> Signaling measurements: fps:72.214109 droprate:0.000000 avg-fps:70.258145
+0:00:03.193409405  1868   0x7f84044f70 DEBUG         fpsdisplaysink fpsdisplaysink.c:372:display_current_fps:<fpsdisplaysink0> Updated max-fps to 75.213708
+0:00:03.194469849  1868   0x7f84044f70 LOG           fpsdisplaysink fpsdisplaysink.c:381:display_current_fps:<fpsdisplaysink0> Signaling measurements: fps:75.213708 droprate:0.000000 avg-fps:71.492593
 ```
 
 #### 管道控制
