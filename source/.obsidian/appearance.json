@@ -1,4 +1,9 @@
 {
-  "baseFontSizeAction": true,
-  "baseFontSize": 26
+  "accentColor": "",
+  "textFontFamily": "Source Code Pro",
+  "interfaceFontFamily": "Source Code Pro",
+  "theme": "moonstone",
+  "baseFontSize": 16,
+  "translucency": true,
+  "cssTheme": "AnuPpuccin"
 }

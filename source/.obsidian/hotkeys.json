@@ -4,10 +4,18 @@
       "modifiers": [
         "Alt"
       ],
-      "key": "O"
+      "key": "P"
     }
   ],
-  "app:toggle-left-sidebar": [
+  "editor:toggle-strikethrough": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "D"
+    }
+  ],
+  "editor:toggle-highlight": [
     {
       "modifiers": [
         "Alt"
