@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "lightdm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -184,6 +185,10 @@
   },
   "active": "d4bc7921ed5271dc",
   "lastOpenFiles": [
+    "_posts/xorg.md",
+    "_posts/对比度.md",
+    "images/对比度-20251120102631211.webp",
+    "images/对比度-20251120094523292.webp",
     "images/对比度-20251118112053940.webp",
     "friends/index.md",
     "about.md",
@@ -213,7 +218,6 @@
     "Excalidraw/Drawing 2022-10-20 23.05.34.excalidraw.md",
     "Excalidraw/Drawing 2023-05-13 12.27.49.excalidraw.md",
     "Excalidraw/Drawing 2023-05-23 14.45.06.excalidraw.md",
-    "_posts/xorg.md",
     "images/未命名-20250113193129688.webp",
     "2023/03/20",
     "2023/03",
@@ -221,15 +225,12 @@
     "images/about-20240414145021489.webp",
     "images/about-20240414144738241.webp",
     "images/结构主义-20240414144538926.webp",
-    "images/about-20240414144444154.webp",
     "_私有/posts/穿搭/外套",
     "_私有/posts/etc/简历",
     "_私有/posts/齐泽克",
     "_私有/posts/雅思",
     "_私有/posts/随笔",
     "_私有/posts/读书笔记",
-    "_私有/posts/穿搭",
-    "_私有/images/麂皮.png",
-    "_私有/images/风格2.png"
+    "_私有/posts/穿搭"
   ]
 }

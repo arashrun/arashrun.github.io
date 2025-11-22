@@ -3,7 +3,8 @@
   "textFontFamily": "Source Code Pro",
   "interfaceFontFamily": "Source Code Pro",
   "theme": "moonstone",
-  "baseFontSize": 16,
+  "baseFontSize": 30,
   "translucency": true,
-  "cssTheme": "AnuPpuccin"
+  "cssTheme": "AnuPpuccin",
+  "baseFontSizeAction": true
 }

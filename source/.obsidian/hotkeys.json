@@ -22,5 +22,14 @@
       ],
       "key": "H"
     }
+  ],
+  "app:open-sandbox-vault": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "B"
+    }
   ]
 }
