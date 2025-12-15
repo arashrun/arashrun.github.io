@@ -69,3 +69,43 @@ x11vnc是基于 `rdp` 协议来实现远程控制的。不同于tigervnc-standal
 - [mackstann/tinywm: The tiniest window manager.](https://github.com/mackstann/tinywm)
 - [jichu4n/basic_wm: An example basic X11 window manager.](https://github.com/jichu4n/basic_wm/tree/master)
 
+
+
+### 小工具
+
+**根据PID激活窗口**
+
+```bash
+#!/bin/bash
+
+# 检查是否提供了 PID 参数
+if [ -z "$1" ]; then
+    echo "用法: $0 <进程PID>"
+    echo "示例: $0 12345"
+    exit 1
+fi
+
+TARGET_PID="$1"
+
+# 查找给定 PID 对应的所有窗口 ID
+# 注意：如果一个 PID 有多个窗口，此命令会返回所有它们的 ID
+WINDOW_IDS=$(wmctrl -lp | grep " $TARGET_PID " | awk '{print $1}')
+
+if [ -z "$WINDOW_IDS" ]; then
+    echo "未找到 PID $TARGET_PID 对应的窗口。"
+    exit 1
+fi
+
+# 遍历找到的所有窗口 ID，并激活它们
+# 在大多数情况下，只有一个主窗口需要激活
+for WID in $WINDOW_IDS; do
+    echo "正在激活窗口 ID: $WID (PID: $TARGET_PID)"
+    wmctrl -i -a "$WID"
+    # 如果你只想激活第一个找到的窗口，可以在这里加上 `break`
+    # break
+done
+
+echo "操作完成。"
+
+```
+
