@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/dbus.md",
+                "file": "_posts/嵌入式.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dbus"
+              "title": "嵌入式"
             }
           }
         ]
@@ -184,6 +184,10 @@
   },
   "active": "d4bc7921ed5271dc",
   "lastOpenFiles": [
+    "_posts/嵌入式.md~",
+    "_posts/qml嵌入qwidget.md",
+    "_posts/嵌入式.md",
+    "_posts/qml嵌入qwidget.md~",
     "_posts/git-skill.md",
     "_posts/dbus.md",
     "_posts/xorg.md",
@@ -210,13 +214,10 @@
     "_posts/PluseAudio.md",
     "_posts/gstreamer.md",
     "_posts/qt多线程.md",
-    "_posts/交叉编译.md",
     "images/交叉编译-20250908184729828.webp",
-    "_posts/Debian发行版DIY.md",
     "未命名.canvas",
     "images/交叉编译-20250618183715853.webp",
     "images/交叉编译-20250618183557779.webp",
-    "_posts/xinput2-and-keyboard.md",
     "images/未命名-20250113193129688.webp",
     "2023/03/20",
     "2023/03",
@@ -229,7 +230,6 @@
     "_私有/posts/齐泽克",
     "_私有/posts/雅思",
     "_私有/posts/随笔",
-    "_私有/posts/读书笔记",
-    "_私有/posts/穿搭"
+    "_私有/posts/读书笔记"
   ]
 }

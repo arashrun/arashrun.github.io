@@ -17,12 +17,19 @@ tags:
 [Git 打补丁-- patch 和 diff 的使用](https://www.jianshu.com/p/ec04de3f95cc)
 [git 补丁 - diff 和 patch 使用详解](https://cloud.tencent.com/developer/article/1423939)
 
+[git am 解决冲突](https://www.cnblogs.com/joker1937/p/15731049.html) 
+
 ### git 基本操作
 
 
-1. git clone私有仓库
+1. git clone
 ```shell
+
+# clone私有仓库
 git clone https://username:password@github.com/username/repo_name.git
+
+# 本地仓库clone
+git clone --depth=1 -b dev file:///home/like/code <dst>
 ```
 2. add, commit
 
@@ -74,4 +81,32 @@ pick <Hash_C> Commit C message
 
 ### git 子模块
 
-1. git submodule add <git path>
+```bash
+git submodule add <git path>
+```
+
+### 统计脚本
+
+统计仓库提交
+```bash
+#!/bin/bash
+
+# 替换 "username" 为实际的用户名
+user_commits=$(git log --author="jerry" --since="1 year ago" --pretty=format:"%h" | wc -l)
+total_commits=$(git log --since="1 year ago" --pretty=format:"%h" | wc -l)
+percentage=$(echo "scale=2; $user_commits / $total_commits * 100" | bc)
+
+echo "User commits in the last year: $user_commits"
+echo "Total commits in the last year: $total_commits"
+echo "User's commit percentage: $percentage%"
+
+
+# 替换 "username" 为实际的用户名
+user_commits=$(git log --author="jerry" --since="1 year ago" --no-merges --pretty=format:"%h" | wc -l)
+total_commits=$(git log --since="1 year ago" --no-merges --pretty=format:"%h" | wc -l)
+percentage=$(echo "scale=2; $user_commits / $total_commits * 100" | bc)
+
+echo "User commits in the last year (excluding merges): $user_commits"
+echo "Total commits in the last year (excluding merges): $total_commits"
+echo "User's commit percentage (excluding merges): $percentage%"
+```
