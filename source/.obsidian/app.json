@@ -4,8 +4,9 @@
   "attachmentFolderPath": "images",
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
-  "showLineNumber": true,
+  "showLineNumber": false,
   "vimMode": false,
   "promptDelete": false,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "readableLineLength": false
 }
