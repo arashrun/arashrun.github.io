@@ -14,14 +14,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/PluseAudio.md",
+                "file": "_posts/RK3588视频渲染.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PluseAudio"
+              "title": "RK3588视频渲染"
             },
             "group": "dd9e7fb991985b85"
+          },
+          {
+            "id": "b626a77ebb33168f",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.12.7"
+            }
           }
         ]
       },
@@ -36,13 +48,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/PluseAudio.md",
+                "file": "_posts/RK3588视频渲染.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "PluseAudio 的大纲"
+              "title": "RK3588视频渲染 的大纲"
             },
             "group": "dd9e7fb991985b85"
           }
@@ -209,9 +221,11 @@
   },
   "active": "d4bc7921ed5271dc",
   "lastOpenFiles": [
+    "_posts/RK3588视频渲染.md",
+    "_posts/powershell.md",
+    "_posts/PluseAudio.md",
     "_posts/PluseAudio.md~",
     "_posts/设备树.md",
-    "_posts/PluseAudio.md",
     "_posts/gcc.md",
     "_posts/cmake.md",
     "_posts/cmakelist.md",
@@ -240,7 +254,6 @@
     "search.md",
     "_posts/字体.md",
     "_posts/字节序.md",
-    "_posts/编码和字符集.md",
     "images/交叉编译-20250908184729828.webp",
     "未命名.canvas",
     "images/交叉编译-20250618183715853.webp",
@@ -254,7 +267,6 @@
     "_私有/posts/穿搭/外套",
     "_私有/posts/etc/简历",
     "_私有/posts/齐泽克",
-    "_私有/posts/雅思",
-    "_私有/posts/随笔"
+    "_私有/posts/雅思"
   ]
 }

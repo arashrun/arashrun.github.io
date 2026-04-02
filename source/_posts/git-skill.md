@@ -9,7 +9,7 @@ tags:
 
 
 
-## git基本概念
+## 基本概念
 
 [git reference](https://gitee.com/all-about-git)
 
@@ -19,7 +19,7 @@ tags:
 
 [git am 解决冲突](https://www.cnblogs.com/joker1937/p/15731049.html) 
 
-### git 基本操作
+### 基本操作
 
 
 1. git clone
@@ -56,6 +56,12 @@ $ git remote set-url origin root@192.168.147.130:~/opt/git/tools.git
 ```bash
 git rm -r --cached xxx/         -- 不删除本地文件，只是取消git跟踪
 git rm -r --f xxx/              -- 删除本地文件，取消跟踪
+
+# 删除untracked files
+# 查看待清理文件
+git clean -n 
+# 执行清理动作
+git clean -fd
 ```
 
 6. 推送本地新建分支到远程新建分支（创建远程分支），并在两者之间建立联系。
@@ -79,7 +85,7 @@ pick <Hash_B> Commit B message
 pick <Hash_C> Commit C message
 ```
 
-### git 子模块
+### 子模块
 
 ```bash
 git submodule add <git path>
