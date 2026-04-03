@@ -1,10 +1,11 @@
 {
-  "accentColor": "",
+  "accentColor": "#5c9ef5",
   "textFontFamily": "Source Code Pro",
   "interfaceFontFamily": "Source Code Pro",
   "theme": "moonstone",
-  "baseFontSize": 24,
+  "baseFontSize": 18,
   "translucency": true,
   "cssTheme": "AnuPpuccin",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "monospaceFontFamily": "Source Code Pro"
 }

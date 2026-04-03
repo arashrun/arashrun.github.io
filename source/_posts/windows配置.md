@@ -35,3 +35,6 @@ scoop install scoop-cn/glazewm
 2. 启动，使用默认配置即可
 
 
+## powershell
+
+pwsh7支持 `cd -` 命令。

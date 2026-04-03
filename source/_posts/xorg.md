@@ -38,6 +38,8 @@ https://ssk-wh.github.io/2023/04c447ae7.html
 
 ### vnc
 
+[vnc的systemd方案](vnc方案.md)
+
 ```bash
 # apt install x11vnc
 
