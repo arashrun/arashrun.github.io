@@ -8,6 +8,34 @@ tags:
   - 日常使用
   - windows
 ---
+## 常用操作
+
+
+- pwsh7支持 `cd -` 命令
+- 配置文件 [profile](https://gitee.com/arashrun/conf/blob/master/windows/powershell/Microsoft.PowerShell_profile.ps1)
+
+```powershell
+# 安装pwsh 7
+winget install --id Microsoft.PowerShell --source winget
+
+# 卸载
+winget uninstall --id Microsoft.PowerShell
+```
+
+
+```powershell
+# 编辑用户配置文件
+# powershell 5.1 配置文件在$HOME/Document/WindowsPowerShell目录
+# pwsh 7之后放在 $HOME/Document/PowerShell 目录
+nvim $PROFILE
+
+# 重新加载配置文件
+. $PROFILE
+
+# 安装常用插件
+install-Module -Name PSBookmark
+
+```
 
 
 ## 远程执行相关

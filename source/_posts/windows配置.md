@@ -7,34 +7,18 @@ tags:
   - 工具
   - 日常使用
 ---
+## 装机必备
 
-## 包管理
+#### 字体
 
-### winget
+- [DejaVuSansMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/DejaVuSansMono.zip) : #nerdfont
 
+#### 软件
 
-### scoop
-
-
-
-
-## 桌面管理
+- keepassxc：密码管理
+- geek：卸载工具【可清除注册表】
 
 
-### glazewm
 
-windows下的窗口平铺管理器
+## 常用工具配置
 
-1. 下载
-
-```powershell
-scoop install scoop-cn/glazewm
-
-```
-
-2. 启动，使用默认配置即可
-
-
-## powershell
-
-pwsh7支持 `cd -` 命令。
