@@ -73,22 +73,28 @@ sv->>cl:streamed that output
 
 #### 常用命令
 
+**容器相关**
+
+```bash
 1. 为client创建一个伪终端
+   docker run -it 交互式运行
+			<镜像名> 
+			--name <容器名称>
+			-p <host_port>:<container_port>
+			-d 后台运行容器
+			-v <host_dir>:<container_dir> 将主机目录映射到容器内指定目录
+			/bin/bash 
+			
+2. 重命名容器
+   docker rename <old_name/container_id> <new_name>
+   
+3. 查看所有的容器信息
+   docker ps -a
+```
 
-   docker run -it 镜像名 /bin/bash
-
-2. 查看运行过的容器
-
-   docker ps （-a详细信息）
 
 3. 不使用缓存构建镜像
 	docker build -t xxx --no-cache .
-
-4. 将容器内的端口映射到本机指定端口
-	docker run -p <host_port>:<container_port> <img_name>
-
-5. 替换镜像指定的cmd运行容器，异常退出调试有用
-	docker run -it --entrypoint /bin/bash <img_name>
 
 #### Dockerfile
 
