@@ -6,7 +6,6 @@
       {
         "id": "e45d763dffcdf98a",
         "type": "tabs",
-        "dimension": 80.863539445629,
         "children": [
           {
             "id": "b626a77ebb33168f",
@@ -14,48 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/docker.md",
+                "file": "_posts/git-skill.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "docker"
+              "title": "git-skill"
             }
           },
           {
-            "id": "97e18dcb242df65e",
+            "id": "e726380078e2cf7c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/powershell.md",
+                "file": "_posts/thunderbird替代outlook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "powershell"
-            }
-          }
-        ]
-      },
-      {
-        "id": "1f1e45c59725b28f",
-        "type": "tabs",
-        "dimension": 19.136460554371002,
-        "children": [
-          {
-            "id": "40fbcdb6add208d4",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "_posts/docker.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "docker 的大纲"
+              "title": "thunderbird替代outlook"
             }
           }
         ]
@@ -90,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "udev",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -177,37 +154,35 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/面试杂谈.md"
-              },
-              "icon": "lucide-list",
-              "title": "面试杂谈 的大纲"
-            }
-          },
-          {
-            "id": "dd8ab6fed7090585",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
+                "file": "_posts/git-skill.md",
+                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
-              "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "icon": "lucide-list",
+              "title": "git-skill 的大纲"
+            }
+          },
+          {
+            "id": "3fecda9901711848",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 375.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:新建数据库": false,
+      "bases:创建新数据库": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -220,15 +195,23 @@
   },
   "active": "b626a77ebb33168f",
   "lastOpenFiles": [
-    "_posts/powershell.md",
-    "_posts/docker.md",
-    "_posts/openlist.md",
-    "_posts/windows配置.md",
-    "_posts/linux编程接口.md",
-    "images/openlist-20260405154351365.webp",
+    "_posts/thunderbird替代outlook.md",
+    "pending.md",
+    "_posts/git-skill.md",
+    "_posts/qt.md",
+    "_posts/PluseAudio.md",
+    "_posts/常用压缩格式对比.md",
+    "_posts/lambda.md",
+    "_posts/linux.md",
+    "待处理",
+    "_posts/qml嵌入qwidget.md",
     "_posts/android.md",
+    "images/openlist-20260405154351365.webp",
+    "_posts/openlist.md",
+    "_posts/debian.md",
     "_posts/vim.md",
     "_posts/vim-manual.md",
+    "_posts/windows配置.md",
     "_模板/4.md",
     "_模板/br.md",
     "_模板/format-header.md",
@@ -237,17 +220,10 @@
     "_posts/ProtoBuf.md",
     "_posts/面试杂谈.md",
     "_posts/RK3588视频渲染.md",
-    "_posts/PluseAudio.md",
+    "_posts/powershell.md",
     "_posts/PluseAudio.md~",
     "_posts/设备树.md",
     "_posts/gcc.md",
-    "_posts/cmake.md",
-    "_posts/cmakelist.md",
-    "_posts/交叉编译.md",
-    "_posts/usb.md",
-    "_posts/hostapd.md",
-    "_posts/qt多语言翻译.md",
-    "_posts/git-skill.md",
     "images/PluseAudio-20260115154010622.webp",
     "_posts/嵌入式.md~",
     "_posts/qml嵌入qwidget.md~",
@@ -265,7 +241,6 @@
     "images/about-20240414145021489.webp",
     "_私有/posts/穿搭/外套",
     "_私有/posts/etc/简历",
-    "_私有/posts/齐泽克",
-    "_私有/posts/雅思"
+    "_私有/posts/齐泽克"
   ]
 }

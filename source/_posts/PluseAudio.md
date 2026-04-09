@@ -11,7 +11,7 @@ tags:
 
 [PulseAudio under the hood](https://gavv.net/articles/pulseaudio-under-the-hood/)
 
-
+[Modules – PulseAudio](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Modules/) 
 
 
 ```shell
@@ -103,7 +103,7 @@ systemctl --user restart pulseaudio.service
 
 ## Ladspa
 
-LADSPA 是一个标准，它允许软件音频处理器和效果器被 “插件化” 到各种音频合成与录音软件中。
+[Linux Audio Developer's Simple Plugin API (LADSPA)](https://ladspa.org/)  是一个标准，它允许软件音频处理器和效果器被 “插件化” 到各种音频合成与录音软件中。
 例如，开发者可以编写一个混响程序，并将其打包为 LADSPA “插件库”。普通用户随后就能在任何支持 LADSPA 的音频应用里使用这个混响效果。Linux 上的大多数主流音频应用都支持 LADSPA。
 简单来说，LADSPA 和 LV2 是 Linux 系统上的“音频效果器插件标准”。你可以把它们想象成 Photoshop 的滤镜，或者是游戏里的 MOD，只不过它们处理的是声音。
 
@@ -463,7 +463,7 @@ Ports:  "50Hz gain (low shelving)" input, control, -70 to 30, default 0
 - card
 一个card代表物理或模拟的音频IC，一个声卡通常包含多个 `port` 和多个可用的 `profile` 
 
-- profile
+- [Profiles](https://www.freedesktop.org/wiki/Software/PulseAudio/Backends/ALSA/Profiles/) 
 由于声卡有多个端口，因此可以按需启用相关功能组合。profile就是声卡上的一组功能组合
 
 - port

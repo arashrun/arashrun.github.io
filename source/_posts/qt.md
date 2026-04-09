@@ -2,9 +2,9 @@
 title: qt重点内容
 date: 2021-07-28 09:46:50
 categories:
-- qt
+  - qt
 tags:
-- 学习术语
+  - 大纲
 ---
 
 
@@ -37,7 +37,10 @@ tags:
 
 ## Reference:
 
-| [中文教程](https://qtguide.ustclug.org/) | [官方文档](https://doc.qt.io/qt-5/topics-network-connectivity.html) | [中文文档](http://qt6.digitser.net/index.html) |
+- [中文教程](https://qtguide.ustclug.org/) 
+- [官方文档](https://doc.qt.io/qt-5/topics-network-connectivity.html) 
+- [中文文档](http://qt6.digitser.net/index.html) 
+- [Qt Style Sheets Examples | Qt Widgets 5.15.19](https://doc.qt.io/archives/qt-5.15/stylesheet-examples.html#customizing-qcombobox) 
 
 
 

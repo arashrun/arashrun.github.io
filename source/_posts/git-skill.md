@@ -23,13 +23,25 @@ tags:
 
 
 1. git clone
-```shell
+```bash
 
 # clone私有仓库
 git clone https://username:password@github.com/username/repo_name.git
 
 # 本地仓库clone
 git clone --depth=1 -b dev file:///home/like/code <dst>
+
+# 本地仓库clone多个分支到一个仓库
+# 1. 克隆第一个分支 dev-2.0
+git clone --depth=1 -b dev-2.0 file:///home/like/code/ $dst
+# 2. 进入目录
+cd $dst
+# 3. 添加第二个分支的追踪信息
+git remote set-branches origin dev-2.0 dev-2.1
+# 4. 拉取第二个分支的深度为 1 的数据
+git fetch --depth=1 origin dev-2.1
+# 5. 创建本地分支追踪远程
+git checkout -b dev-2.1 origin/dev-2.1
 ```
 2. add, commit
 
