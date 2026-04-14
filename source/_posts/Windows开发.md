@@ -66,3 +66,12 @@ UWP 是创建适用于 Windows 的客户端应用程序的众多方法之一。 
 
 
 ### MSIX
+
+
+### CLR
+
+CLR 全称是 Common Language Runtime (公共语言运行时)，它是 Microsoft .NET Framework（以及后来的 .NET Core/.NET）的核心组件，可以看作是 .NET 应用程序的虚拟机。
+
+简单来说，当你在使用 C#、VB.NET、F# 或其他 .NET 语言编写代码时，你的代码并不会直接编译成计算机可以直接执行的机器码。相反，它会被编译成一种中间语言，称为 Common Intermediate Language (CIL)，以前也叫 Microsoft Intermediate Language (MSIL)。这个 CIL 代码是平台无关的，有点像 Java 的字节码。
+
+而 CLR 的主要职责，就是管理和执行这些 CIL 代码。
