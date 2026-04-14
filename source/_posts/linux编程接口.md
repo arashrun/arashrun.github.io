@@ -6,7 +6,7 @@ categories:
 tags:
 - linux
 ---
-[系统调用reference文档](https://oikvmsuwqias.ap-southeast-1.clawcloudrun.com/d/cm/Linux_Syscall_quickref.pdf?sign=iAwC56xhptiwl1AOpqa5KgJJtGCG2gFIBx0TYXt0HFo=:0) 
+[系统调用reference文档](https://oikvmsuwqias.ap-southeast-1.clawcloudrun.com/cm/Linux_Syscall_quickref.pdf) 
 
 
 
