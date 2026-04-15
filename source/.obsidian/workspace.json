@@ -13,15 +13,15 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Excalidraw/windows.canvas",
+                "file": "Excalidraw/前端.canvas",
                 "viewState": {
-                  "x": 929.6665344238281,
-                  "y": 169.9999237060547,
+                  "x": 1017,
+                  "y": -650,
                   "zoom": 0
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "windows"
+              "title": "前端"
             }
           },
           {
@@ -30,12 +30,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Windows开发.md",
+                "file": "_posts/web.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows开发"
+              "title": "web"
             }
           }
         ],
@@ -158,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/windows.canvas",
+                "file": "_posts/web.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "windows 的大纲"
+              "title": "web 的大纲"
             }
           },
           {
@@ -211,11 +211,16 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "37997e87fa6e5c8b",
+  "active": "f371930fad7c3116",
   "lastOpenFiles": [
+    "Excalidraw/前端.canvas",
+    "_posts/web.md",
+    "_posts/css.md",
     "_posts/Windows开发.md",
-    "_posts/WinRT.md",
+    "_posts/systemd.md",
+    "_posts/Systemd开关机hook脚本.md",
     "Excalidraw/windows.canvas",
+    "_posts/WinRT.md",
     "images/winrt与win32对比.webp",
     "Excalidraw/WinRT.md",
     "_posts/git-skill.md",
@@ -238,11 +243,6 @@
     "_模板/4.md",
     "_模板/br.md",
     "_模板/format-header.md",
-    "_posts/xorg.md",
-    "_posts/vnc方案.md",
-    "_posts/ProtoBuf.md",
-    "_posts/面试杂谈.md",
-    "_posts/RK3588视频渲染.md",
     "_posts/PluseAudio.md~",
     "images/PluseAudio-20260115154010622.webp",
     "_posts/嵌入式.md~",

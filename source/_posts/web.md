@@ -36,6 +36,31 @@ tags:
 ### nodejs
 
 
+### 模块化
+
+
+#### CommonJS
+Nodejs遵循的就是CommonJS规范
+require
+
+#### CMD
+[Common Module Definition](https://www.cnblogs.com/huiguo/p/7967503.html) 
+
+是由阿里巴巴 玉伯 开发SeaJS的时候提出的前端模块化规范。
+
+CMD是规范
+SeaJS是实现了CMD规范的库
+
+SeaJS中实现了define函数
+
+#### AMD
+RequireJs是遵循AMD规范的实现库
+
+#### ESM
+ECMAScript Module
+[esm](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules) 
+import
+from
 
 ## 框架
 
@@ -46,6 +71,8 @@ tags:
 #### vue
 
 #### Angular
+
+Angular Js和现在的 Angular不是同一个东西。Angular Js最后一个版本是1.8
 
 #### fluent
 

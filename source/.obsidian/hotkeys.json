@@ -1,27 +1,10 @@
 {
-  "editor:toggle-strikethrough": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "D"
-    }
-  ],
   "editor:toggle-highlight": [
     {
       "modifiers": [
         "Alt"
       ],
       "key": "H"
-    }
-  ],
-  "app:open-sandbox-vault": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "B"
     }
   ],
   "insert-template": [
@@ -38,6 +21,14 @@
         "Alt"
       ],
       "key": "G"
+    }
+  ],
+  "editor:toggle-strikethrough": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "U"
     }
   ]
 }
