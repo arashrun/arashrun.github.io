@@ -1,6 +1,21 @@
+---
+title: Systemd开关机hook脚本
+date: 2026-04-14 14:59:53
+categories:
+  - linux
+tags:
+  - linux
+---
+## systemd不常用命令
 
-## systemd开关机脚本执行方法
+```bash
+# systemd启动时间分析  
+systemd-analyze plot > /tmp/boot.svg  
+```
 
+## 关机/重启事件拦截
+
+- `systemd` unit file
 
 ```bash
 # work.service
