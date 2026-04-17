@@ -1,0 +1,106 @@
+{
+  "root": {
+    "data": {
+      "text": "windows"
+    },
+    "children": [
+      {
+        "data": {
+          "id": "dhuj076ou6w0",
+          "created": 1776337258860,
+          "text": "windows/c++"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dhuj1b6gjq80",
+              "created": 1776337345918,
+              "text": "Win32"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhuj1d8aep40",
+              "created": 1776337350382,
+              "text": "MFC"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhuj1ej9ajk0",
+              "created": 1776337353222,
+              "text": "WinRT",
+              "note": null,
+              "resources": "[{\"name\":\"WinRT#WinRT\",\"path\":\"_posts/WinRT.md#WinRT\"}]"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dhuj1nrv8iw0",
+                  "created": 1776337373334,
+                  "text": "C++/CX",
+                  "note": "### 特点\n\n1. 语言扩展\n扩展了C++语言语法及关键字。例如 `ref new` `ref class` ，类似于C++/CLI的做法\n\n2. 推荐状态\n**已过时**。微软已经不推荐。推荐C++/WinRT\n\n3. 易用性\n对于习惯于 .NET 或 C++/CLI 语法的开发者来说可能更直观，但其非标准的语法可能会让传统的 C++ 开发者感到困惑。\n\n4. 兼容性\n仅限于微软的 Visual C++ 编译器。\n需要生成特定的 .cpp 和 .h 文件。",
+                  "resources": "[{\"name\":\"WinRT#C++/CX\",\"path\":\"_posts/WinRT.md#C++/CX\"}]"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dhuj1qw3cl40",
+                  "created": 1776337380119,
+                  "text": "C++/Winrt",
+                  "note": null,
+                  "resources": "[{\"name\":\"WinRT#C++/Winrt\",\"path\":\"_posts/WinRT.md#C++/Winrt\"}]"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dhuj1fp1snc0",
+              "created": 1776337355749,
+              "text": "COM"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dhuj1lafrzs0",
+                  "created": 1776337367926,
+                  "text": "ATL",
+                  "note": "主要用于开发 COM 组件和 ActiveX 控件，具有轻量级的特点",
+                  "resources": null
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dhuj1hgb0u00",
+              "created": 1776337359574,
+              "text": "CLR",
+              "note": null,
+              "resources": "[{\"name\":\"Windows开发#CLR\",\"path\":\"_posts/Windows开发.md#CLR\"}]"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dhuj1ilpi1s0",
+                  "created": 1776337362077,
+                  "text": "C++/CLI"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "template": "default",
+  "theme": "fresh-blue",
+  "version": "1.4.43"
+}

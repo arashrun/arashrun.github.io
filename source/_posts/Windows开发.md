@@ -7,6 +7,26 @@ tags:
 - windows
 ---
 
+### windows渲染架构
+
+```powershell
+应用层 ─┬─ Win32 API (传统窗口)
+        ├─ UWP/XAML (现代应用)
+        └─ DirectX API (游戏、高性能图形)
+
+中间层 ─┬─ DirectComposition (合成引擎)
+        └─ Direct2D/Direct3D (渲染引擎)
+
+驱动层 ─┬─ D3D 驱动 (GPU 加速)
+        └─ WDDM (Windows 显示驱动模型)
+
+硬件层 ── GPU/显示设备
+```
+
+
+
+
+
 ### Win32 Api
 
 [开始使用 - Win32 apps | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/win32/desktop-programming)

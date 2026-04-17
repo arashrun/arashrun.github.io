@@ -4,42 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b26cd04a7512cc0a",
+        "id": "29dbd37b9da3c728",
         "type": "tabs",
         "children": [
           {
-            "id": "37997e87fa6e5c8b",
+            "id": "3d3add6e49fd970d",
             "type": "leaf",
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Excalidraw/前端.canvas",
-                "viewState": {
-                  "x": 1017,
-                  "y": -650,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "前端"
-            }
-          },
-          {
-            "id": "f371930fad7c3116",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/web.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "web"
+              "title": "新标签页"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/web.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "web 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -200,6 +177,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "kityminder-editor-k:新建 KityMinder 脑图": false,
       "bases:新建数据库": false,
       "canvas:新建白板": false,
       "switcher:打开快速切换": false,
@@ -211,15 +189,21 @@
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "f371930fad7c3116",
+  "active": "3d3add6e49fd970d",
   "lastOpenFiles": [
+    "Excalidraw/渲染框架.canvas",
     "Excalidraw/前端.canvas",
+    "Excalidraw/windows.km",
+    "工具.km",
+    "Excalidraw/windows.canvas",
+    "_posts/Windows开发.md",
+    "images/1.png",
+    "Excalidraw/windows.md",
+    "_posts/xorg.md",
     "_posts/web.md",
     "_posts/css.md",
-    "_posts/Windows开发.md",
     "_posts/systemd.md",
     "_posts/Systemd开关机hook脚本.md",
-    "Excalidraw/windows.canvas",
     "_posts/WinRT.md",
     "images/winrt与win32对比.webp",
     "Excalidraw/WinRT.md",
@@ -241,8 +225,6 @@
     "_posts/vim-manual.md",
     "_posts/windows配置.md",
     "_模板/4.md",
-    "_模板/br.md",
-    "_模板/format-header.md",
     "_posts/PluseAudio.md~",
     "images/PluseAudio-20260115154010622.webp",
     "_posts/嵌入式.md~",
@@ -254,12 +236,9 @@
     "未命名.canvas",
     "images/交叉编译-20250618183715853.webp",
     "images/交叉编译-20250618183557779.webp",
-    "images/未命名-20250113193129688.webp",
     "2023/03/20",
     "2023/03",
     "2023",
-    "_私有/posts/穿搭/外套",
-    "_私有/posts/etc/简历",
-    "_私有/posts/齐泽克"
+    "_私有/posts/穿搭/外套"
   ]
 }
