@@ -1,0 +1,997 @@
+{
+  "root": {
+    "data": {
+      "id": "dba7yofx5q80",
+      "created": 1752337957713,
+      "text": "cpp"
+    },
+    "children": [
+      {
+        "data": {
+          "id": "dba7z34ghmg0",
+          "created": 1752337989671,
+          "text": "面向对象"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dba7zc4lkf40",
+              "created": 1752338009271,
+              "text": "设计模式",
+              "expandState": "collapse"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbaw6dzsjw80",
+                  "created": 1752406268522,
+                  "text": "创建型"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dbaw6glfqb40",
+                  "created": 1752406274183,
+                  "text": "结构型"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dbaw6oxdx9c0",
+                  "created": 1752406292320,
+                  "text": "行为型"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "data": {
+          "id": "dba84eqlf7k0",
+          "created": 1752338406775,
+          "text": "熟悉网络编程"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dba8jbwf7nk0",
+              "created": 1752339576060,
+              "text": "网络模型"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dcrb1ahs3340",
+                  "created": 1757729303476,
+                  "text": "OSI七层"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dcrb1f9ncls0",
+                  "created": 1757729313868,
+                  "text": "TCP/IP四层"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dba8izpxzh40",
+              "created": 1752339549547,
+              "text": "socket编程"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dba8js32c1c0",
+              "created": 1752339611290,
+              "text": "http"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dba8h879m4o0",
+              "created": 1752339411280,
+              "text": "websocket"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "data": {
+          "id": "dba84g0cte00",
+          "created": 1752338409542,
+          "text": "多线程/多进程"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dba8gons0ds0",
+              "created": 1752339368743,
+              "text": "进程"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbtaa1k3oxs0",
+                  "created": 1754274129666,
+                  "text": "调度"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dbtaa4jkbf40",
+                  "created": 1754274136164,
+                  "text": "同步"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dbtb0y9tdg80",
+                      "created": 1754276238346,
+                      "text": "信号量（semaphore）"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "data": {
+                  "id": "dbtaa5kqs600",
+                  "created": 1754274138412,
+                  "text": "通信"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dbtb1xsrork0",
+                      "created": 1754276315680,
+                      "text": "管道"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dbu3srbonkw0",
+                          "created": 1754357408496,
+                          "text": "pipe/pipe2"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dbtb26ur4p40",
+                      "created": 1754276335391,
+                      "text": "FIFO"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbtb2akdhlc0",
+                      "created": 1754276343470,
+                      "text": "消息队列"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbtb42qb6rc0",
+                      "created": 1754276483143,
+                      "text": "共享存储（共享内存）"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbtb3zukmvs0",
+                      "created": 1754276476871,
+                      "text": "socket"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dba8gpk1xo00",
+              "created": 1752339370694,
+              "text": "线程"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbubexaxvzc0",
+                  "created": 1754378893292,
+                  "text": "同步"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dbubhk2wbgg0",
+                      "created": 1754379099600,
+                      "text": "互斥锁(mutex)",
+                      "note": "标准库：\n=======\n<mutex>\nstd::mutex\nstd::timed_mutext\nstd::recursive_mutex"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbubjpjpqc00",
+                      "created": 1754379268229,
+                      "text": "信号量(semaphore)",
+                      "note": "POSIX\n=======\n\nsem_init(sem_t* s, int pshare, int count);\n\npshare决定是一个进程内部的还是跨进程的信号量。进程内部使用全局或堆内存，跨进程使用共享内存机制进行信号量的初始化。\n\n因此信号量既可以用于一个进程内部的多个线程之间进行同步的原语，也可以用于多个进程间的同步原语\n\n\n标准库：\n======\n<semaphore>\nc++20才支持信号量。包括计数信号量和二值信号量\n\ncounting_semaphore：计数信号量\nbinary_semaphore: 二值信号量"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbubhtzkumw0",
+                      "created": 1754379121168,
+                      "text": "条件变量(condition_variable)",
+                      "note": "标准库：\n=======\n<condition_variable>"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dcorf190cyo0",
+                      "created": 1757470838341,
+                      "text": "读写锁",
+                      "note": "标准库：\n========\n<shared_mutex>\nc++14才引入。\nstd::shared_lock\n\n**读写分离**\n读操作：多个线程可以通过 std::shared_lock 获取共享锁（读锁），同时读取资源。\n写操作：线程通过 std::unique_lock 或 std::lock_guard 获取独占锁（写锁），此时其他线程（无论读还是写）都无法获取锁，保证写入的原子性。"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dcorf6cd7u80",
+                      "created": 1757470849428,
+                      "text": "原子操作"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "data": {
+          "id": "dba84mfrf6g0",
+          "created": 1752338423535,
+          "text": "数据库"
+        },
+        "children": []
+      },
+      {
+        "data": {
+          "id": "dba8ah4yctk0",
+          "created": 1752338882182,
+          "text": "领域特定",
+          "expandState": "collapse"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dcs7yqey5ww0",
+              "created": 1757822199668,
+              "text": "软+硬"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dcs7quj1jt40",
+                  "created": 1757821581744,
+                  "text": "嵌入式软件",
+                  "expandState": "collapse",
+                  "note": "常用开发软件\n===========\nKeil\nIAR"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dcs7urrzsco0",
+                      "created": 1757821889177,
+                      "text": "系统移植+驱动开发",
+                      "note": "RTOS（实时操作系统）\n=============\nFreeRTOS"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dcs7uylxhls0",
+                      "created": 1757821904047,
+                      "text": "通信协议",
+                      "expandState": "collapse"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dcs7w1snkv40",
+                          "created": 1757821989348,
+                          "text": "I2C"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dcs7w5rz34g0",
+                          "created": 1757821998014,
+                          "text": "SPI"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dcs7w740d9c0",
+                          "created": 1757822000919,
+                          "text": "UART"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dcs7vek8x800",
+                      "created": 1757821938774,
+                      "text": "原理图+调试"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dcs7yvqge8g0",
+              "created": 1757822211247,
+              "text": "软+领域算法"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dcs80rjodu00",
+                  "created": 1757822358859,
+                  "text": "音视频"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dcs80ij8v8w0",
+              "created": 1757822339242,
+              "text": "纯软"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "data": {
+          "id": "dbojm76lifs0",
+          "created": 1753792672486,
+          "text": "c++标准",
+          "expandState": "expand"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dbojmh79ezc0",
+              "created": 1753792694294,
+              "text": "内存"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbojmus0iao0",
+                  "created": 1753792723847,
+                  "text": "智能指针"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dbojmjxqb1c0",
+              "created": 1753792700248,
+              "text": "cpu"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbojqgkzs9k0",
+                  "created": 1753793006404,
+                  "text": "并发和多线程",
+                  "note": "\n线程创建相关\n============\n<thread>\n<future>\n\n\n  \n线程同步相关\n=============\n<atomic>(原子操作)\n<mutex>(互斥锁+读写锁)\n<condition_variable>(条件变量)\n<semaphore>(信号量)",
+                  "expandState": "collapse"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dbub1qoddf40",
+                      "created": 1754377860133,
+                      "text": "<thread>",
+                      "note": "thread类\n==========\njoin()\ndetach()\nswap:\n\n\n\n\nthis_thread命名空间\n==================\nyield:\nget_id:\nsleep_for:\nsleep_until:"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dcpnhdgogy00",
+                      "created": 1757561297172,
+                      "text": "<atomic>"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbub1vbv40g0",
+                      "created": 1754377870260,
+                      "text": "<mutex>\n<shared_mutext>",
+                      "expandState": "collapse",
+                      "layout_left_offset": {
+                        "x": -62,
+                        "y": -10
+                      }
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dcpqqglg1uo0",
+                          "created": 1757570472598,
+                          "text": "mutex类型",
+                          "note": "c++11\n======\n- 基本互斥锁\n\nvoid lock()\nbool try_lock()\nvoid unlock()\n\n- 定时互斥锁：超过指定时长或时间点后就不阻塞了。\n\n在基本互斥锁基础上增加了：\nbool try_lock_for(时间段)\nbool try_lock_until(时间点)\n\n核心价值在于可控的等待时间，它让线程在竞争资源时拥有 “超时退出” 的选择权，尤其适合需要容错、实时性或柔性处理资源竞争的场景\n\n- 递归互斥锁：同一个线程可以多次获取已持有的递归锁，而不会导致死锁，只需保证解锁次数与加锁次数相同即可。\n\n “递归函数调用”\n “成员函数嵌套加锁”\n “回调函数重入” 等场景，解决了普通互斥锁在这些场景下的死锁问题。但需注意其性能开销，仅在必要时使用。\n \n \n c++14\n ===========\n - 共享超时互斥锁(shared_timed_mutex)\n \n \n \n c++17\n ======\n - 共享互斥锁(shared_mutex)",
+                          "expandState": "expand"
+                        },
+                        "children": [
+                          {
+                            "data": {
+                              "id": "dcpriknu0bk0",
+                              "created": 1757572675646,
+                              "text": "mutex",
+                              "note": "lock\ntry_lock\nunlock"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcprimk7pj40",
+                              "created": 1757572679780,
+                              "text": "timed_mutex",
+                              "note": "在mutex基础上增加\n\ntry_lock_for\ntry_lock_until"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcprirug5wg0",
+                              "created": 1757572691283,
+                              "text": "recursive_mutex",
+                              "note": "和mutex相比没有添加新方法\n\n\n\n\n使用场景：\nthread1：func1\nthread2：func2->func1\n\nfunc1和func2中都对同一数据进行修改，因此都使用了锁，如果使用普通的mutex，若thread2先执行，func2中获取到了锁，再进入func1中又要等待同一把锁导致死锁"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcprj84ufvk0",
+                              "created": 1757572726740,
+                              "text": "recursive_timed_mutex",
+                              "note": "c++14引入\n\nC++14 引入 shared_timed_mutex 的核心动机是：解决 C++ 标准库长期缺乏 “标准读写锁” 的痛点，同时优先覆盖 “需要超时容错” 的关键场景。\n\n它提供了读写锁的核心能力（共享读 lock_shared()、独占写 lock()）；\n\n\n更关键的是，它支持超时锁操作（try_lock_for/try_lock_until）—— 这是工业界避免死锁的重要机制（比如 “尝试加锁 N 秒，失败则放弃”）。\n很多实际场景中，“超时容错” 是刚需（例如网络服务、异步任务），如果只提供 “无超时的读写锁”，开发者仍需自己封装超时逻辑，增加复杂度。"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcql00l1nw00",
+                              "created": 1757655854684,
+                              "text": "shared_mutex",
+                              "note": "c++17引入\n\nshared_mutex 的引入，是标准委员会在 C++14 解决 “有无” 问题后，对 “性能优化” 的补充 —— 它的设计目标是 **轻量、高效的基础读写锁**，专门针对 “不需要超时操作，只想要最小开销读写锁” 的场景。"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "data": {
+                          "id": "dcpqqku3fa80",
+                          "created": 1757570481828,
+                          "text": "mutex管理类",
+                          "note": "c++11\n=======\nlock_guard:\nunique_lock:\n\n\n\n\n\n\nc++14\n========\nshared_lock:\n\n\n\nc++17\n======\nscoped_lock:",
+                          "expandState": "expand"
+                        },
+                        "children": [
+                          {
+                            "data": {
+                              "id": "dcqgoioun480",
+                              "created": 1757643669286,
+                              "text": "lock_guard",
+                              "note": "只是对互斥锁的简单RAII封装，未提供任何其他的public方法\n"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcqgonowzfs0",
+                              "created": 1757643680174,
+                              "text": "unique_lock",
+                              "note": "提供RAII\n\n提供了一组公共接口方法如：lock，unlock，try_lock, try_lock_for, try_lock_until等mutex接口，可以细粒度地控制加解锁的时机"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcqgosl8wh40",
+                              "created": 1757643690836,
+                              "text": "shared_lock",
+                              "note": "提供RAII\n\n必须配合shared_mutex类型的互斥体类型使用。\n\n\n\n"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcqgovyl2w00",
+                              "created": 1757643698173,
+                              "text": "scoped_lock",
+                              "note": "RAII支持\n\n核心是支持同时锁定多个互斥锁\n\n"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "data": {
+                          "id": "dcprsv3d6jc0",
+                          "created": 1757573481994,
+                          "text": "mutex工具函数",
+                          "note": "两个函数模板。用于对任意的mutex类型进行lock和try_lock操作\n",
+                          "expandState": "expand"
+                        },
+                        "children": [
+                          {
+                            "data": {
+                              "id": "dcprt1c3us00",
+                              "created": 1757573495584,
+                              "text": "try_lock",
+                              "note": "尝试同时锁定两个以上的互斥锁，其中任何一个try_lock失败都终止下一步，转而解锁所有上锁的互斥体，并返回失败的mutex的序号"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dcprt69l3mo0",
+                              "created": 1757573506315,
+                              "text": "lock",
+                              "note": "同时锁定两个以上的互斥锁。任何一个不能上锁都阻塞住"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dbub1ddo5y00",
+                      "created": 1754377831188,
+                      "text": "<condition_variable>",
+                      "note": "\n条件等待线程：\nwait\nwait_for\nwait_until\n\n\n通知线程：\nnotify_one\nnotify_all"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dcqobnv92bk0",
+                          "created": 1757665230702,
+                          "text": "condition_variable"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dcqobrww8ow0",
+                          "created": 1757665239509,
+                          "text": "condition_variable_any"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dcpngopt6wo0",
+                      "created": 1757561243323,
+                      "text": "<future>"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dcqluqjk8wo0",
+                          "created": 1757658262115,
+                          "text": "promise"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dcpsb40g6pk0",
+                          "created": 1757574911964,
+                          "text": "future"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dcqluwy46og0",
+                          "created": 1757658276056,
+                          "text": "async",
+                          "note": "启动策略：\n=========\n\nlaunch::async: 新线程中异步执行，立刻执行\n\nlaunch::deferred: 不立刻执行，只有当返回的future对象调用了get,wait。任务才开始执行\n\n如果调用std::async不将返回值赋值给一变量，则会导致阻塞当前调用"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dcqlvo8ujvk0",
+                          "created": 1757658335478,
+                          "text": "packaged_task"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "data": {
+                  "id": "dct67i5p8m80",
+                  "created": 1757918804709,
+                  "text": "日期时间",
+                  "expandState": "collapse"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dct67t0ym6o0",
+                      "created": 1757918828367,
+                      "text": "时钟-clock",
+                      "note": "定义\n=====\n\n一个时间起点 + 计时频率 = 时钟\n\n例如：\n\n2000年xx月xx日xx时xx分xx秒\n+\n每秒钟前进10次"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dct67wi39u00",
+                      "created": 1757918835933,
+                      "text": "时间点-time_point"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dct681fvxeo0",
+                      "created": 1757918846683,
+                      "text": "时长-duration"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dbojn1fmthk0",
+              "created": 1753792738336,
+              "text": "输入输出"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbojralo5940",
+                  "created": 1753793071749,
+                  "text": "键盘输入/屏幕输出"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dbojrcpid2o0",
+                  "created": 1753793076334,
+                  "text": "文件读写"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dbojnbry3ug0",
+              "created": 1753792760848,
+              "text": "数据结构"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbojnno0bj40",
+                  "created": 1753792786731,
+                  "text": "容器"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dbojnpohdgo0",
+                  "created": 1753792791114,
+                  "text": "字符串处理"
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "data": {
+              "id": "dbojndnkewg0",
+              "created": 1753792764937,
+              "text": "算法",
+              "expandState": "collapse"
+            },
+            "children": [
+              {
+                "data": {
+                  "id": "dbojp01xuls0",
+                  "created": 1753792892059,
+                  "text": "数值算法"
+                },
+                "children": []
+              },
+              {
+                "data": {
+                  "id": "dbphrdyagdk0",
+                  "created": 1753888996779,
+                  "text": "算法库",
+                  "expandState": "expand"
+                },
+                "children": [
+                  {
+                    "data": {
+                      "id": "dbphrignbqo0",
+                      "created": 1753889006596,
+                      "text": "不修改序列的操作"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dbphrthaits0",
+                          "created": 1753889030580,
+                          "text": "批量操作foreach"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dbphs0tmm7s0",
+                          "created": 1753889046563,
+                          "text": "搜索"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dbphs4wnmw00",
+                          "created": 1753889055453,
+                          "text": "折叠"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dbphrnmoqpc0",
+                      "created": 1753889017845,
+                      "text": "修改序列的操作"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dbphsbi9gko0",
+                          "created": 1753889069820,
+                          "text": "复制"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dbphsel02sg0",
+                          "created": 1753889076516,
+                          "text": "交换swap"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dbphswohe7s0",
+                          "created": 1753889115909,
+                          "text": "变换-transform"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dbphu3noisw0",
+                          "created": 1753889209462,
+                          "text": "生成-fill"
+                        },
+                        "children": []
+                      },
+                      {
+                        "data": {
+                          "id": "dbphu5xqwz40",
+                          "created": 1753889214424,
+                          "text": "移除"
+                        },
+                        "children": [
+                          {
+                            "data": {
+                              "id": "dbpip1sngg00",
+                              "created": 1753891634698,
+                              "text": "remove-移除特定元素"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dbpipau5bi80",
+                              "created": 1753891654380,
+                              "text": "unique-移除重复元素"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "data": {
+                          "id": "dbpilyhbofk0",
+                          "created": 1753891392390,
+                          "text": "变更顺序"
+                        },
+                        "children": [
+                          {
+                            "data": {
+                              "id": "dbpio4jegco0",
+                              "created": 1753891562305,
+                              "text": "reverse-逆转"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dbpio7jmp540",
+                              "created": 1753891568849,
+                              "text": "rotate-旋转"
+                            },
+                            "children": []
+                          },
+                          {
+                            "data": {
+                              "id": "dbpioja450g0",
+                              "created": 1753891594395,
+                              "text": "shuffle-随机顺序"
+                            },
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "data": {
+                          "id": "dbpim4y2dr40",
+                          "created": 1753891406463,
+                          "text": "采样"
+                        },
+                        "children": [
+                          {
+                            "data": {
+                              "id": "dbpinw1rweg0",
+                              "created": 1753891543825,
+                              "text": "sample-随机采样"
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dbphuzetw540",
+                      "created": 1753889278584,
+                      "text": "排序相关"
+                    },
+                    "children": [
+                      {
+                        "data": {
+                          "id": "dbpis26eu3k0",
+                          "created": 1753891870623,
+                          "text": "分支主题"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "data": {
+                      "id": "dbpis3hrz9s0",
+                      "created": 1753891873487,
+                      "text": "堆操作"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbpisspjf8w0",
+                      "created": 1753891928375,
+                      "text": "最大/最小操作"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbpit1refx40",
+                      "created": 1753891948079,
+                      "text": "字典序比较操作"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbpit72ld8w0",
+                      "created": 1753891959640,
+                      "text": "排列操作"
+                    },
+                    "children": []
+                  },
+                  {
+                    "data": {
+                      "id": "dbpitb3v7jk0",
+                      "created": 1753891968424,
+                      "text": "数值运算"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "data": {
+                  "id": "dbojp4xidrs0",
+                  "created": 1753792902675,
+                  "text": "数学库"
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "template": "default",
+  "theme": "fresh-blue",
+  "version": "1.4.43"
+}

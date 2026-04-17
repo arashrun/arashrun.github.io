@@ -1,0 +1,662 @@
+{
+	"root": {
+		"data": {
+			"id": "d90hox6gneo0",
+			"created": 1744037487742,
+			"text": "xorg"
+		},
+		"children": [
+			{
+				"data": {
+					"id": "d90hq1zcbc80",
+					"created": 1744037576560,
+					"text": "xserver",
+					"layout": null
+				},
+				"children": []
+			},
+			{
+				"data": {
+					"id": "d90hq4d73f40",
+					"created": 1744037581751,
+					"text": "x window system",
+					"note": "X Window System被设计用于：允许多个程序共享访问同一套硬件设备。这里的硬件设备指的是《输入设备》以及《输出设备》\n\n输入设备： 鼠标，键盘\n输出设备：显卡，显示器\n\n一个叫做X Server 的程序用来实现上述的多个程序共享硬件资源的需求。X Server用来管理硬件资源的分配和使用给多个程序\n",
+					"hyperlink": "http://www.x.org/releases/current/doc/",
+					"hyperlinkTitle": "wiki",
+					"expandState": "expand",
+					"layout": null
+				},
+				"children": [
+					{
+						"data": {
+							"id": "d9274jj3qyo0",
+							"created": 1744210799563,
+							"text": "C/S架构",
+							"expandState": "expand",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d927qsz854g0",
+									"created": 1744212544140,
+									"text": "communication-channel",
+									"note": "1. 基于TCP：因为x协议没有提供重排和重发数据包\n\n2. message：发送的消息类型被X11 协议所规定",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d927bscobp40",
+							"created": 1744211367314,
+							"text": "输入",
+							"expandState": "collapse",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d927bvj7elk0",
+									"created": 1744211374240,
+									"text": "键盘",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927bwko5ao0",
+									"created": 1744211376505,
+									"text": "鼠标",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927c3zyiu80",
+									"created": 1744211392667,
+									"text": "触摸板Touchpad",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927c7m967k0",
+									"created": 1744211400545,
+									"text": "触摸屏TouchScreen",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d927bu0u5l40",
+							"created": 1744211370952,
+							"text": "输出",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d927dmn93uo0",
+							"created": 1744211511622,
+							"text": "窗口系统对象",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d927dqytay80",
+									"created": 1744211521028,
+									"text": "Windows",
+									"note": "只是屏幕上一块可以绘制的区域。\n\n1. 树状层次组织起windows的\n2. root window是xserver创建的，覆盖整个屏幕，生命周期就是xserver\n3. 树结构中同层级窗口是stack order的，可以相互堆叠\n",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927dsw6p4w0",
+									"created": 1744211525222,
+									"text": "Pixmaps",
+									"note": "也是一个支持绘制的区域。和windows不同的是。不属于树状层次结构中，并且不是直接显示在屏幕上。pixmap的内容是通过间接拷贝到windows上进行显示的。pixmap的可能存放在：系统内存，显卡的显存中，共享内存中",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927duesyag0",
+									"created": 1744211528525,
+									"text": "Widgets",
+									"note": "应用级别的元素：按钮，菜单，文本框等。用于和用户交互。显示和事件处理的集合",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927dx2gmgo0",
+									"created": 1744211534309,
+									"text": "XIDs",
+									"note": "资源ID，被xserver管理的资源\n\n资源：connection，windows，pixmap，cursor\n\n可通过xid实现不同client互相操作和访问",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927e0svc3c0",
+									"created": 1744211542436,
+									"text": "Atoms",
+									"note": "为了减少x客户端和服务器之间的字符串重传。存在一个映射表。atoms代表了x协议中的一个操作",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927e29muzk0",
+									"created": 1744211545627,
+									"text": "Properties",
+									"note": "一个键值对\n\nkey：文本字符串，代表一个atom\nvalue：atom/integer/...\n\n最初版本的属性集定义在ICCCM中，之后被扩展EWMH\n\n",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927e4isqw80",
+									"created": 1744211550534,
+									"text": "Grabs",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d927e6dqatk0",
+									"created": 1744211554581,
+									"text": "Selections，cut-copy-paste",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d9285ticghs0",
+							"created": 1744213720759,
+							"text": "扩展系统",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d92mvmmkpj40",
+									"created": 1744255238784,
+									"text": "XRandR",
+									"note": "xrandr其实是X11服务器 X.Org Server 提供的XRandR(Rotate and Resize)扩展的客户端工具，它通过调用XRandR扩展接口获取所有显示相关的信息。\n\n\n显示器硬件(EDID)\n        ↑\n  通过DDC通道\n        ↑\nLinux内核 显卡驱动 (DRM/KMS，e.g. modesetting、amdgpu)\n        ↑\n      X server\n        ↑\n    XRandR扩展\n        ↑\n      xrandr命令\n      \n\n",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d9p1ayxv9pk0",
+							"created": 1746530255637,
+							"text": "协议文档(Protocal)",
+							"hyperlink": "https://x.org/releases/current/doc/xproto/x11protocol.html#x11protocol",
+							"hyperlinkTitle": "x11协议",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d9p1dbazndc0",
+									"created": 1746530439279,
+									"text": "预定义Atoms",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p1dyn4he00",
+									"created": 1746530490079,
+									"text": "链接建立",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p1e6ia9i80",
+									"created": 1746530507201,
+									"text": "请求",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p1ebxdyg80",
+									"created": 1746530518998,
+									"text": "连接关闭",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p1eehc0x40",
+									"created": 1746530524558,
+									"text": "事件",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"data": {
+					"id": "d90hq98derc0",
+					"created": 1744037592344,
+					"text": "xcb",
+					"hyperlink": "https://www.x.org/wiki/guide/xlib-and-xcb/",
+					"hyperlinkTitle": "基本介绍",
+					"expandState": "collapse",
+					"layout": null
+				},
+				"children": [
+					{
+						"data": {
+							"id": "d90hro3xy540",
+							"created": 1744037703092,
+							"text": "xcb教程",
+							"hyperlink": "http://www.x.org/releases/current/doc/libxcb/tutorial/index.html",
+							"hyperlinkTitle": "",
+							"layout": null
+						},
+						"children": []
+					}
+				]
+			},
+			{
+				"data": {
+					"id": "d9p1qsln7sw0",
+					"created": 1746531495663,
+					"text": "xlib",
+					"expandState": "collapse",
+					"layout": null
+				},
+				"children": [
+					{
+						"data": {
+							"id": "d9p1u3bhemg0",
+							"created": 1746531754086,
+							"text": "xlib介绍",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1uk0x0800",
+							"created": 1746531790452,
+							"text": "display函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1um225fc0",
+							"created": 1746531794875,
+							"text": "window函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1useaulk0",
+							"created": 1746531808676,
+							"text": "window信息函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1uy1cra80",
+							"created": 1746531820954,
+							"text": "pixmap/光标函数",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d9p2jmne36w0",
+									"created": 1746533755269,
+									"text": "创建/销毁pixmap",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p2jwig4a80",
+									"created": 1746533776738,
+									"text": "创建/销毁/修改光标颜色",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d9p1v3lu9eo0",
+							"created": 1746531833076,
+							"text": "color管理函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1vajhd480",
+							"created": 1746531848171,
+							"text": "GC（图形上下文）",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1vjlqh4o0",
+							"created": 1746531867898,
+							"text": "绘图函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1vp2lyo80",
+							"created": 1746531879803,
+							"text": "窗口和会话管理",
+							"expandState": "collapse",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d9p25a51j000",
+									"created": 1746532630940,
+									"text": "save-set",
+									"note": " X11 窗口系统中的 Save-Set 机制，它用于确保某些窗口在特定情况下不会被意外销毁\n \n 基本概念\n窗口层级关系：在 X11 中，窗口有父子关系，子窗口(Subwindow)会显示在父窗口内。\n\n窗口管理器的作用：窗口管理器通常会\"重新包装\"应用程序的窗口，比如添加边框、标题栏等，这实际上是通过创建一个新的父窗口(框架)来包含原窗口。\n\n问题场景\n当窗口管理器崩溃或被杀死时：\n\n它创建的所有框架窗口会被销毁\n按照正常逻辑，这些框架的子窗口(即应用程序窗口)也会被销毁\n这会导致应用程序窗口意外消失\nSave-Set 的解决方案\nSave-Set 机制允许：\n\n标记需要保护的窗口：应用程序可以将其窗口添加到\"保存集\"(save-set)中\n自动恢复机制：\n当父窗口(框架)被销毁时\n系统会检查这些被标记的窗口\n不是销毁它们，而是将它们重新映射到原来的父窗口(通常是根窗口)\n保持窗口可见\n实际应用示例\n窗口管理器为应用程序窗口创建框架(新的父窗口)\n应用程序将自身窗口添加到 save-set\n窗口管理器崩溃，框架被销毁\nX 系统检测到框架销毁，但发现子窗口在 save-set 中\n系统自动将应用程序窗口重新映射到根窗口下\n用户仍然可以看到应用程序窗口，不会丢失工作",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p2hw8l5ko0",
+									"created": 1746533619413,
+									"text": "改变窗口父对象",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p2i5ck1vs0",
+									"created": 1746533639244,
+									"text": "设置和获取字体搜索路径",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p2if1ytr40",
+									"created": 1746533660372,
+									"text": "独占server",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p2iis44gw0",
+									"created": 1746533668483,
+									"text": "屏保控制",
+									"layout": null
+								},
+								"children": []
+							},
+							{
+								"data": {
+									"id": "d9p2isu3w0w0",
+									"created": 1746533690371,
+									"text": "访问控制",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d9p1vuu2c800",
+							"created": 1746531892347,
+							"text": "事件",
+							"layout": null
+						},
+						"children": [
+							{
+								"data": {
+									"id": "d9p2pxpcf480",
+									"created": 1746534249516,
+									"text": "键盘+鼠标事件",
+									"expandState": "collapse",
+									"layout": null
+								},
+								"children": [
+									{
+										"data": {
+											"id": "d9p2yjo9cxc0",
+											"created": 1746534924253,
+											"text": "鼠标点击事件",
+											"layout": null
+										},
+										"children": []
+									},
+									{
+										"data": {
+											"id": "d9p2yni8k4g0",
+											"created": 1746534932596,
+											"text": "键盘和鼠标事件",
+											"layout": null
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"data": {
+									"id": "d9p3ajycksg0",
+									"created": 1746535865233,
+									"text": "Structure Control事件",
+									"note": "结构控制事件。\n\n\n这里的结构包括：\n\n1. 窗口层次结构\n2. 窗口大小，位置，边框，堆叠顺序等窗口固有结构\n3. 窗口显示\n",
+									"layout": null
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"data": {
+							"id": "d9p1vy943u00",
+							"created": 1746531899787,
+							"text": "事件处理函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1we2sjog0",
+							"created": 1746531934233,
+							"text": "输入设备函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1wmq3ii80",
+							"created": 1746531953057,
+							"text": "本地和国际化文本函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1wxkor2w0",
+							"created": 1746531976674,
+							"text": "ICCCM函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1x7nk7hc0",
+							"created": 1746531998616,
+							"text": "资源管理函数",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9p1xw7m1rk0",
+							"created": 1746532052071,
+							"text": "工具函数",
+							"layout": null
+						},
+						"children": []
+					}
+				]
+			},
+			{
+				"data": {
+					"id": "d9pkgjumwr40",
+					"created": 1746584294062,
+					"text": "ICCCM协议",
+					"hyperlink": "https://x.org/releases/X11R7.6/doc/xorg-docs/specs/ICCCM/icccm.html#introduction",
+					"hyperlinkTitle": "规范手册",
+					"layout": null
+				},
+				"children": [
+					{
+						"data": {
+							"id": "d9pkmuc6uhc0",
+							"created": 1746584787077,
+							"text": "Selection 机制",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9pkmz6dlt40",
+							"created": 1746584797609,
+							"text": "Cut Buffers",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9pknszqyao0",
+							"created": 1746584862512,
+							"text": "窗口管理器",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9pkpja1tnk0",
+							"created": 1746584998095,
+							"text": "会话管理器",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9pkpr6vsjs0",
+							"created": 1746585015318,
+							"text": "操作共享资源",
+							"layout": null
+						},
+						"children": []
+					},
+					{
+						"data": {
+							"id": "d9pkqct3gcg0",
+							"created": 1746585062373,
+							"text": "Device color characterization",
+							"layout": null
+						},
+						"children": []
+					}
+				]
+			},
+			{
+				"data": {
+					"id": "d9pkh8cwztc0",
+					"created": 1746584347410,
+					"text": "freedesktop",
+					"hyperlink": "https://specifications.freedesktop.org/",
+					"hyperlinkTitle": "所以的规范",
+					"note": "\nUnix平台下桌面环境相关的标准规范\n\n\n",
+					"layout": null
+				},
+				"children": [
+					{
+						"data": {
+							"id": "d9pkgp61xds0",
+							"created": 1746584305637,
+							"text": "EWMH协议",
+							"layout": null
+						},
+						"children": []
+					}
+				]
+			}
+		]
+	},
+	"template": "default",
+	"theme": "fresh-blue",
+	"version": "1.4.43"
+}
