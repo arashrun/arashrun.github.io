@@ -67,7 +67,7 @@
               "id": "dhvvc2um6ow0",
               "created": 1776473603069,
               "text": "ALSA",
-              "note": "- [alsa库api官方文档](https://www.alsa-project.org/alsa-doc/alsa-lib/index.html)\n",
+              "note": "- [alsa库api官方文档](https://www.alsa-project.org/alsa-doc/alsa-lib/index.html)\n\n",
               "resources": "[{\"name\":\"alsa\",\"path\":\"_posts/alsa.md\"}]"
             },
             "children": []

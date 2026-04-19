@@ -8,5 +8,6 @@
   "vimMode": false,
   "promptDelete": false,
   "showInlineTitle": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "detectAllFileExtensions": true
 }
