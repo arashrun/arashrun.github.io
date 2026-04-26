@@ -19,7 +19,7 @@ tags:
 
 [git am 解决冲突](https://www.cnblogs.com/joker1937/p/15731049.html) 
 
-### 基本操作
+## 基本操作
 
 
 1. git clone
@@ -83,7 +83,7 @@ git branch --set-upstream <branch> <remote-branch>
 ```
 
 
-### rebase
+## rebase
 
 对本地提交A进行补充修复或提交
 
@@ -97,13 +97,179 @@ pick <Hash_B> Commit B message
 pick <Hash_C> Commit C message
 ```
 
-### 子模块
+## 子模块
 
 ```bash
 git submodule add <git path>
 ```
 
-### 统计脚本
+
+## bundle
+
+
+在 `git bundle` 命令中，`<git-rev-list args>` 是最关键的部分，它决定了你的“离线包”（bundle）里**包含哪些提交记录（History）**。
+
+简单来说，它的语法和 `git log` 后面跟的参数完全一样，用于**划定一个范围**。
+
+---
+
+### 1. 为什么需要它？
+
+`git bundle` 的本质是将一部分仓库数据打包成一个单一文件。为了让这个文件在另一台电脑上能被顺利“解压”（fetch/pull），你需要告诉 Git：
+
+- 从哪个点开始打包？
+    
+- 打包到哪个点结束？
+    
+
+### 2. 常见的参数写法
+
+#### A. 打包全量历史（整个分支）
+
+如果你想把某个分支从诞生到现在的全部内容都打进去：
+```
+git bundle create my-repo.bundle main
+```
+
+_这里的 `main` 就是一个 rev-list 参数，代表“从 main 分支的最新点往回追溯到最初”。_
+
+#### B. 打包增量更新（范围选择）
+
+这是最常用的场景。假设你上次已经给对方传过数据了，这次只想把 `v1.0` 之后的新提交打包：
+```
+git bundle create incremental.bundle v1.0..main
+```
+
+- `v1.0..main` 意思就是：**包含所有在 main 分支上、但不在 v1.0 标签中的提交。**
+    
+- 这能极大地减小打包文件的体积。
+    
+
+#### C. 打包所有分支和标签
+
+如果你想备份整个仓库：
+```
+git bundle create full-backup.bundle --all
+```
+
+- `--all` 会告诉 `git-rev-list` 遍历所有的 refs。
+    
+
+---
+
+### 3. 本质：它是如何工作的？
+
+当你输入这些参数时，Git 内部会调用 `git rev-list` 命令。这个命令的作用是**列出所有符合条件的提交哈希值**。
+
+- 如果你提供 `master`，它会列出从 master 开始往回数的所有 commit。
+    
+- 如果你提供 `origin/master..master`，它只会列出你本地领先于远程的那几个提交。
+    
+
+### 4. 特别注意：必须包含引用（Ref）
+
+在 `git bundle` 中，你**必须**在参数中包含一个分支名或标签名，否则别人拿到这个包后，不知道该把这些提交挂在哪个“分支指针”下。
+
+> **错误示范：** `git bundle create test.bundle HEAD~3..HEAD`
+> 
+> 虽然这划定了 3 个提交，但包里没有分支名，对方可能无法直接通过分支方式拉取。
+> 
+> **正确示范：** `git bundle create test.bundle main -3` 或 `git bundle create test.bundle main ^v1.0`
+
+### 总结
+
+你可以把 `<git-rev-list args>` 理解为**“提交范围过滤器”**。
+
+- 想打包全部？写**分支名**。
+    
+- 想打包部分？写 **`旧版本..新版本`**。
+    
+- 想打多个分支？写 **`branch1 branch2`**。
+
+
+
+收到这个 `.bundle` 文件后，对方的操作逻辑其实和从 GitHub/GitLab 上 `git fetch` 或 `git pull` 几乎一模一样，只不过把 **URL** 换成了 **文件路径**。
+
+根据你提供的信息，这个包是一个**增量包**（它明确标注了 `requires` 某个特定提交），所以同步步骤如下：
+
+---
+
+### 1. 验证兼容性（可选但推荐）
+
+在同步之前，对方可以先检查自己的本地仓库是否拥有该 bundle 所需的基础（即那个 `3a2f8b...`）。
+```
+git bundle verify /路径/to/.dev.bundle
+```
+
+如果输出 `is okay`，说明对方的本地仓库里有那个“前置提交”，可以顺利合并。
+
+---
+
+### 2. 从 Bundle 中提取数据
+
+对方不需要解压这个文件，直接在他们的 Git 仓库目录下运行以下命令：
+
+#### 方案 A：直接合并到当前分支（类似 git pull）
+
+如果对方正处于 `dev` 分支，想直接把补丁打上去：
+
+```
+git pull /路径/to/.dev.bundle dev
+```
+
+#### 方案 B：先获取更新，再手动处理（类似 git fetch）
+
+这是更稳妥的做法，先将内容取回，存放在一个临时分支或远程追踪分支里：
+
+```
+# 将 bundle 里的 dev 分支取回并重命名为本地的 bundle-res 分支
+git fetch /路径/to/.dev.bundle dev:bundle-res
+```
+
+之后，他们可以查看差异并合并：
+
+```
+git log main..bundle-res --oneline  # 查看补丁里多了什么
+git merge bundle-res                # 合并到当前分支
+```
+
+---
+
+### 3. 将其视为一个“离线远程仓库” (进阶用法)
+
+如果对方需要频繁通过这个 bundle 同步，可以把它像远程仓库一样“挂载”起来：
+
+```
+git remote add offline-src /路径/to/.dev.bundle
+git fetch offline-src
+```
+
+这样，以后只要你发了新的同名 bundle 覆盖旧文件，他只需要运行 `git fetch offline-src` 就能看到更新。
+
+---
+
+### ⚠️ 关键注意事项
+
+1. **基础要求 (The Requires)**：
+    
+    对方的仓库**必须**包含那行 `3a2f8bb9...` 的提交记录。如果对方的进度比这个号还旧（或者完全是另一个仓库），同步会报错，提示 `error: Repository lacks these prerequisite commits`。
+    
+2. **分支名称**：
+    
+    你在打包时指定了 `refs/heads/dev`，所以对方在 `fetch` 或 `pull` 时，必须指定 `dev` 这个名字。
+    
+3. **路径问题**：
+    
+    命令中的路径可以是相对路径，也可以是绝对路径。如果在 Windows 上，路径看起来像 `C:\Users\Name\Desktop\dev.bundle`。
+    
+
+**总结一句话给对方：**
+
+> “运行 `git pull /文件路径/dev.bundle dev` 即可同步。”
+
+
+
+## 统计脚本
 
 统计仓库提交
 ```bash

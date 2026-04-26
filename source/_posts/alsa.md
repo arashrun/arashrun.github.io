@@ -15,40 +15,27 @@ tags:
 	- plugins
 	- high level api
 - pcm
-	- pcm api
-	- plugins
+	- pcm api [alsa-api](alsa-api.md)
+	- plugins [pcm_plugins](pcm_plugins.md) 
 	- external plugins
 	- external control plugins
 - rawmidi
-- use case
+- use case [ucm_config](ucm_config.md)
 - alsa topology
-
-
-
 
 
 ## 内核层API
 
 
-
-
-
-
-```mermaid
-mindmap
-root((alsa))
-	app
-		primitive control
-		pcm
-	kernel
-```
-
-
-
-## term
+## terms
 
 - primitive control：
 - pcm:
+- sample:【采样】 一个数值
+- frames:【帧】一个时间点根据转换器（ADC）的数量采集到的sample集合.单声道frame(v1),多声道frame(v1,v2,v3)
+- stream: 连续时间内的sample序列
+- chunk: 现代声卡允许控制传输时间周期,chunk代表一个时间周期内的一段stream
+- device：【设备】可以是物理的也可以是虚拟的
 - use case:
 - rawmidi
 - sequencer:

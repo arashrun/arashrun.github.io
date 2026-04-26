@@ -1,1 +1,139 @@
-{"root":{"data":{"id":"dbf60a0u2s00","created":1752840240617,"text":"工具"},"children":[{"data":{"id":"dbf60d0blfs0","created":1752840247117,"text":"终端","layout_right_offset":{"x":44,"y":-18},"layout":null},"children":[]},{"data":{"id":"dbf620m2nko0","created":1752840376862,"text":"开发工具","layout":null},"children":[{"data":{"id":"dbf62vt8nug0","created":1752840444776,"text":"Mingw-w64","layout":null,"note":"**Mingw-w64是一个头文件、导入库、库和工具的集合**，与编译器工具链（如GCC或LLVM）结合使用时，可以为构建本机Windows应用程序和库提供完整的开发环境。Mingw-w64是原始mingw.org项目的进一步发展，该项目创建的目的是为了支持Windows系统上的GCC编译器。它于2007年分叉，以提供64位支持和更新的API。此后，它获得了广泛的应用和分发。"},"children":[]},{"data":{"id":"dbf62you5r40","created":1752840451040,"text":"cygwin","layout":null,"note":"### 是什么\n\n\n### 核心原理\n"},"children":[]},{"data":{"id":"dbf633to5yo0","created":1752840462216,"text":"msys","layout":null},"children":[]}]}]},"template":"default","theme":"fresh-blue","version":"1.4.43"}
+{
+  "root": {
+    "data": {
+      "id": "dbf60a0u2s00",
+      "created": 1752840240617,
+      "text": "工具"
+    },
+    "children": [
+      {
+        "data": {
+          "id": "dbf60d0blfs0",
+          "created": 1752840247117,
+          "text": "终端",
+          "layout_right_offset": {
+            "x": 44,
+            "y": -18
+          },
+          "layout": null
+        },
+        "children": []
+      },
+      {
+        "data": {
+          "id": "dhza38cnsv40",
+          "created": 1776819906285,
+          "text": "UI/UX"
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dhza3flnp5c0",
+              "created": 1776819922066,
+              "text": "Figma (行业标配)"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza3lnubao0",
+              "created": 1776819935259,
+              "text": "Pixso / MasterGo (国产首选)"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza4lrvmcg0",
+              "created": 1776820013867,
+              "text": "Framer"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza4mndoe00",
+              "created": 1776820015772,
+              "text": "Uizard / UX Pilot (AI 驱动型) "
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza53ls6eg0",
+              "created": 1776820052681,
+              "text": "Lunacy (最推荐：离线版 Figma)"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza4z4xsvs0",
+              "created": 1776820042955,
+              "text": "Penpot Desktop (开源力量)"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza68b8g9c0",
+              "created": 1776820141291,
+              "text": "Axure RP (原型的王者)"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dhza72kum4g0",
+              "created": 1776820207176,
+              "text": "Affinity Designer 2 (买断制专业矢量设计)"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "data": {
+          "id": "dbf620m2nko0",
+          "created": 1752840376862,
+          "text": "开发工具",
+          "layout": null
+        },
+        "children": [
+          {
+            "data": {
+              "id": "dbf62vt8nug0",
+              "created": 1752840444776,
+              "text": "Mingw-w64",
+              "layout": null,
+              "note": "**Mingw-w64是一个头文件、导入库、库和工具的集合**，与编译器工具链（如GCC或LLVM）结合使用时，可以为构建本机Windows应用程序和库提供完整的开发环境。Mingw-w64是原始mingw.org项目的进一步发展，该项目创建的目的是为了支持Windows系统上的GCC编译器。它于2007年分叉，以提供64位支持和更新的API。此后，它获得了广泛的应用和分发。"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dbf62you5r40",
+              "created": 1752840451040,
+              "text": "cygwin",
+              "layout": null,
+              "note": "### 是什么\n\n\n### 核心原理\n"
+            },
+            "children": []
+          },
+          {
+            "data": {
+              "id": "dbf633to5yo0",
+              "created": 1752840462216,
+              "text": "msys",
+              "layout": null
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "template": "default",
+  "theme": "fresh-blue",
+  "version": "1.4.43"
+}

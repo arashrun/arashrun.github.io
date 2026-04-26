@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/alsa.md",
+                "file": "_posts/vnc方案.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "alsa"
+              "title": "vnc方案"
             }
           }
         ],
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/alsa.md",
+                "file": "_posts/vnc方案.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "alsa 的大纲"
+              "title": "vnc方案 的大纲"
             }
           },
           {
@@ -209,12 +209,19 @@
   },
   "active": "c046af2c5b187a3e",
   "lastOpenFiles": [
-    "_posts/linux编程接口.md",
-    "_posts/alsa.md",
+    "_posts/git-skill.md",
+    "_posts/vnc方案.md",
+    "MindMaps/工具.km",
     "MindMaps/Linux.km",
+    "_posts/ucm_config.md",
+    "_posts/alsa.md",
+    "_posts/未命名.md",
+    "_posts/pcm_plugins.md",
+    "_posts/alsa-api.md",
+    "_posts/tmux.md",
+    "_posts/linux编程接口.md",
     "MindMaps/cpp.km",
     "MindMaps/网络编程.km",
-    "MindMaps/工具.km",
     "MindMaps/windows.km",
     "_posts/linux.md",
     "_posts/Cpp数据类型转换.md",
@@ -239,18 +246,10 @@
     "_posts/WinRT.md",
     "images/winrt与win32对比.webp",
     "Excalidraw/WinRT.md",
-    "_posts/git-skill.md",
     "_posts/thunderbird替代outlook.md",
     "pending.md",
     "_posts/qt.md",
-    "_posts/PluseAudio.md",
-    "_posts/常用压缩格式对比.md",
-    "_posts/lambda.md",
-    "_posts/qml嵌入qwidget.md",
-    "_posts/android.md",
     "images/openlist-20260405154351365.webp",
-    "_posts/openlist.md",
-    "_posts/debian.md",
     "images/PluseAudio-20260115154010622.webp",
     "images/对比度-20251120102631211.webp",
     "images/对比度-20251120094523292.webp",

@@ -86,3 +86,30 @@ WantedBy=multi-user.target
 - **防火墙**：确保你的服务器开启了 **5900** 端口。
 
 **如果您在启动后发现只能看到登录界面而无法进入桌面，或者遇到“Permission Denied”，通常需要调整服务中的 `User=root` 设置。需要我帮您针对特定的桌面管理器（如 GNOME 或 KDE）进行微调吗？**
+
+
+
+## vncserver
+
+vncserver是软链接,最后软链接到的是 `tigervncserver` 这是一个perl封装脚本，实际运行的是 `Xtigervnc` 这个实例.
+### install
+
+```bash
+
+# http://www.tigervnc.org
+sudo apt install tigervnc-standalone-server tigervnc-common tigervnc-tools
+
+vncpasswd
+
+# -localhost: 仅接收本地连接
+vncserver :1 -localhost -geometry 1920x1080 -depth 24
+
+# 需要先通过如下ssh命令连接上之后,vnc
+ssh -L 5901:localhost:5901 user@ip
+```
+
+### 配置
+
+```bash
+# 配置启动哪些程序
+```

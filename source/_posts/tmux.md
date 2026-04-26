@@ -15,6 +15,9 @@ panle: a window contains muti-panle
 sudo apt install tmux -y
 
 ## usage
+
+```bash
+
 tmux new -s <session name>
 tmux new-session -s <session name>
 
@@ -42,6 +45,8 @@ c-b z   # enter / return full screen
 c-b (   # 切换到上一个session
 c-b )   # 切换到下一个session
 c-b L   # 切换到最后一个session
+```
+
 
 ## configure
 
@@ -49,6 +54,16 @@ c-b L   # 切换到最后一个session
 # source the tmux config file
 # tmux source-file ~/.tmux.conf
 
+# 修改prefix为 '\' 或者 'alt+a'
+unbind C-b
+set -g prefix M-a
+bind M-a send-prefix
+
+# or
+
+unbind C-b
+set -g prefix '\'
+bind '\' send-prefix
 
 
 set -g base-index 1 # 设置窗口的起始下标为1
