@@ -1,5 +1,5 @@
 ---
-title: PluseAudio
+title: pluseAudio
 date: 2024-12-25 17:05:24
 categories:
   - linux
@@ -474,6 +474,7 @@ eol 是 End of List（列表结束）的缩写。
 因为它是一个异步通信库，当你向 PulseAudio 服务端请求信息（比如“列出所有模块”）时，服务端不会一次性把所有数据塞进一个巨大的数组传回，而是通过多次回调逐条发送。
 ![](../images/PluseAudio-20260115154010622.webp)
 
+- Overflow（溢出）：生产者生产速度大于消费者消费速度，就会导致缓冲区溢出。相对的是underflow。
 - Gain（增益/dB）：控制声音的大小。正值增加声音，负值削减声音，$0$ 表示不改变。
 - Frequency(频率/Hz)：你想要调节的声音位置（低音、中音或高音）。
 - Bandwidth（带宽/octaves）：受影响的范围有多宽。数值越大，周围的频率跟着改变的越多。

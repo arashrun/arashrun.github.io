@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/vnc方案.md",
+                "file": "_posts/pulseaudio_profile.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vnc方案"
+              "title": "pulseaudio_profile"
             }
           }
         ],
@@ -66,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "udev",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/vnc方案.md",
+                "file": "_posts/pulseaudio_profile.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "vnc方案 的大纲"
+              "title": "pulseaudio_profile 的大纲"
             }
           },
           {
@@ -209,16 +209,29 @@
   },
   "active": "c046af2c5b187a3e",
   "lastOpenFiles": [
+    "_posts/tmux.md",
+    "_posts/总线.md",
+    "MindMaps/硬件.km",
+    "MindMaps/Linux.km",
+    "_posts/pulseaudio_profile.md",
+    "_posts/pulseaudio.md",
+    "_posts/pulsesink.md",
+    "_posts/alsa.md",
+    "_posts/alsa-api.md",
+    "pending.md",
     "_posts/git-skill.md",
+    "_posts/nvim.md",
+    "_模板/format-header.md",
+    "_模板/h4.md",
+    "_模板/br.md",
+    "_posts/vim.md",
+    "_posts/公众号文章爬取.md",
+    "_posts/ucm_config.md",
+    "_posts/bluez.md",
+    "_posts/gstreamer.md",
     "_posts/vnc方案.md",
     "MindMaps/工具.km",
-    "MindMaps/Linux.km",
-    "_posts/ucm_config.md",
-    "_posts/alsa.md",
-    "_posts/未命名.md",
     "_posts/pcm_plugins.md",
-    "_posts/alsa-api.md",
-    "_posts/tmux.md",
     "_posts/linux编程接口.md",
     "MindMaps/cpp.km",
     "MindMaps/网络编程.km",
@@ -229,26 +242,13 @@
     "MindMaps/系统架构师.km",
     "MindMaps/渲染引擎.km",
     "MindMaps/xorg.km",
-    "MindMaps/硬件.km",
     "_posts/vim-manual.md",
-    "_posts/vim.md",
     "Excalidraw/前端.canvas",
     "Excalidraw/渲染框架.canvas",
     "_posts/xorg.md",
     "Excalidraw/windows.canvas",
-    "_posts/Windows开发.md",
     "images/1.png",
-    "Excalidraw/windows.md",
-    "_posts/web.md",
-    "_posts/css.md",
-    "_posts/systemd.md",
-    "_posts/Systemd开关机hook脚本.md",
-    "_posts/WinRT.md",
     "images/winrt与win32对比.webp",
-    "Excalidraw/WinRT.md",
-    "_posts/thunderbird替代outlook.md",
-    "pending.md",
-    "_posts/qt.md",
     "images/openlist-20260405154351365.webp",
     "images/PluseAudio-20260115154010622.webp",
     "images/对比度-20251120102631211.webp",

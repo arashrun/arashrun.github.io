@@ -8,6 +8,7 @@ tags:
 ---
 [ALSA project - the C library reference: Index, Preamble and License](https://www.alsa-project.org/alsa-doc/alsa-lib/index.html) 
 
+
 ## 应用层API
 
 - primitive control
@@ -125,3 +126,105 @@ tags:
 |**DSP Topology**|内部算法路径|定义 DSP 内部的音频处理流水线|
 
 你想了解这些概念是为了进行音频驱动开发，还是在调试 Linux 系统的音频配置？
+
+
+## amixer命令
+
+```bash
+$ amixer contents -c 1
+numid=9,iface=MIXER,name='I2STDM Digital Loopback Mode'
+  ; type=ENUMERATED,access=rw------,values=1,items=4
+  ; Item #0 'Disabled'
+  ; Item #1 'Mode1'
+  ; Item #2 'Mode2'
+  ; Item #3 'Mode2 Swap'
+  : values=0
+这里的输出我看不懂，能逐行解释一下吗？分号后面和冒号后面
+```
+
+
+这对 `amixer` 的输出是 ALSA 驱动中最核心的调试信息。它描述了一个混音器控件（Control Element）的属性和当前状态。
+
+为了让你看懂，我们将这几行拆开，逐一解释其含义：
+
+### 第一行：基本属性
+
+`numid=9,iface=MIXER,name='I2STDM Digital Loopback Mode'`
+
+- **numid=9**: 这是该控件在内核中的**唯一数字 ID**。你也可以通过 `amixer cset numid=9 1` 来直接修改它。
+    
+- **iface=MIXER**: 属于 **MIXER 接口**（如前所述，表示这是一个调音/路由相关的控件）。
+    
+- **name='...'**: 控件的**人类可读名称**。在 PulseAudio 的 Path 文件中引用时，通常就是用这个名字。
+    
+
+---
+
+### 第二行（分号后）：数据类型与权限
+
+`; type=ENUMERATED,access=rw------,values=1,items=4`
+
+- **type=ENUMERATED**: **枚举类型**。意味着这个控件不是连续的滑块（如音量），而是像“旋钮”一样，只有几个固定的档位可以选。
+    
+- **access=rw------**: **访问权限**。
+    
+    - `r`: 可读（Readable）。
+        
+    - `w`: 可写（Writable）。
+        
+    - 后面的短横线表示没有其他特殊权限（如通知、锁定等）。
+        
+- **values=1**: 表示该控件包含 **1 个数值**。如果是立体声音量，这里通常是 `values=2`。
+    
+- **items=4**: 表示该枚举控件共有 **4 个可选项**。
+    
+
+---
+
+### 第三至六行（分号后）：选项列表
+
+`; Item #0 'Disabled'`
+
+`; Item #1 'Mode1'` ...
+
+- 这些是该枚举控件的具体**选项名称**。
+    
+- 每一个 `Item` 对应一个索引数字。比如当你把值设为 `0` 时，硬件就处于 `Disabled` 状态。
+    
+
+---
+
+### 最后一行（冒号后）：当前状态值
+
+`: values=0`
+
+- 这反映了**硬件当前的实际设置**。
+    
+- 这里的 `0` 对应上面的 `Item #0`。
+    
+- **结论**：目前的“数字回环模式”处于 **Disabled（禁用）** 状态。
+    
+
+---
+
+### 总结图解
+
+为了更直观地理解，你可以把这个输出想象成一个带有 4 个档位的物理拨码开关：
+
+- **分号 ( ; ) 后面**的内容是“说明书”：它告诉你这个开关是什么型号、有几个档位、每个档位叫什么名字。
+    
+- **冒号 ( : ) 后面**的内容是“刻度位置”：它告诉你现在开关指在哪个档位上。
+    
+
+### 常见的其他属性（补充）
+
+如果是一个音量控件，你还会看到不同的信息：
+
+- **type=INTEGER**: 整数类型（通常用于音量）。
+    
+- **min=0, max=255**: 告诉你音量滑块的范围。
+    
+- **step=1**: 调节的步进大小。
+    
+
+你的这个硬件非常简洁，全都是基于这种“开关”式的枚举控制，这在数字总线（I2S/TDM）的路由配置中非常典型。
