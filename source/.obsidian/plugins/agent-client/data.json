@@ -1,0 +1,78 @@
+{
+  "claude": {
+    "id": "claude-code-acp",
+    "displayName": "Claude Code",
+    "apiKey": "",
+    "command": "claude-agent-acp",
+    "args": [],
+    "env": []
+  },
+  "codex": {
+    "id": "codex-acp",
+    "displayName": "Codex",
+    "apiKey": "",
+    "command": "/usr/local/bin/codex-acp",
+    "args": [],
+    "env": []
+  },
+  "gemini": {
+    "id": "gemini-cli",
+    "displayName": "Gemini CLI",
+    "apiKey": "",
+    "command": "gemini",
+    "args": [
+      "--experimental-acp"
+    ],
+    "env": []
+  },
+  "customAgents": [],
+  "defaultAgentId": "codex-acp",
+  "autoAllowPermissions": false,
+  "autoMentionActiveNote": true,
+  "enableSystemNotifications": true,
+  "debugMode": false,
+  "nodePath": "/usr/local/bin/node",
+  "exportSettings": {
+    "defaultFolder": "ai",
+    "filenameTemplate": "agent_client_{date}_{time}",
+    "autoExportOnNewChat": false,
+    "autoExportOnCloseChat": false,
+    "openFileAfterExport": true,
+    "includeImages": true,
+    "imageLocation": "obsidian",
+    "imageCustomFolder": "Agent Client",
+    "frontmatterTag": "agent-client"
+  },
+  "windowsWslMode": true,
+  "windowsWslDistribution": "Ubuntu20",
+  "sendMessageShortcut": "enter",
+  "chatViewLocation": "editor-tab",
+  "displaySettings": {
+    "autoCollapseDiffs": false,
+    "diffCollapseThreshold": 10,
+    "maxNoteLength": 10000,
+    "maxSelectionLength": 10000,
+    "showEmojis": true,
+    "fontSize": null
+  },
+  "savedSessions": [
+    {
+      "sessionId": "019ea521-14f9-7632-a883-ef523aa5b7eb",
+      "agentId": "codex-acp",
+      "cwd": "/mnt/c/Users/huangym/Documents/PARA/arashrun.github.io/source",
+      "title": "你认为什么样的信息值得记录到obsdian中呢 搜索引擎随便就能搜索到的信息有必要记录吗",
+      "createdAt": "2026-06-08T06:09:49.082Z",
+      "updatedAt": "2026-06-08T06:09:49.082Z"
+    }
+  ],
+  "lastUsedModels": {},
+  "lastUsedModes": {},
+  "enableFloatingChat": false,
+  "floatingButtonImage": "",
+  "floatingWindowSize": {
+    "width": 400,
+    "height": 500
+  },
+  "floatingWindowPosition": null,
+  "floatingButtonPosition": null
+}

@@ -9,13 +9,13 @@ tags:
 https://www.freedesktop.org/wiki/Software/PulseAudio/Backends/ALSA/Profiles/
 
 
-你提供的这个网页是 **PulseAudio 官方文档**中关于如何为非标准音频硬件编写自定义配置文件（Profiles）的指南。它主要面向那些音频硬件**无法被 PulseAudio 自动识别或配置**的用户，希望通过手动配置让硬件更好地与 PulseAudio 协同工作【turn0fetch0】。
+你提供的这个网页是 **PulseAudio 官方文档**中关于如何为非标准音频硬件编写自定义配置文件（Profiles）的指南。它主要面向那些音频硬件**无法被 PulseAudio 自动识别或配置**的用户，希望通过手动配置让硬件更好地与 PulseAudio 协同工作。
 
 下面我为你梳理和解读这份文档的核心内容。
 
 ### 🧠 一、核心目的与适用场景
 
-编写 PulseAudio 配置文件主要是为了解决以下问题【turn0fetch0】：
+编写 PulseAudio 配置文件主要是为了解决以下问题：
 
 | 适用场景 | 具体表现 |
 | :--- | :--- |

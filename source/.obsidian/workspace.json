@@ -11,26 +11,38 @@
             "id": "f9798e966f2d6c58",
             "type": "leaf",
             "state": {
-              "type": "kityminder-view",
-              "state": {
-                "file": "MindMaps/Linux.km"
-              },
-              "icon": "lucide-file",
-              "title": "Linux"
-            }
-          },
-          {
-            "id": "c046af2c5b187a3e",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/pulseaudio_profile.md",
+                "file": "_posts/css.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pulseaudio_profile"
+              "title": "css"
+            }
+          },
+          {
+            "id": "60b067e9c1f12b55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/gpu.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "gpu"
+            }
+          },
+          {
+            "id": "536eece52676baa6",
+            "type": "leaf",
+            "state": {
+              "type": "agent-client-chat-view",
+              "state": {},
+              "icon": "bot-message-square",
+              "title": "Agent client"
             }
           }
         ],
@@ -91,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209.5
+    "width": 266.5
   },
   "right": {
     "id": "5f7ec1b51268369b",
@@ -153,13 +165,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/pulseaudio_profile.md",
+                "file": "_posts/gpu.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "pulseaudio_profile 的大纲"
+              "title": "gpu 的大纲"
             }
           },
           {
@@ -191,7 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 304.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,48 +216,50 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "agent-client:Open agent client": false
     }
   },
-  "active": "c046af2c5b187a3e",
+  "active": "60b067e9c1f12b55",
   "lastOpenFiles": [
-    "_posts/tmux.md",
-    "_posts/总线.md",
-    "MindMaps/硬件.km",
+    "_posts/css.md",
     "MindMaps/Linux.km",
+    "_posts/gpu.md",
+    "_posts/lambda.md",
+    "_posts/libcurl.md",
+    "_posts/windows配置.md",
+    "_posts/Windows开发.md",
+    "_posts/web.md",
+    "_posts/vim-manual.md",
+    "_posts/vim.md",
+    "pending.md",
+    "_posts/字体.md",
+    "未整理.md",
+    "about.md",
+    "_posts/嵌入式.md",
+    "_posts/总线.md",
+    "MindMaps/xorg.km",
+    "_posts/bluez.md",
     "_posts/pulseaudio_profile.md",
     "_posts/pulseaudio.md",
+    "_posts/RPC.md",
+    "_posts/录音底噪问题解决.md",
     "_posts/pulsesink.md",
+    "_posts/三分钟.md",
+    "_posts/流媒体协议.md",
     "_posts/alsa.md",
-    "_posts/alsa-api.md",
-    "pending.md",
-    "_posts/git-skill.md",
-    "_posts/nvim.md",
-    "_模板/format-header.md",
-    "_模板/h4.md",
-    "_模板/br.md",
-    "_posts/vim.md",
-    "_posts/公众号文章爬取.md",
-    "_posts/ucm_config.md",
-    "_posts/bluez.md",
-    "_posts/gstreamer.md",
-    "_posts/vnc方案.md",
+    "_posts/编码和字符集.md",
+    "_posts/[Confusing Pulseaudio device names. · Issue.md",
+    "MindMaps/硬件.km",
     "MindMaps/工具.km",
-    "_posts/pcm_plugins.md",
-    "_posts/linux编程接口.md",
     "MindMaps/cpp.km",
     "MindMaps/网络编程.km",
     "MindMaps/windows.km",
-    "_posts/linux.md",
-    "_posts/Cpp数据类型转换.md",
     "MindMaps/mesa-3d.km",
     "MindMaps/系统架构师.km",
     "MindMaps/渲染引擎.km",
-    "MindMaps/xorg.km",
-    "_posts/vim-manual.md",
     "Excalidraw/前端.canvas",
     "Excalidraw/渲染框架.canvas",
-    "_posts/xorg.md",
     "Excalidraw/windows.canvas",
     "images/1.png",
     "images/winrt与win32对比.webp",
