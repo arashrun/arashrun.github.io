@@ -33,7 +33,7 @@
   "debugMode": false,
   "nodePath": "/usr/local/bin/node",
   "exportSettings": {
-    "defaultFolder": "ai",
+    "defaultFolder": "AiChat",
     "filenameTemplate": "agent_client_{date}_{time}",
     "autoExportOnNewChat": false,
     "autoExportOnCloseChat": false,
@@ -56,6 +56,14 @@
     "fontSize": null
   },
   "savedSessions": [
+    {
+      "sessionId": "019eaa4d-35a0-70e3-be54-22205abdf0e8",
+      "agentId": "codex-acp",
+      "cwd": "/mnt/c/Users/huangym/Documents/PARA/arashrun.github.io/source",
+      "title": "国内音频领域有哪些知名产品或服务或公司",
+      "createdAt": "2026-06-09T03:05:38.854Z",
+      "updatedAt": "2026-06-09T03:05:38.904Z"
+    },
     {
       "sessionId": "019ea521-14f9-7632-a883-ef523aa5b7eb",
       "agentId": "codex-acp",
