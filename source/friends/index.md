@@ -25,12 +25,13 @@ tags:
 
 
 
-### 计算机后浪
+### 友圈
 
-| [宝硕](https://blog.baoshuo.ren/) | [sukka](https://skk.moe/)   | [lwl12](https://blog.lwl12.com/) |
-|-----------------------------------|-----------------------------|----------------------------------|
-| [青空之蓝](https://www.ixk.me/)   | [Cyris](https://cyris.moe/) | [时光](https://imrbq.cn/)        |
-|[towrite](https://towriting.com/)| | |
+| [宝硕](https://blog.baoshuo.ren/)   | [sukka](https://skk.moe/)   | [lwl12](https://blog.lwl12.com/) | [乌有之乡](https://www.wyzxwk.com/)                            |
+| --------------------------------- | --------------------------- | -------------------------------- | ---------------------------------------------------------- |
+| [青空之蓝](https://www.ixk.me/)       | [Cyris](https://cyris.moe/) | [时光](https://imrbq.cn/)          | [LuxiBlog](https://luxi.blog/)                             |
+| [towrite](https://towriting.com/) |                             |                                  | [网上邻居 - 陈杨树下 By DemoChen](https://demochen.com/links/#top) |
+|                                   |                             |                                  |                                                            |
 
 
 ### 开发
